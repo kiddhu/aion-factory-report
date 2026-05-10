@@ -1,16 +1,16 @@
-# AION Factory Report
+# AION 工厂报告
 
-Generated at: `2026-05-10T15:46:43Z`
-Ledger generated at: `2026-05-10T13:50:00Z`
+生成时间：`2026-05-10T15:56:31Z`
+账本生成时间：`2026-05-10T13:50:00Z`
 
-## Overall score
-- Score: 23/100
-- Verdict: Factory has weak motion; ledger shows too many blocked or unevidenced tasks.
-- Moving tasks: 3/13
-- Stalled/order-only/blocker tasks: 10
+## 总体评分
+- 评分：23/100
+- 判断：工厂运转偏弱；账本显示过多任务被阻塞或缺少证据。
+- 正在推进的任务：3/13
+- 卡住/仅下令/阻塞任务：10
 
-## Current task progress
-| Task | Status | Owner | Audit | Next gate |
+## 当前任务进度
+| 任务 | 状态 | 负责人 | 审计 | 下一关口 |
 |---|---:|---|---|---|
 | aion-dgw-0049-t01-deployment-confirmation | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | dispatch to 007 only after runtime handle is available; production deploy remains forbidden |
 | aion-dgw-0049-t02-prod-smoke-gate | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | define read-only PROD-SMOKE evidence gate; no production PASS without evidence |
@@ -26,9 +26,9 @@ Ledger generated at: `2026-05-10T13:50:00Z`
 | tianggong-0086-stock-quant-shadow-audit-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
 
-## AION Factory Morning Report
+## AION 工厂晨报
 
-### 1. Active tasks
+### 1. 进行中的任务
 - aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden
 - aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence
 - aion-dgw-0049-t03-github-writeback-path: DISPATCH_HANDLE_MISSING -> verify writeback capability and auth state without printing secrets
@@ -43,7 +43,7 @@ Ledger generated at: `2026-05-10T13:50:00Z`
 - tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL
 
-### 2. Tasks stuck at ORDER_POSTED_ONLY
+### 2. 卡在仅已下令的任务
 - aion-dgw-0049-t04-status-taxonomy
 - aion-dgw-0049-t05-failure-replay-rules
 - aion-governance-0081-dispatch-treaty
@@ -52,29 +52,29 @@ Ledger generated at: `2026-05-10T13:50:00Z`
 - tianggong-0085-seekapi-growth-intel
 - tianggong-0086-stock-quant-shadow-audit-intel
 
-### 3. Tasks missing runtime handle
-- none
+### 3. 缺少执行入口的任务
+- 无
 
-### 4. Tasks missing ACK
-- none
+### 4. 缺少接单确认的任务
+- 无
 
-### 5. Tasks missing first artifact
-- none
+### 5. 缺少第一产物的任务
+- 无
 
-### 6. Tasks waiting audit
-- none
+### 6. 等待八府巡按审计的任务
+- 无
 
-### 7. Tasks ready for low-risk merge
-- none
+### 7. 可低风险合并的任务
+- 无
 
-### 8. Tasks requiring Monarch
+### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation
 - aion-dgw-0049-t02-prod-smoke-gate
 
-### 9. Tasks falsely claiming progress
-- none
+### 9. 疑似虚假进展的任务
+- 无
 
-### 10. Next 3 actions
+### 10. 下一步 3 个动作
 - aion-dgw-0049-t01-deployment-confirmation: dispatch to 007 only after runtime handle is available; production deploy remains forbidden
 - aion-dgw-0049-t02-prod-smoke-gate: define read-only PROD-SMOKE evidence gate; no production PASS without evidence
 - aion-dgw-0049-t03-github-writeback-path: verify writeback capability and auth state without printing secrets
