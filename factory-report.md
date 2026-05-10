@@ -1,13 +1,13 @@
 # AION 工厂报告
 
-生成时间：`2026-05-10T15:56:31Z`
-账本生成时间：`2026-05-10T13:50:00Z`
+生成时间：`2026-05-10T17:55:37Z`
+账本生成时间：`2026-05-10T17:55:20Z`
 
 ## 总体评分
-- 评分：23/100
+- 评分：36/100
 - 判断：工厂运转偏弱；账本显示过多任务被阻塞或缺少证据。
-- 正在推进的任务：3/13
-- 卡住/仅下令/阻塞任务：10
+- 正在推进的任务：5/14
+- 卡住/仅下令/阻塞任务：9
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -21,9 +21,10 @@
 | aion-governance-0087-autonomous-authorization-council | ORDER_POSTED_ONLY | gm2 | bafuxunan | connect authorization levels to merge_authorization ledger gate |
 | aion-governance-0089-factory-kernel-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | continue v0.2 real ledger integration in #91 and audit runtime recovery in #92 |
 | tianggong-0083-m31-plus-parent | MERGED_LOW_RISK | gm2 | bafuxunan | drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution |
-| tianggong-0084-universal-evaluation-rubric | ORDER_POSTED_ONLY | gm2 | bafuxunan | create machine-checkable universal evaluation schema/checker/fixtures before P1 intel scoring |
+| tianggong-0084-universal-evaluation-rubric | MERGED_LOW_RISK | gm2 | bafuxunan | #84 merged; use universal evaluation checker for #85/#86 read-only intel records |
 | tianggong-0085-seekapi-growth-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute |
 | tianggong-0086-stock-quant-shadow-audit-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials |
+| tianggong-0105-coding-agent-adapter | MERGED_LOW_RISK | gm2 | bafuxunan | PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization. |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
 
 ## AION 工厂晨报
@@ -38,9 +39,10 @@
 - aion-governance-0087-autonomous-authorization-council: ORDER_POSTED_ONLY -> connect authorization levels to merge_authorization ledger gate
 - aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92
 - tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution
-- tianggong-0084-universal-evaluation-rubric: ORDER_POSTED_ONLY -> create machine-checkable universal evaluation schema/checker/fixtures before P1 intel scoring
+- tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records
 - tianggong-0085-seekapi-growth-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute
 - tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials
+- tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL
 
 ### 2. 卡在仅已下令的任务
@@ -48,7 +50,6 @@
 - aion-dgw-0049-t05-failure-replay-rules
 - aion-governance-0081-dispatch-treaty
 - aion-governance-0087-autonomous-authorization-council
-- tianggong-0084-universal-evaluation-rubric
 - tianggong-0085-seekapi-growth-intel
 - tianggong-0086-stock-quant-shadow-audit-intel
 
@@ -65,7 +66,7 @@
 - 无
 
 ### 7. 可低风险合并的任务
-- 无
+- tianggong-0084-universal-evaluation-rubric
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation
