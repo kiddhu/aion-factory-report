@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-10T17:55:37Z`
-账本生成时间：`2026-05-10T17:55:20Z`
+生成时间：`2026-05-10T18:26:06Z`
+账本生成时间：`2026-05-10T18:11:09Z`
 
 ## 总体评分
-- 评分：36/100
+- 评分：47/100
 - 判断：工厂运转偏弱；账本显示过多任务被阻塞或缺少证据。
-- 正在推进的任务：5/14
+- 正在推进的任务：8/17
 - 卡住/仅下令/阻塞任务：9
 
 ## 当前任务进度
@@ -17,8 +17,8 @@
 | aion-dgw-0049-t03-github-writeback-path | DISPATCH_HANDLE_MISSING | agent007 | bafuxunan | verify writeback capability and auth state without printing secrets |
 | aion-dgw-0049-t04-status-taxonomy | ORDER_POSTED_ONLY | agent007 | bafuxunan | convert taxonomy into governance PR/checker evidence |
 | aion-dgw-0049-t05-failure-replay-rules | ORDER_POSTED_ONLY | agent007 | bafuxunan | convert failure classes into governance PR/checker evidence |
-| aion-governance-0081-dispatch-treaty | ORDER_POSTED_ONLY | gm2 | bafuxunan | connect Dispatch Treaty statuses to Factory Kernel checker |
-| aion-governance-0087-autonomous-authorization-council | ORDER_POSTED_ONLY | gm2 | bafuxunan | connect authorization levels to merge_authorization ledger gate |
+| aion-governance-0081-dispatch-treaty | ORDER_POSTED_ONLY | gm2 | bafuxunan | Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists |
+| aion-governance-0087-autonomous-authorization-council | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | connect authorization levels to merge_authorization ledger gate |
 | aion-governance-0089-factory-kernel-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | continue v0.2 real ledger integration in #91 and audit runtime recovery in #92 |
 | tianggong-0083-m31-plus-parent | MERGED_LOW_RISK | gm2 | bafuxunan | drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution |
 | tianggong-0084-universal-evaluation-rubric | MERGED_LOW_RISK | gm2 | bafuxunan | #84 merged; use universal evaluation checker for #85/#86 read-only intel records |
@@ -26,6 +26,9 @@
 | tianggong-0086-stock-quant-shadow-audit-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials |
 | tianggong-0105-coding-agent-adapter | MERGED_LOW_RISK | gm2 | bafuxunan | PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization. |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
+| aion-governance-0090-factory-kernel-v0-1-pr | MERGED_LOW_RISK | gm2 | bafuxunan | superseded by #89 Factory Kernel v0.2 live-ledger takeover |
+| seekapi-0032-payment-credits-webhook-contract | NEEDS_MONARCH | gm | bafuxunan | high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization |
+| aion-governance-0089-factory-kernel-v0-2-live-ledger | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops |
 
 ## AION 工厂晨报
 
@@ -35,8 +38,8 @@
 - aion-dgw-0049-t03-github-writeback-path: DISPATCH_HANDLE_MISSING -> verify writeback capability and auth state without printing secrets
 - aion-dgw-0049-t04-status-taxonomy: ORDER_POSTED_ONLY -> convert taxonomy into governance PR/checker evidence
 - aion-dgw-0049-t05-failure-replay-rules: ORDER_POSTED_ONLY -> convert failure classes into governance PR/checker evidence
-- aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> connect Dispatch Treaty statuses to Factory Kernel checker
-- aion-governance-0087-autonomous-authorization-council: ORDER_POSTED_ONLY -> connect authorization levels to merge_authorization ledger gate
+- aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists
+- aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate
 - aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92
 - tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution
 - tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records
@@ -44,12 +47,14 @@
 - tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials
 - tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL
+- aion-governance-0090-factory-kernel-v0-1-pr: MERGED_LOW_RISK -> superseded by #89 Factory Kernel v0.2 live-ledger takeover
+- seekapi-0032-payment-credits-webhook-contract: NEEDS_MONARCH -> high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization
+- aion-governance-0089-factory-kernel-v0-2-live-ledger: MERGED_LOW_RISK -> post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops
 
 ### 2. 卡在仅已下令的任务
 - aion-dgw-0049-t04-status-taxonomy
 - aion-dgw-0049-t05-failure-replay-rules
 - aion-governance-0081-dispatch-treaty
-- aion-governance-0087-autonomous-authorization-council
 - tianggong-0085-seekapi-growth-intel
 - tianggong-0086-stock-quant-shadow-audit-intel
 
@@ -67,10 +72,12 @@
 
 ### 7. 可低风险合并的任务
 - tianggong-0084-universal-evaluation-rubric
+- aion-governance-0089-factory-kernel-v0-2-live-ledger
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation
 - aion-dgw-0049-t02-prod-smoke-gate
+- seekapi-0032-payment-credits-webhook-contract
 
 ### 9. 疑似虚假进展的任务
 - 无

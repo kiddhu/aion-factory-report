@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-10T17:55:37Z",
-  "ledger_generated_at": "2026-05-10T17:55:20Z",
+  "generated_at": "2026-05-10T18:26:06Z",
+  "ledger_generated_at": "2026-05-10T18:11:09Z",
   "project_filter": null,
   "score": {
-    "score": 36,
+    "score": 47,
     "max_score": 100,
-    "total_tasks": 14,
-    "moving_tasks": 5,
+    "total_tasks": 17,
+    "moving_tasks": 8,
     "stalled_or_order_only_tasks": 9,
     "false_progress_penalty": 0,
     "verdict": "工厂运转偏弱；账本显示过多任务被阻塞或缺少证据。"
@@ -89,18 +89,18 @@
       "first_artifact": null,
       "pr": null,
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/81",
-      "next_gate": "connect Dispatch Treaty statuses to Factory Kernel checker"
+      "next_gate": "Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists"
     },
     {
       "task_id": "aion-governance-0087-autonomous-authorization-council",
       "project_id": "aion-governance",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "FIRST_ARTIFACT_SEEN",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
-      "first_artifact": null,
-      "pr": null,
+      "runtime_handle": "branch:governance/autonomous-authorization-council-v1",
+      "ack_at": "2026-05-10T18:11:09Z",
+      "first_artifact": "PR #88 autonomous authorization council v1",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/88",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/87",
       "next_gate": "connect authorization levels to merge_authorization ledger gate"
     },
@@ -194,6 +194,45 @@
       "pr": "https://github.com/kiddhu/aion-governance/pull/98",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/97",
       "next_gate": "daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL"
+    },
+    {
+      "task_id": "aion-governance-0090-factory-kernel-v0-1-pr",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/factory-kernel-v0-1",
+      "ack_at": "2026-05-10T00:00:00Z",
+      "first_artifact": "Factory Kernel v0.1 schema/checker/evidence seed merged",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/90",
+      "source_issue": "https://github.com/kiddhu/aion-governance/pull/90",
+      "next_gate": "superseded by #89 Factory Kernel v0.2 live-ledger takeover"
+    },
+    {
+      "task_id": "seekapi-0032-payment-credits-webhook-contract",
+      "project_id": "seekapi",
+      "status": "NEEDS_MONARCH",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": null,
+      "ack_at": null,
+      "first_artifact": null,
+      "pr": null,
+      "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/32",
+      "next_gate": "high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization"
+    },
+    {
+      "task_id": "aion-governance-0089-factory-kernel-v0-2-live-ledger",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:factory/issue-89-kernel-v02-live-ledger",
+      "ack_at": "2026-05-10T18:11:09Z",
+      "first_artifact": "tests/test_aion_factory_kernel_live_ledger.py and live ledger/index updates",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/109",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
+      "next_gate": "post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops"
     }
   ],
   "sections": {
@@ -203,21 +242,23 @@
       "aion-dgw-0049-t03-github-writeback-path: DISPATCH_HANDLE_MISSING -> verify writeback capability and auth state without printing secrets",
       "aion-dgw-0049-t04-status-taxonomy: ORDER_POSTED_ONLY -> convert taxonomy into governance PR/checker evidence",
       "aion-dgw-0049-t05-failure-replay-rules: ORDER_POSTED_ONLY -> convert failure classes into governance PR/checker evidence",
-      "aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> connect Dispatch Treaty statuses to Factory Kernel checker",
-      "aion-governance-0087-autonomous-authorization-council: ORDER_POSTED_ONLY -> connect authorization levels to merge_authorization ledger gate",
+      "aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists",
+      "aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate",
       "aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
       "tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
       "tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records",
       "tianggong-0085-seekapi-growth-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute",
       "tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials",
       "tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.",
-      "aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL"
+      "aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL",
+      "aion-governance-0090-factory-kernel-v0-1-pr: MERGED_LOW_RISK -> superseded by #89 Factory Kernel v0.2 live-ledger takeover",
+      "seekapi-0032-payment-credits-webhook-contract: NEEDS_MONARCH -> high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization",
+      "aion-governance-0089-factory-kernel-v0-2-live-ledger: MERGED_LOW_RISK -> post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops"
     ],
     "tasks_stuck_at_order_posted_only": [
       "aion-dgw-0049-t04-status-taxonomy",
       "aion-dgw-0049-t05-failure-replay-rules",
       "aion-governance-0081-dispatch-treaty",
-      "aion-governance-0087-autonomous-authorization-council",
       "tianggong-0085-seekapi-growth-intel",
       "tianggong-0086-stock-quant-shadow-audit-intel"
     ],
@@ -226,11 +267,13 @@
     "tasks_missing_first_artifact": [],
     "tasks_waiting_audit": [],
     "tasks_ready_for_low_risk_merge": [
-      "tianggong-0084-universal-evaluation-rubric"
+      "tianggong-0084-universal-evaluation-rubric",
+      "aion-governance-0089-factory-kernel-v0-2-live-ledger"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
-      "aion-dgw-0049-t02-prod-smoke-gate"
+      "aion-dgw-0049-t02-prod-smoke-gate",
+      "seekapi-0032-payment-credits-webhook-contract"
     ],
     "tasks_falsely_claiming_progress": [],
     "next_3_actions": [
