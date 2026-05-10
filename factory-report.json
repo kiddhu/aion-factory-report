@@ -1,14 +1,14 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-10T15:56:31Z",
-  "ledger_generated_at": "2026-05-10T13:50:00Z",
+  "generated_at": "2026-05-10T17:55:37Z",
+  "ledger_generated_at": "2026-05-10T17:55:20Z",
   "project_filter": null,
   "score": {
-    "score": 23,
+    "score": 36,
     "max_score": 100,
-    "total_tasks": 13,
-    "moving_tasks": 3,
-    "stalled_or_order_only_tasks": 10,
+    "total_tasks": 14,
+    "moving_tasks": 5,
+    "stalled_or_order_only_tasks": 9,
     "false_progress_penalty": 0,
     "verdict": "工厂运转偏弱；账本显示过多任务被阻塞或缺少证据。"
   },
@@ -133,15 +133,15 @@
     {
       "task_id": "tianggong-0084-universal-evaluation-rubric",
       "project_id": "tianggong-si",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "MERGED_LOW_RISK",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
-      "first_artifact": null,
-      "pr": null,
+      "runtime_handle": "branch:tianggong/issue-84-universal-evaluation",
+      "ack_at": "2026-05-10T17:00:00Z",
+      "first_artifact": "scripts/tianggong_universal_evaluation_check.py",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/101",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/84",
-      "next_gate": "create machine-checkable universal evaluation schema/checker/fixtures before P1 intel scoring"
+      "next_gate": "#84 merged; use universal evaluation checker for #85/#86 read-only intel records"
     },
     {
       "task_id": "tianggong-0085-seekapi-growth-intel",
@@ -170,6 +170,19 @@
       "next_gate": "wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials"
     },
     {
+      "task_id": "tianggong-0105-coding-agent-adapter",
+      "project_id": "tianggong-si",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:tianggong/issue-105-coding-agent-adapter",
+      "ack_at": "2026-05-10T17:43:00Z",
+      "first_artifact": "projects/tianggong-si/adapters/unified-coding-agent-adapter-v1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/106",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/105",
+      "next_gate": "PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization."
+    },
+    {
       "task_id": "aion-governance-0097-factory-report-dashboard",
       "project_id": "aion-governance",
       "status": "MERGED_LOW_RISK",
@@ -194,9 +207,10 @@
       "aion-governance-0087-autonomous-authorization-council: ORDER_POSTED_ONLY -> connect authorization levels to merge_authorization ledger gate",
       "aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
       "tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
-      "tianggong-0084-universal-evaluation-rubric: ORDER_POSTED_ONLY -> create machine-checkable universal evaluation schema/checker/fixtures before P1 intel scoring",
+      "tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records",
       "tianggong-0085-seekapi-growth-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute",
       "tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials",
+      "tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.",
       "aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL"
     ],
     "tasks_stuck_at_order_posted_only": [
@@ -204,7 +218,6 @@
       "aion-dgw-0049-t05-failure-replay-rules",
       "aion-governance-0081-dispatch-treaty",
       "aion-governance-0087-autonomous-authorization-council",
-      "tianggong-0084-universal-evaluation-rubric",
       "tianggong-0085-seekapi-growth-intel",
       "tianggong-0086-stock-quant-shadow-audit-intel"
     ],
@@ -212,7 +225,9 @@
     "tasks_missing_ack": [],
     "tasks_missing_first_artifact": [],
     "tasks_waiting_audit": [],
-    "tasks_ready_for_low_risk_merge": [],
+    "tasks_ready_for_low_risk_merge": [
+      "tianggong-0084-universal-evaluation-rubric"
+    ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
       "aion-dgw-0049-t02-prod-smoke-gate"
