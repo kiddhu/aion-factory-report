@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-10T18:47:17Z`
-账本生成时间：`2026-05-10T18:41:20Z`
+生成时间：`2026-05-11T02:19:18Z`
+账本生成时间：`2026-05-11T02:18:22Z`
 
 ## 总体评分
-- 评分：57/100
+- 评分：59/100
 - 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
-- 正在推进的任务：12/21
+- 正在推进的任务：13/22
 - 卡住/仅下令/阻塞任务：9
 
 ## v0.3 低风险闭环
@@ -14,6 +14,11 @@
 - 已关闭闭环：3
 - 已登记闭环：3
 - 剩余闭环：0
+
+## v0.4 失败分类与重放
+- 已分类候选：7
+- 可自动重放候选：6
+- 需要 Monarch 拍板候选：1
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -39,6 +44,7 @@
 | aion-governance-0089-v03-loop2-state-fixtures | MERGED_LOW_RISK | gm2 | bafuxunan | Loop 2 closed; use failure classes as v0.4 replay candidates. |
 | aion-governance-0089-v03-loop3-report-summary | MERGED_LOW_RISK | gm2 | bafuxunan | Loop 3 closed; v0.3 final closeout and public Factory Report sync. |
 | aion-governance-0089-factory-kernel-v0-3-low-risk-loops | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | final closeout PR, CI, audit, merge, public report verification |
+| aion-governance-0089-factory-kernel-v0-4-failure-replay | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen |
 
 ## AION 工厂晨报
 
@@ -64,6 +70,7 @@
 - aion-governance-0089-v03-loop2-state-fixtures: MERGED_LOW_RISK -> Loop 2 closed; use failure classes as v0.4 replay candidates.
 - aion-governance-0089-v03-loop3-report-summary: MERGED_LOW_RISK -> Loop 3 closed; v0.3 final closeout and public Factory Report sync.
 - aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification
+- aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen
 
 ### 2. 卡在仅已下令的任务
 - aion-dgw-0049-t04-status-taxonomy

@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-10T18:47:17Z",
-  "ledger_generated_at": "2026-05-10T18:41:20Z",
+  "generated_at": "2026-05-11T02:19:18Z",
+  "ledger_generated_at": "2026-05-11T02:18:22Z",
   "project_filter": null,
   "score": {
-    "score": 57,
+    "score": 59,
     "max_score": 100,
-    "total_tasks": 21,
-    "moving_tasks": 12,
+    "total_tasks": 22,
+    "moving_tasks": 13,
     "stalled_or_order_only_tasks": 9,
     "false_progress_penalty": 0,
     "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
@@ -27,6 +27,21 @@
       "aion-governance-0089-v03-loop1-packet-template",
       "aion-governance-0089-v03-loop2-state-fixtures",
       "aion-governance-0089-v03-loop3-report-summary"
+    ]
+  },
+  "failure_replay_summary": {
+    "title": "v0.4 失败分类与重放",
+    "classified_candidates": 7,
+    "auto_replay_candidates": 6,
+    "monarch_gated_candidates": 1,
+    "candidate_task_ids": [
+      "aion-dgw-0049-t03-github-writeback-path",
+      "aion-dgw-0049-t04-status-taxonomy",
+      "aion-dgw-0049-t05-failure-replay-rules",
+      "aion-governance-0081-dispatch-treaty",
+      "tianggong-0085-seekapi-growth-intel",
+      "tianggong-0086-stock-quant-shadow-audit-intel",
+      "seekapi-0032-payment-credits-webhook-contract"
     ]
   },
   "progress": [
@@ -302,6 +317,19 @@
       "pr": null,
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
       "next_gate": "final closeout PR, CI, audit, merge, public report verification"
+    },
+    {
+      "task_id": "aion-governance-0089-factory-kernel-v0-4-failure-replay",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:factory/issue-89-v04-failure-replay",
+      "ack_at": "2026-05-11T02:11:36Z",
+      "first_artifact": "factory/kernel/failure-replay-policy-v0.4.json + scripts/aion_failure_replay_check.py",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/116",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
+      "next_gate": "v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen"
     }
   ],
   "sections": {
@@ -326,7 +354,8 @@
       "aion-governance-0089-v03-loop1-packet-template: MERGED_LOW_RISK -> Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay.",
       "aion-governance-0089-v03-loop2-state-fixtures: MERGED_LOW_RISK -> Loop 2 closed; use failure classes as v0.4 replay candidates.",
       "aion-governance-0089-v03-loop3-report-summary: MERGED_LOW_RISK -> Loop 3 closed; v0.3 final closeout and public Factory Report sync.",
-      "aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification"
+      "aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification",
+      "aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen"
     ],
     "tasks_stuck_at_order_posted_only": [
       "aion-dgw-0049-t04-status-taxonomy",
