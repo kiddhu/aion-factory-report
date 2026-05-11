@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T03:49:44Z`
-账本生成时间：`2026-05-11T03:38:39Z`
+生成时间：`2026-05-11T04:21:50Z`
+账本生成时间：`2026-05-11T04:16:40Z`
 
 ## 总体评分
-- 评分：79/100
-- 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
-- 正在推进的任务：19/24
+- 评分：80/100
+- 判断：工厂运转良好，证据覆盖较强。
+- 正在推进的任务：20/25
 - 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
@@ -24,10 +24,14 @@
 - 已恢复候选：6
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
-## AION Board v0.1 / 董事局裁决
-- 已登记裁决：1
-- 裁决分布：{'AUTO_PROCEED_WITH_AUDIT': 1}
-- 裁决任务：aion-governance-0123-board-v0-1-protocol
+## AION Board v0.2 / 董事局自动裁决门禁
+- 已登记裁决：2
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 2, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 高风险被拦截：0
+- 裁决后已派工：2
+- 裁决后未派工：0
+- 超预算裁决：0
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -56,6 +60,7 @@
 | aion-governance-0089-factory-kernel-v0-4-failure-replay | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen |
 | aion-governance-0089-factory-kernel-v0-4-1-replay-recovery | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization |
 | aion-governance-0123-board-v0-1-protocol | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization. |
+| aion-governance-0126-board-v0-2-auto-proceed-gate | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated |
 
 ## AION 工厂晨报
 
@@ -84,6 +89,7 @@
 - aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen
 - aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization
 - aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.
+- aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated
 
 ### 2. 卡在仅已下令的任务
 - 无
