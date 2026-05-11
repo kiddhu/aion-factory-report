@@ -1,14 +1,14 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T02:19:18Z",
-  "ledger_generated_at": "2026-05-11T02:18:22Z",
+  "generated_at": "2026-05-11T02:38:50Z",
+  "ledger_generated_at": "2026-05-11T02:38:39Z",
   "project_filter": null,
   "score": {
-    "score": 59,
+    "score": 70,
     "max_score": 100,
-    "total_tasks": 22,
-    "moving_tasks": 13,
-    "stalled_or_order_only_tasks": 9,
+    "total_tasks": 23,
+    "moving_tasks": 16,
+    "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
   },
@@ -31,17 +31,23 @@
   },
   "failure_replay_summary": {
     "title": "v0.4 失败分类与重放",
-    "classified_candidates": 7,
-    "auto_replay_candidates": 6,
-    "monarch_gated_candidates": 1,
+    "classified_candidates": 3,
+    "auto_replay_candidates": 0,
+    "monarch_gated_candidates": 3,
     "candidate_task_ids": [
+      "aion-dgw-0049-t01-deployment-confirmation",
+      "aion-dgw-0049-t02-prod-smoke-gate",
+      "seekapi-0032-payment-credits-webhook-contract"
+    ],
+    "v041_recovered_candidates": 7,
+    "v041_recovered_task_ids": [
       "aion-dgw-0049-t03-github-writeback-path",
       "aion-dgw-0049-t04-status-taxonomy",
       "aion-dgw-0049-t05-failure-replay-rules",
       "aion-governance-0081-dispatch-treaty",
       "tianggong-0085-seekapi-growth-intel",
       "tianggong-0086-stock-quant-shadow-audit-intel",
-      "seekapi-0032-payment-credits-webhook-contract"
+      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery"
     ]
   },
   "progress": [
@@ -74,54 +80,54 @@
     {
       "task_id": "aion-dgw-0049-t03-github-writeback-path",
       "project_id": "deepseek-global-wrapper",
-      "status": "DISPATCH_HANDLE_MISSING",
+      "status": "FIRST_ARTIFACT_SEEN",
       "owner": "agent007",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
-      "first_artifact": null,
-      "pr": null,
+      "runtime_handle": "github-comment:https://github.com/AION-Empire/deepseek-global-wrapper/issues/49#issuecomment-4417129783",
+      "ack_at": "2026-05-11T02:33:32Z",
+      "first_artifact": "GitHub writeback verified by v0.4.1 recovery comment; no secrets printed",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "verify writeback capability and auth state without printing secrets"
+      "next_gate": "writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade"
     },
     {
       "task_id": "aion-dgw-0049-t04-status-taxonomy",
       "project_id": "deepseek-global-wrapper",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "DISPATCHED_TO_RUNTIME",
       "owner": "agent007",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
+      "runtime_handle": "github-comment:https://github.com/AION-Empire/deepseek-global-wrapper/issues/49#issuecomment-4417129783",
+      "ack_at": "2026-05-11T02:33:32Z",
       "first_artifact": null,
-      "pr": null,
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "convert taxonomy into governance PR/checker evidence"
+      "next_gate": "create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation"
     },
     {
       "task_id": "aion-dgw-0049-t05-failure-replay-rules",
       "project_id": "deepseek-global-wrapper",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "MERGED_LOW_RISK",
       "owner": "agent007",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
-      "first_artifact": null,
-      "pr": null,
+      "runtime_handle": "branch:factory/issue-89-v04-failure-replay",
+      "ack_at": "2026-05-11T02:11:36Z",
+      "first_artifact": "factory/kernel/failure-replay-policy-v0.4.json + scripts/aion_failure_replay_check.py",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/116",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "convert failure classes into governance PR/checker evidence"
+      "next_gate": "v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen"
     },
     {
       "task_id": "aion-governance-0081-dispatch-treaty",
       "project_id": "aion-governance",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "DISPATCHED_TO_RUNTIME",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
+      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/81#issuecomment-4417129838",
+      "ack_at": "2026-05-11T02:33:32Z",
       "first_artifact": null,
-      "pr": null,
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/81",
-      "next_gate": "Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists"
+      "next_gate": "convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops"
     },
     {
       "task_id": "aion-governance-0087-autonomous-authorization-council",
@@ -178,28 +184,28 @@
     {
       "task_id": "tianggong-0085-seekapi-growth-intel",
       "project_id": "tianggong-si",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "DISPATCHED_TO_RUNTIME",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
+      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/85#issuecomment-4417129912",
+      "ack_at": "2026-05-11T02:33:32Z",
       "first_artifact": null,
-      "pr": null,
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/85",
-      "next_gate": "wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute"
+      "next_gate": "create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API"
     },
     {
       "task_id": "tianggong-0086-stock-quant-shadow-audit-intel",
       "project_id": "tianggong-si",
-      "status": "ORDER_POSTED_ONLY",
+      "status": "DISPATCHED_TO_RUNTIME",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": null,
-      "ack_at": null,
+      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/86#issuecomment-4417129958",
+      "ack_at": "2026-05-11T02:33:32Z",
       "first_artifact": null,
-      "pr": null,
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/86",
-      "next_gate": "wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials"
+      "next_gate": "create public read-only stock/quant/shadow-audit OSS intel records using #84 rubric; no trading/credentials"
     },
     {
       "task_id": "tianggong-0105-coding-agent-adapter",
@@ -330,22 +336,35 @@
       "pr": "https://github.com/kiddhu/aion-governance/pull/116",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
       "next_gate": "v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen"
+    },
+    {
+      "task_id": "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:factory/issue-89-v041-replay-recovery",
+      "ack_at": "2026-05-11T02:33:32Z",
+      "first_artifact": "factory/kernel/replay-recovery-actions-v0.4.1.json",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
+      "next_gate": "v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization"
     }
   ],
   "sections": {
     "active_tasks": [
       "aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden",
       "aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence",
-      "aion-dgw-0049-t03-github-writeback-path: DISPATCH_HANDLE_MISSING -> verify writeback capability and auth state without printing secrets",
-      "aion-dgw-0049-t04-status-taxonomy: ORDER_POSTED_ONLY -> convert taxonomy into governance PR/checker evidence",
-      "aion-dgw-0049-t05-failure-replay-rules: ORDER_POSTED_ONLY -> convert failure classes into governance PR/checker evidence",
-      "aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists",
+      "aion-dgw-0049-t03-github-writeback-path: FIRST_ARTIFACT_SEEN -> writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade",
+      "aion-dgw-0049-t04-status-taxonomy: DISPATCHED_TO_RUNTIME -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation",
+      "aion-dgw-0049-t05-failure-replay-rules: MERGED_LOW_RISK -> v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen",
+      "aion-governance-0081-dispatch-treaty: DISPATCHED_TO_RUNTIME -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops",
       "aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate",
       "aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
       "tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
       "tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records",
-      "tianggong-0085-seekapi-growth-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute",
-      "tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials",
+      "tianggong-0085-seekapi-growth-intel: DISPATCHED_TO_RUNTIME -> create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API",
+      "tianggong-0086-stock-quant-shadow-audit-intel: DISPATCHED_TO_RUNTIME -> create public read-only stock/quant/shadow-audit OSS intel records using #84 rubric; no trading/credentials",
       "tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.",
       "aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL",
       "aion-governance-0090-factory-kernel-v0-1-pr: MERGED_LOW_RISK -> superseded by #89 Factory Kernel v0.2 live-ledger takeover",
@@ -355,15 +374,10 @@
       "aion-governance-0089-v03-loop2-state-fixtures: MERGED_LOW_RISK -> Loop 2 closed; use failure classes as v0.4 replay candidates.",
       "aion-governance-0089-v03-loop3-report-summary: MERGED_LOW_RISK -> Loop 3 closed; v0.3 final closeout and public Factory Report sync.",
       "aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification",
-      "aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen"
+      "aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen",
+      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization"
     ],
-    "tasks_stuck_at_order_posted_only": [
-      "aion-dgw-0049-t04-status-taxonomy",
-      "aion-dgw-0049-t05-failure-replay-rules",
-      "aion-governance-0081-dispatch-treaty",
-      "tianggong-0085-seekapi-growth-intel",
-      "tianggong-0086-stock-quant-shadow-audit-intel"
-    ],
+    "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
     "tasks_missing_ack": [],
     "tasks_missing_first_artifact": [],
@@ -384,7 +398,7 @@
     "next_3_actions": [
       "aion-dgw-0049-t01-deployment-confirmation: dispatch to 007 only after runtime handle is available; production deploy remains forbidden",
       "aion-dgw-0049-t02-prod-smoke-gate: define read-only PROD-SMOKE evidence gate; no production PASS without evidence",
-      "aion-dgw-0049-t03-github-writeback-path: verify writeback capability and auth state without printing secrets"
+      "tianggong-0084-universal-evaluation-rubric: #84 merged; use universal evaluation checker for #85/#86 read-only intel records"
     ]
   }
 }

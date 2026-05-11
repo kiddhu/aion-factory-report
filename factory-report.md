@@ -1,13 +1,13 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T02:19:18Z`
-账本生成时间：`2026-05-11T02:18:22Z`
+生成时间：`2026-05-11T02:38:50Z`
+账本生成时间：`2026-05-11T02:38:39Z`
 
 ## 总体评分
-- 评分：59/100
+- 评分：70/100
 - 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
-- 正在推进的任务：13/22
-- 卡住/仅下令/阻塞任务：9
+- 正在推进的任务：16/23
+- 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
 - 目标闭环：3
@@ -16,25 +16,29 @@
 - 剩余闭环：0
 
 ## v0.4 失败分类与重放
-- 已分类候选：7
-- 可自动重放候选：6
-- 需要 Monarch 拍板候选：1
+- 已分类候选：3
+- 可自动重放候选：0
+- 需要 Monarch 拍板候选：3
+
+## v0.4.1 低风险 replay 恢复
+- 已恢复候选：7
+- 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel, aion-governance-0089-factory-kernel-v0-4-1-replay-recovery
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
 |---|---:|---|---|---|
 | aion-dgw-0049-t01-deployment-confirmation | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | dispatch to 007 only after runtime handle is available; production deploy remains forbidden |
 | aion-dgw-0049-t02-prod-smoke-gate | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | define read-only PROD-SMOKE evidence gate; no production PASS without evidence |
-| aion-dgw-0049-t03-github-writeback-path | DISPATCH_HANDLE_MISSING | agent007 | bafuxunan | verify writeback capability and auth state without printing secrets |
-| aion-dgw-0049-t04-status-taxonomy | ORDER_POSTED_ONLY | agent007 | bafuxunan | convert taxonomy into governance PR/checker evidence |
-| aion-dgw-0049-t05-failure-replay-rules | ORDER_POSTED_ONLY | agent007 | bafuxunan | convert failure classes into governance PR/checker evidence |
-| aion-governance-0081-dispatch-treaty | ORDER_POSTED_ONLY | gm2 | bafuxunan | Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists |
+| aion-dgw-0049-t03-github-writeback-path | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade |
+| aion-dgw-0049-t04-status-taxonomy | DISPATCHED_TO_RUNTIME | agent007 | bafuxunan | create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation |
+| aion-dgw-0049-t05-failure-replay-rules | MERGED_LOW_RISK | agent007 | bafuxunan | v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen |
+| aion-governance-0081-dispatch-treaty | DISPATCHED_TO_RUNTIME | gm2 | bafuxunan | convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops |
 | aion-governance-0087-autonomous-authorization-council | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | connect authorization levels to merge_authorization ledger gate |
 | aion-governance-0089-factory-kernel-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | continue v0.2 real ledger integration in #91 and audit runtime recovery in #92 |
 | tianggong-0083-m31-plus-parent | MERGED_LOW_RISK | gm2 | bafuxunan | drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution |
 | tianggong-0084-universal-evaluation-rubric | MERGED_LOW_RISK | gm2 | bafuxunan | #84 merged; use universal evaluation checker for #85/#86 read-only intel records |
-| tianggong-0085-seekapi-growth-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute |
-| tianggong-0086-stock-quant-shadow-audit-intel | ORDER_POSTED_ONLY | gm2 | bafuxunan | wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials |
+| tianggong-0085-seekapi-growth-intel | DISPATCHED_TO_RUNTIME | gm2 | bafuxunan | create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API |
+| tianggong-0086-stock-quant-shadow-audit-intel | DISPATCHED_TO_RUNTIME | gm2 | bafuxunan | create public read-only stock/quant/shadow-audit OSS intel records using #84 rubric; no trading/credentials |
 | tianggong-0105-coding-agent-adapter | MERGED_LOW_RISK | gm2 | bafuxunan | PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization. |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
 | aion-governance-0090-factory-kernel-v0-1-pr | MERGED_LOW_RISK | gm2 | bafuxunan | superseded by #89 Factory Kernel v0.2 live-ledger takeover |
@@ -45,22 +49,23 @@
 | aion-governance-0089-v03-loop3-report-summary | MERGED_LOW_RISK | gm2 | bafuxunan | Loop 3 closed; v0.3 final closeout and public Factory Report sync. |
 | aion-governance-0089-factory-kernel-v0-3-low-risk-loops | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | final closeout PR, CI, audit, merge, public report verification |
 | aion-governance-0089-factory-kernel-v0-4-failure-replay | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen |
+| aion-governance-0089-factory-kernel-v0-4-1-replay-recovery | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization |
 
 ## AION 工厂晨报
 
 ### 1. 进行中的任务
 - aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden
 - aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence
-- aion-dgw-0049-t03-github-writeback-path: DISPATCH_HANDLE_MISSING -> verify writeback capability and auth state without printing secrets
-- aion-dgw-0049-t04-status-taxonomy: ORDER_POSTED_ONLY -> convert taxonomy into governance PR/checker evidence
-- aion-dgw-0049-t05-failure-replay-rules: ORDER_POSTED_ONLY -> convert failure classes into governance PR/checker evidence
-- aion-governance-0081-dispatch-treaty: ORDER_POSTED_ONLY -> Factory Kernel v0.2 must keep #81 visible as dispatch-control issue; no execution claim until runtime/ACK evidence exists
+- aion-dgw-0049-t03-github-writeback-path: FIRST_ARTIFACT_SEEN -> writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade
+- aion-dgw-0049-t04-status-taxonomy: DISPATCHED_TO_RUNTIME -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation
+- aion-dgw-0049-t05-failure-replay-rules: MERGED_LOW_RISK -> v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen
+- aion-governance-0081-dispatch-treaty: DISPATCHED_TO_RUNTIME -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops
 - aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate
 - aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92
 - tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution
 - tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records
-- tianggong-0085-seekapi-growth-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only web-wide OSS intel; no install/execute
-- tianggong-0086-stock-quant-shadow-audit-intel: ORDER_POSTED_ONLY -> wait for #84 rubric skeleton, then perform public read-only stock/quant/shadow-audit OSS intel; no trading/credentials
+- tianggong-0085-seekapi-growth-intel: DISPATCHED_TO_RUNTIME -> create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API
+- tianggong-0086-stock-quant-shadow-audit-intel: DISPATCHED_TO_RUNTIME -> create public read-only stock/quant/shadow-audit OSS intel records using #84 rubric; no trading/credentials
 - tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL
 - aion-governance-0090-factory-kernel-v0-1-pr: MERGED_LOW_RISK -> superseded by #89 Factory Kernel v0.2 live-ledger takeover
@@ -71,13 +76,10 @@
 - aion-governance-0089-v03-loop3-report-summary: MERGED_LOW_RISK -> Loop 3 closed; v0.3 final closeout and public Factory Report sync.
 - aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification
 - aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen
+- aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization
 
 ### 2. 卡在仅已下令的任务
-- aion-dgw-0049-t04-status-taxonomy
-- aion-dgw-0049-t05-failure-replay-rules
-- aion-governance-0081-dispatch-treaty
-- tianggong-0085-seekapi-growth-intel
-- tianggong-0086-stock-quant-shadow-audit-intel
+- 无
 
 ### 3. 缺少执行入口的任务
 - 无
@@ -109,4 +111,4 @@
 ### 10. 下一步 3 个动作
 - aion-dgw-0049-t01-deployment-confirmation: dispatch to 007 only after runtime handle is available; production deploy remains forbidden
 - aion-dgw-0049-t02-prod-smoke-gate: define read-only PROD-SMOKE evidence gate; no production PASS without evidence
-- aion-dgw-0049-t03-github-writeback-path: verify writeback capability and auth state without printing secrets
+- tianggong-0084-universal-evaluation-rubric: #84 merged; use universal evaluation checker for #85/#86 read-only intel records
