@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T13:59:31Z",
+  "generated_at": "2026-05-11T15:39:11Z",
   "ledger_generated_at": "2026-05-11T13:27:05Z",
   "project_filter": null,
   "score": {
     "score": 92,
     "max_score": 100,
-    "total_tasks": 37,
-    "moving_tasks": 34,
+    "total_tasks": 38,
+    "moving_tasks": 35,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -97,21 +97,21 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 14,
+    "total_board_verdicts": 15,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 14,
+      "AUTO_PROCEED_WITH_AUDIT": 15,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 14,
+    "dispatched_after_board_count": 15,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 13,
+      "gm2": 14,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -322,6 +322,19 @@
         "auto_proceed_type": null,
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0168-audit-runtime-v0-1",
+        "from_gm": "gm2",
+        "selected_option": "quality-gate-v0-1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "open Quality Gate v0.1 issue/branch/PR after Audit Runtime closeout/public report/AAR",
+        "audit_required": true,
+        "auto_proceed_type": "checker",
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -364,9 +377,9 @@
         ]
       },
       "gm2": {
-        "queued": 30,
+        "queued": 31,
         "ack_required": 0,
-        "acked": 30,
+        "acked": 31,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -401,7 +414,8 @@
           "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
           "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
           "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
-          "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion"
+          "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
+          "aion-governance-0168-audit-runtime-v0-1"
         ]
       },
       "gm": {
@@ -430,7 +444,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 34,
+    "acked_count": 35,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -444,8 +458,8 @@
     "invalid_ack_timestamp_task_ids": [],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
-    "average_ack_minutes": 0.0,
-    "average_first_artifact_minutes": 342.23
+    "average_ack_minutes": 0.03,
+    "average_first_artifact_minutes": 274.59
   },
   "dispatch_recovery_summary": {
     "title": "AION Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery",
@@ -637,6 +651,19 @@
         "explicit candidate sandbox plan from M1"
       ]
     }
+  },
+  "audit_runtime_summary": {
+    "title": "Audit Runtime v0.1 / 审计运行时",
+    "audit_queue_count": 35,
+    "audit_pending_count": 0,
+    "audit_ack_timeout_count": 0,
+    "audit_timeout_count": 0,
+    "audit_passed_count": 31,
+    "audit_blocked_count": 0,
+    "fallback_audit_count": 27,
+    "formal_bafuxunan_audit_count": 8,
+    "audit_latency_average": 84.62,
+    "audit_bottleneck_task_ids": []
   },
   "progress": [
     {
@@ -1230,6 +1257,26 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0168-audit-runtime-v0-1",
+      "project_id": "Unattended Factory Quality Phase",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "github-pr-169-merged",
+      "ack_at": "2026-05-11T14:11:00Z",
+      "first_artifact": {
+        "path": "factory/state/evidence_packets/aion-governance-0168-audit-runtime-v0-1-first-artifact.json",
+        "type": "evidence_packet",
+        "created_at": "2026-05-11T14:15:00Z"
+      },
+      "pr": "https://github.com/kiddhu/aion-governance/pull/169",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/168",
+      "next_gate": "post-merge closeout PR -> public Factory Report -> #168 AAR -> Quality Gate v0.1",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1270,7 +1317,8 @@
       "aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge",
       "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop: MERGED_LOW_RISK -> post-merge public report sync + Issue #158 AAR + structured completion packet",
       "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps: MERGED_LOW_RISK -> post-merge public report sync + Issue #161 AAR + proceed to missing first artifact and invalid GM completion packet repair",
-      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion: MERGED_LOW_RISK -> public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence"
+      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion: MERGED_LOW_RISK -> public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence",
+      "aion-governance-0168-audit-runtime-v0-1: MERGED_LOW_RISK -> post-merge closeout PR -> public Factory Report -> #168 AAR -> Quality Gate v0.1"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1290,7 +1338,8 @@
       "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
       "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
       "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
-      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion"
+      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
+      "aion-governance-0168-audit-runtime-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
