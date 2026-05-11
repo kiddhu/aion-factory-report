@@ -1,6 +1,6 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T02:38:50Z",
+  "generated_at": "2026-05-11T02:42:19Z",
   "ledger_generated_at": "2026-05-11T02:38:39Z",
   "project_filter": null,
   "score": {
@@ -39,15 +39,14 @@
       "aion-dgw-0049-t02-prod-smoke-gate",
       "seekapi-0032-payment-credits-webhook-contract"
     ],
-    "v041_recovered_candidates": 7,
+    "v041_recovered_candidates": 6,
     "v041_recovered_task_ids": [
       "aion-dgw-0049-t03-github-writeback-path",
       "aion-dgw-0049-t04-status-taxonomy",
       "aion-dgw-0049-t05-failure-replay-rules",
       "aion-governance-0081-dispatch-treaty",
       "tianggong-0085-seekapi-growth-intel",
-      "tianggong-0086-stock-quant-shadow-audit-intel",
-      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery"
+      "tianggong-0086-stock-quant-shadow-audit-intel"
     ]
   },
   "progress": [

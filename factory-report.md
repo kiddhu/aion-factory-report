@@ -1,6 +1,6 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T02:38:50Z`
+生成时间：`2026-05-11T02:42:19Z`
 账本生成时间：`2026-05-11T02:38:39Z`
 
 ## 总体评分
@@ -21,8 +21,8 @@
 - 需要 Monarch 拍板候选：3
 
 ## v0.4.1 低风险 replay 恢复
-- 已恢复候选：7
-- 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel, aion-governance-0089-factory-kernel-v0-4-1-replay-recovery
+- 已恢复候选：6
+- 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
