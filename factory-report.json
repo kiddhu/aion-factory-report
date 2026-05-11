@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T03:14:09Z",
-  "ledger_generated_at": "2026-05-11T03:14:00Z",
+  "generated_at": "2026-05-11T03:49:44Z",
+  "ledger_generated_at": "2026-05-11T03:38:39Z",
   "project_filter": null,
   "score": {
-    "score": 78,
+    "score": 79,
     "max_score": 100,
-    "total_tasks": 23,
-    "moving_tasks": 18,
+    "total_tasks": 24,
+    "moving_tasks": 19,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
@@ -49,6 +49,23 @@
       "tianggong-0086-stock-quant-shadow-audit-intel"
     ]
   },
+  "board_summary": {
+    "title": "AION Board v0.1 / 董事局裁决",
+    "total_board_verdicts": 1,
+    "verdict_counts": {
+      "AUTO_PROCEED_WITH_AUDIT": 1
+    },
+    "tasks": [
+      {
+        "task_id": "aion-governance-0123-board-v0-1-protocol",
+        "selected_option": "board-v0-1-protocol",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L0",
+        "monarch_required": false,
+        "next_action": "Open low-risk bilingual governance PR; require board verdict checker, factory state checker, CI and fallback audit before merge."
+      }
+    ]
+  },
   "progress": [
     {
       "task_id": "aion-dgw-0049-t01-deployment-confirmation",
@@ -61,7 +78,9 @@
       "first_artifact": null,
       "pr": null,
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "dispatch to 007 only after runtime handle is available; production deploy remains forbidden"
+      "next_gate": "dispatch to 007 only after runtime handle is available; production deploy remains forbidden",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-dgw-0049-t02-prod-smoke-gate",
@@ -74,7 +93,9 @@
       "first_artifact": null,
       "pr": null,
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "define read-only PROD-SMOKE evidence gate; no production PASS without evidence"
+      "next_gate": "define read-only PROD-SMOKE evidence gate; no production PASS without evidence",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-dgw-0049-t03-github-writeback-path",
@@ -87,7 +108,9 @@
       "first_artifact": "GitHub writeback verified by v0.4.1 recovery comment; no secrets printed",
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade"
+      "next_gate": "writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-dgw-0049-t04-status-taxonomy",
@@ -100,7 +123,9 @@
       "first_artifact": null,
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation"
+      "next_gate": "create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-dgw-0049-t05-failure-replay-rules",
@@ -113,7 +138,9 @@
       "first_artifact": "factory/kernel/failure-replay-policy-v0.4.json + scripts/aion_failure_replay_check.py",
       "pr": "https://github.com/kiddhu/aion-governance/pull/116",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
-      "next_gate": "v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen"
+      "next_gate": "v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0081-dispatch-treaty",
@@ -126,7 +153,9 @@
       "first_artifact": null,
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/81",
-      "next_gate": "convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops"
+      "next_gate": "convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0087-autonomous-authorization-council",
@@ -139,7 +168,9 @@
       "first_artifact": "PR #88 autonomous authorization council v1",
       "pr": "https://github.com/kiddhu/aion-governance/pull/88",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/87",
-      "next_gate": "connect authorization levels to merge_authorization ledger gate"
+      "next_gate": "connect authorization levels to merge_authorization ledger gate",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-factory-kernel-v0-1",
@@ -152,7 +183,9 @@
       "first_artifact": "Factory Kernel v0.1 merged",
       "pr": "https://github.com/kiddhu/aion-governance/pull/90",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "continue v0.2 real ledger integration in #91 and audit runtime recovery in #92"
+      "next_gate": "continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "tianggong-0083-m31-plus-parent",
@@ -165,7 +198,9 @@
       "first_artifact": "projects/tianggong-si/reports/m31-plus/factory-operating-report.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/95",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/83",
-      "next_gate": "drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution"
+      "next_gate": "drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "tianggong-0084-universal-evaluation-rubric",
@@ -178,7 +213,9 @@
       "first_artifact": "scripts/tianggong_universal_evaluation_check.py",
       "pr": "https://github.com/kiddhu/aion-governance/pull/101",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/84",
-      "next_gate": "#84 merged; use universal evaluation checker for #85/#86 read-only intel records"
+      "next_gate": "#84 merged; use universal evaluation checker for #85/#86 read-only intel records",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "tianggong-0085-seekapi-growth-intel",
@@ -191,7 +228,9 @@
       "first_artifact": "projects/tianggong-si/evaluations/seekapi-growth/v1/seekapi-growth-intel-report.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/103",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/85",
-      "next_gate": "SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization."
+      "next_gate": "SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "tianggong-0086-stock-quant-shadow-audit-intel",
@@ -204,7 +243,9 @@
       "first_artifact": "projects/tianggong-si/evaluations/stock-quant-shadow-audit/v1/stock-quant-shadow-audit-intel-report.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/104",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/86",
-      "next_gate": "Stock/quant/shadow-audit intel is merged as low-risk internal read-only asset. Any clone/install/execute, broker/data integration, trading, production use, public publishing, or production PASS requires separate Monarch authorization."
+      "next_gate": "Stock/quant/shadow-audit intel is merged as low-risk internal read-only asset. Any clone/install/execute, broker/data integration, trading, production use, public publishing, or production PASS requires separate Monarch authorization.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "tianggong-0105-coding-agent-adapter",
@@ -217,7 +258,9 @@
       "first_artifact": "projects/tianggong-si/adapters/unified-coding-agent-adapter-v1.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/106",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/105",
-      "next_gate": "PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization."
+      "next_gate": "PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0097-factory-report-dashboard",
@@ -230,7 +273,9 @@
       "first_artifact": "docs/factory-report/index.html",
       "pr": "https://github.com/kiddhu/aion-governance/pull/98",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/97",
-      "next_gate": "daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL"
+      "next_gate": "daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0090-factory-kernel-v0-1-pr",
@@ -243,7 +288,9 @@
       "first_artifact": "Factory Kernel v0.1 schema/checker/evidence seed merged",
       "pr": "https://github.com/kiddhu/aion-governance/pull/90",
       "source_issue": "https://github.com/kiddhu/aion-governance/pull/90",
-      "next_gate": "superseded by #89 Factory Kernel v0.2 live-ledger takeover"
+      "next_gate": "superseded by #89 Factory Kernel v0.2 live-ledger takeover",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "seekapi-0032-payment-credits-webhook-contract",
@@ -256,7 +303,9 @@
       "first_artifact": null,
       "pr": null,
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/32",
-      "next_gate": "high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization"
+      "next_gate": "high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-factory-kernel-v0-2-live-ledger",
@@ -269,7 +318,9 @@
       "first_artifact": "tests/test_aion_factory_kernel_live_ledger.py and live ledger/index updates",
       "pr": "https://github.com/kiddhu/aion-governance/pull/109",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops"
+      "next_gate": "post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-v03-loop1-packet-template",
@@ -282,7 +333,9 @@
       "first_artifact": "factory/kernel/templates/low-risk-loop-task-packet-v0.3.json",
       "pr": "https://github.com/kiddhu/aion-governance/pull/111",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay."
+      "next_gate": "Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-v03-loop2-state-fixtures",
@@ -295,7 +348,9 @@
       "first_artifact": "factory/kernel/examples/low-risk-loop-state-machine-v0.3.json",
       "pr": "https://github.com/kiddhu/aion-governance/pull/112",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "Loop 2 closed; use failure classes as v0.4 replay candidates."
+      "next_gate": "Loop 2 closed; use failure classes as v0.4 replay candidates.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-v03-loop3-report-summary",
@@ -308,7 +363,9 @@
       "first_artifact": "scripts/aion_factory_morning_report.py",
       "pr": "https://github.com/kiddhu/aion-governance/pull/113",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "Loop 3 closed; v0.3 final closeout and public Factory Report sync."
+      "next_gate": "Loop 3 closed; v0.3 final closeout and public Factory Report sync.",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
@@ -321,7 +378,9 @@
       "first_artifact": "docs/factory-report/factory-report.json",
       "pr": null,
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "final closeout PR, CI, audit, merge, public report verification"
+      "next_gate": "final closeout PR, CI, audit, merge, public report verification",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-factory-kernel-v0-4-failure-replay",
@@ -334,7 +393,9 @@
       "first_artifact": "factory/kernel/failure-replay-policy-v0.4.json + scripts/aion_failure_replay_check.py",
       "pr": "https://github.com/kiddhu/aion-governance/pull/116",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen"
+      "next_gate": "v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen",
+      "board_verdict": null,
+      "board_authorization_level": null
     },
     {
       "task_id": "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
@@ -347,7 +408,24 @@
       "first_artifact": "factory/kernel/replay-recovery-actions-v0.4.1.json",
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/89",
-      "next_gate": "v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization"
+      "next_gate": "v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization",
+      "board_verdict": null,
+      "board_authorization_level": null
+    },
+    {
+      "task_id": "aion-governance-0123-board-v0-1-protocol",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/aion-board-v0-1-post-merge-ledger",
+      "ack_at": "2026-05-11T03:38:39Z",
+      "first_artifact": "docs/governance/aion-board-v0.1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/124",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/123",
+      "next_gate": "Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L0"
     }
   ],
   "sections": {
@@ -374,7 +452,8 @@
       "aion-governance-0089-v03-loop3-report-summary: MERGED_LOW_RISK -> Loop 3 closed; v0.3 final closeout and public Factory Report sync.",
       "aion-governance-0089-factory-kernel-v0-3-low-risk-loops: FIRST_ARTIFACT_SEEN -> final closeout PR, CI, audit, merge, public report verification",
       "aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen",
-      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization"
+      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization",
+      "aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -386,7 +465,8 @@
       "aion-governance-0089-factory-kernel-v0-2-live-ledger",
       "aion-governance-0089-v03-loop1-packet-template",
       "aion-governance-0089-v03-loop2-state-fixtures",
-      "aion-governance-0089-v03-loop3-report-summary"
+      "aion-governance-0089-v03-loop3-report-summary",
+      "aion-governance-0123-board-v0-1-protocol"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
