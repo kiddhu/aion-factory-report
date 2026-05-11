@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T05:23:19Z",
-  "ledger_generated_at": "2026-05-11T05:22:00Z",
+  "generated_at": "2026-05-11T06:03:21Z",
+  "ledger_generated_at": "2026-05-11T06:02:19Z",
   "project_filter": null,
   "score": {
-    "score": 78,
+    "score": 79,
     "max_score": 100,
-    "total_tasks": 27,
-    "moving_tasks": 21,
+    "total_tasks": 28,
+    "moving_tasks": 22,
     "stalled_or_order_only_tasks": 4,
     "false_progress_penalty": 0,
     "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
@@ -51,10 +51,10 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 4,
+    "total_board_verdicts": 5,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 4,
+      "AUTO_PROCEED_WITH_AUDIT": 5,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
@@ -62,10 +62,10 @@
     },
     "high_risk_blocked_count": 0,
     "dispatched_after_board_count": 4,
-    "not_dispatched_after_board_count": 0,
+    "not_dispatched_after_board_count": 1,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 3,
+      "gm2": 4,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -140,9 +140,121 @@
           "max_consecutive_auto_tasks": 3,
           "on_exceed": "NEEDS_MONARCH"
         },
+        "dispatched_after_board": false
+      },
+      {
+        "task_id": "aion-dispatch-runtime-0135-v0-1",
+        "from_gm": "gm2",
+        "selected_option": "aion-dispatch-runtime-v0-1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "implement low-risk dispatch runtime PR",
+        "audit_required": true,
+        "auto_proceed_type": "checker",
+        "budget_status": {
+          "authorization_level": "L1",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
+          "on_exceed": "NEEDS_MONARCH"
+        },
         "dispatched_after_board": true
       }
     ]
+  },
+  "executor_queue_summary": {
+    "title": "AION Dispatch Runtime v0.1 / Executor Queue",
+    "executor_count": 4,
+    "by_executor": {
+      "agent007": {
+        "queued": 5,
+        "ack_required": 0,
+        "acked": 3,
+        "missing_first_artifact": 1,
+        "ack_timeout": 0,
+        "executor_idle_blocker": 0,
+        "fallback_triggered": 0,
+        "task_ids": [
+          "aion-dgw-0049-t01-deployment-confirmation",
+          "aion-dgw-0049-t02-prod-smoke-gate",
+          "aion-dgw-0049-t03-github-writeback-path",
+          "aion-dgw-0049-t04-status-taxonomy",
+          "aion-dgw-0049-t05-failure-replay-rules"
+        ]
+      },
+      "gm2": {
+        "queued": 21,
+        "ack_required": 0,
+        "acked": 21,
+        "missing_first_artifact": 1,
+        "ack_timeout": 0,
+        "executor_idle_blocker": 0,
+        "fallback_triggered": 0,
+        "task_ids": [
+          "aion-governance-0081-dispatch-treaty",
+          "aion-governance-0087-autonomous-authorization-council",
+          "aion-governance-0089-factory-kernel-v0-1",
+          "tianggong-0083-m31-plus-parent",
+          "tianggong-0084-universal-evaluation-rubric",
+          "tianggong-0085-seekapi-growth-intel",
+          "tianggong-0086-stock-quant-shadow-audit-intel",
+          "tianggong-0105-coding-agent-adapter",
+          "aion-governance-0097-factory-report-dashboard",
+          "aion-governance-0090-factory-kernel-v0-1-pr",
+          "aion-governance-0089-factory-kernel-v0-2-live-ledger",
+          "aion-governance-0089-v03-loop1-packet-template",
+          "aion-governance-0089-v03-loop2-state-fixtures",
+          "aion-governance-0089-v03-loop3-report-summary",
+          "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
+          "aion-governance-0089-factory-kernel-v0-4-failure-replay",
+          "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
+          "aion-governance-0123-board-v0-1-protocol",
+          "aion-governance-0126-board-v0-2-auto-proceed-gate",
+          "aion-governance-0130-board-v0-3-gm-completion-gate",
+          "aion-dispatch-runtime-0135-v0-1"
+        ]
+      },
+      "gm": {
+        "queued": 1,
+        "ack_required": 0,
+        "acked": 0,
+        "missing_first_artifact": 0,
+        "ack_timeout": 0,
+        "executor_idle_blocker": 0,
+        "fallback_triggered": 0,
+        "task_ids": [
+          "seekapi-0032-payment-credits-webhook-contract"
+        ]
+      },
+      "007": {
+        "queued": 1,
+        "ack_required": 1,
+        "acked": 0,
+        "missing_first_artifact": 0,
+        "ack_timeout": 0,
+        "executor_idle_blocker": 0,
+        "fallback_triggered": 0,
+        "task_ids": [
+          "seekapi-0129-payment-event-responsibility-matrix-v0-1"
+        ]
+      }
+    },
+    "ack_required_count": 1,
+    "acked_count": 24,
+    "missing_first_artifact_count": 2,
+    "ack_timeout_count": 0,
+    "executor_idle_blocker_count": 0,
+    "fallback_triggered_count": 0,
+    "ack_required_task_ids": [
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1"
+    ],
+    "missing_first_artifact_task_ids": [
+      "aion-dgw-0049-t04-status-taxonomy",
+      "aion-governance-0081-dispatch-treaty"
+    ],
+    "fallback_triggered_task_ids": [],
+    "average_ack_minutes": -84.18,
+    "average_first_artifact_minutes": null
   },
   "progress": [
     {
@@ -567,12 +679,28 @@
       "status": "ORDER_POSTED_ONLY",
       "owner": "agent007",
       "audit": "bafuxunan",
-      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/129#issuecomment-4417785485",
+      "runtime_handle": null,
       "ack_at": null,
-      "first_artifact": "Issue #129 includes GM1 next_step_options, Board verdict, Factory Ledger mapping draft, evidence target, and stop conditions.",
+      "first_artifact": null,
       "pr": "https://github.com/kiddhu/aion-governance/pull/131",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/129",
-      "next_gate": "await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR",
+      "next_gate": "ACK_REQUIRED: await 007 ACK within Dispatch Runtime SLA; if no ACK, mark ACK_TIMEOUT / executor_idle_blocker and route L1 docs matrix fallback to gm1_direct",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-dispatch-runtime-0135-v0-1",
+      "project_id": "AION Dispatch Runtime",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/aion-dispatch-runtime-v0-1",
+      "ack_at": "2026-05-11T05:40:00Z",
+      "first_artifact": "Issue #135 plus Dispatch Runtime schemas/checker/fixtures/report implementation branch",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/136",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/135",
+      "next_gate": "public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups",
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
@@ -606,7 +734,8 @@
       "aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.",
       "aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated",
       "aion-governance-0130-board-v0-3-gm-completion-gate: MERGED_LOW_RISK -> Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated",
-      "seekapi-0129-payment-event-responsibility-matrix-v0-1: ORDER_POSTED_ONLY -> await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR"
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1: ORDER_POSTED_ONLY -> ACK_REQUIRED: await 007 ACK within Dispatch Runtime SLA; if no ACK, mark ACK_TIMEOUT / executor_idle_blocker and route L1 docs matrix fallback to gm1_direct",
+      "aion-dispatch-runtime-0135-v0-1: MERGED_LOW_RISK -> public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups"
     ],
     "tasks_stuck_at_order_posted_only": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
