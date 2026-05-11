@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T10:06:15Z`
-账本生成时间：`2026-05-11T10:05:09Z`
+生成时间：`2026-05-11T10:27:04Z`
+账本生成时间：`2026-05-11T10:26:08Z`
 
 ## 总体评分
 - 评分：83/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：24/29
+- 正在推进的任务：25/30
 - 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
@@ -25,17 +25,17 @@
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## AION Board v0.2 / 董事局自动裁决门禁
-- 已登记裁决：6
-- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 6, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 已登记裁决：7
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 7, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：6
+- 裁决后已派工：7
 - 裁决后未派工：0
 - 超预算裁决：0
-- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：26
+- 已 ACK：27
 - 缺第一产物：2
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -48,6 +48,15 @@
 - report-only：0
 - needs Monarch：0
 - fallback 任务：seekapi-0129-payment-event-responsibility-matrix-v0-1
+
+## Auto-trigger Gate v0.1 / 自动触发门
+- 自动触发总数：1
+- 已触发：1
+- 已阻断：0
+- 需要 Monarch：0
+- 已触发任务：seekapi-0129-payment-event-responsibility-matrix-v0-1
+- 待产物任务：无
+- 待审计任务：无
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -81,6 +90,7 @@
 | seekapi-0129-payment-event-responsibility-matrix-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | AAR posted; optional SeekAPI payment metadata contract/intake template as L1 follow-up; L4 actions require Monarch authorization |
 | aion-dispatch-runtime-0135-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups |
 | aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery | MERGED_LOW_RISK | gm2 | bafuxunan | Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option |
+| aion-governance-0143-auto-trigger-gate-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Auto-trigger Gate v0.1 merged; public Factory Report/AAR closeout; Executor Pool M0 remains prepare-only and high-risk actions require Monarch |
 
 ## AION 工厂晨报
 
@@ -114,6 +124,7 @@
 - seekapi-0129-payment-event-responsibility-matrix-v0-1: MERGED_LOW_RISK -> AAR posted; optional SeekAPI payment metadata contract/intake template as L1 follow-up; L4 actions require Monarch authorization
 - aion-dispatch-runtime-0135-v0-1: MERGED_LOW_RISK -> public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups
 - aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery: MERGED_LOW_RISK -> Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option
+- aion-governance-0143-auto-trigger-gate-v0-1: MERGED_LOW_RISK -> Auto-trigger Gate v0.1 merged; public Factory Report/AAR closeout; Executor Pool M0 remains prepare-only and high-risk actions require Monarch
 
 ### 2. 卡在仅已下令的任务
 - 无
@@ -137,6 +148,7 @@
 - aion-governance-0089-v03-loop2-state-fixtures
 - aion-governance-0089-v03-loop3-report-summary
 - aion-governance-0123-board-v0-1-protocol
+- aion-governance-0143-auto-trigger-gate-v0-1
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation
