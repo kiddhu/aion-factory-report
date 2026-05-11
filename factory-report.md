@@ -1,21 +1,21 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T13:51:20Z`
+生成时间：`2026-05-11T13:59:31Z`
 账本生成时间：`2026-05-11T13:27:05Z`
 
 ## 总体评分
-- 评分：86/100
+- 评分：92/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：31/36
+- 正在推进的任务：34/37
 - 卡住/仅下令/阻塞任务：3
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
 - 是否达到无人值守高质量：False
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
-- 质量分：86/95
+- 质量分：92/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 2, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 1, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 0, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
-- 修复队列：repair-invalid-gm-completion-packets, repair-missing-first-artifact, keep-high-risk-replay-frozen
+- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 0, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 修复队列：keep-high-risk-replay-frozen
 
 ## v0.3 低风险闭环
 - 目标闭环：3
@@ -33,30 +33,30 @@
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## AION Board v0.2 / 董事局自动裁决门禁
-- 已登记裁决：13
-- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 13, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 已登记裁决：14
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 14, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：13
+- 裁决后已派工：14
 - 裁决后未派工：0
 - 超预算裁决：0
-- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics, aion-governance-0155-gm-self-driving-completion-rule-v0-1, aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop, aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics, aion-governance-0155-gm-self-driving-completion-rule-v0-1, aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop, aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps, aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion
 
 ## GM Self-Driving Completion Rule v0.1 / GM 自驱收口
 - completion packet 总数：2
 - 含 next_step_options：2
 - 含 board_submission：2
-- 自动提交 Board：1
+- 自动提交 Board：2
 - 错误回 Monarch：0
 - 缺 next_step_options 被阻断：0
 - 缺 board_submission 被阻断：0
 - L4 正确升级：0
-- L0/L1/L2 prepare-only 自动进 Board：1
+- L0/L1/L2 prepare-only 自动进 Board：2
 - GM 来源统计：{'gm1': 1, 'gm2': 1}
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：33
-- 缺第一产物：2
+- 已 ACK：34
+- 缺第一产物：0
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
 - fallback 已触发：1
@@ -95,9 +95,9 @@
 | aion-dgw-0049-t01-deployment-confirmation | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | dispatch to 007 only after runtime handle is available; production deploy remains forbidden |
 | aion-dgw-0049-t02-prod-smoke-gate | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | define read-only PROD-SMOKE evidence gate; no production PASS without evidence |
 | aion-dgw-0049-t03-github-writeback-path | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade |
-| aion-dgw-0049-t04-status-taxonomy | DISPATCHED_TO_RUNTIME | agent007 | bafuxunan | create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation |
+| aion-dgw-0049-t04-status-taxonomy | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation |
 | aion-dgw-0049-t05-failure-replay-rules | MERGED_LOW_RISK | agent007 | bafuxunan | v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen |
-| aion-governance-0081-dispatch-treaty | DISPATCHED_TO_RUNTIME | gm2 | bafuxunan | convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops |
+| aion-governance-0081-dispatch-treaty | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops |
 | aion-governance-0087-autonomous-authorization-council | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | connect authorization levels to merge_authorization ledger gate |
 | aion-governance-0089-factory-kernel-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | continue v0.2 real ledger integration in #91 and audit runtime recovery in #92 |
 | tianggong-0083-m31-plus-parent | MERGED_LOW_RISK | gm2 | bafuxunan | drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution |
@@ -128,6 +128,7 @@
 | aion-governance-0155-gm-self-driving-completion-rule-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | bilingual PR + CI + audit + low-risk merge |
 | aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge public report sync + Issue #158 AAR + structured completion packet |
 | aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge public report sync + Issue #161 AAR + proceed to missing first artifact and invalid GM completion packet repair |
+| aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion | MERGED_LOW_RISK | gm2 | bafuxunan | public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence |
 
 ## AION 工厂晨报
 
@@ -135,9 +136,9 @@
 - aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden
 - aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence
 - aion-dgw-0049-t03-github-writeback-path: FIRST_ARTIFACT_SEEN -> writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade
-- aion-dgw-0049-t04-status-taxonomy: DISPATCHED_TO_RUNTIME -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation
+- aion-dgw-0049-t04-status-taxonomy: FIRST_ARTIFACT_SEEN -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation
 - aion-dgw-0049-t05-failure-replay-rules: MERGED_LOW_RISK -> v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen
-- aion-governance-0081-dispatch-treaty: DISPATCHED_TO_RUNTIME -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops
+- aion-governance-0081-dispatch-treaty: FIRST_ARTIFACT_SEEN -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops
 - aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate
 - aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92
 - tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution
@@ -168,6 +169,7 @@
 - aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge
 - aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop: MERGED_LOW_RISK -> post-merge public report sync + Issue #158 AAR + structured completion packet
 - aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps: MERGED_LOW_RISK -> post-merge public report sync + Issue #161 AAR + proceed to missing first artifact and invalid GM completion packet repair
+- aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion: MERGED_LOW_RISK -> public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence
 
 ### 2. 卡在仅已下令的任务
 - 无
@@ -197,6 +199,7 @@
 - aion-governance-0152-executor-pool-m1-1-internal-routing-metrics
 - aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop
 - aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps
+- aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation

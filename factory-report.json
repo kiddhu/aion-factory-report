@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T13:51:20Z",
+  "generated_at": "2026-05-11T13:59:31Z",
   "ledger_generated_at": "2026-05-11T13:27:05Z",
   "project_filter": null,
   "score": {
-    "score": 86,
+    "score": 92,
     "max_score": 100,
-    "total_tasks": 36,
-    "moving_tasks": 31,
+    "total_tasks": 37,
+    "moving_tasks": 34,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -19,43 +19,22 @@
     "ready_for_unattended_high_quality": false,
     "project_scoped_ready_for_unattended_high_quality": null,
     "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
-    "quality_score": 86,
+    "quality_score": 92,
     "minimum_ready_score": 95,
     "blocker_counts": {
       "monarch_gated_failure_replay": 3,
       "auto_replay_candidates": 0,
-      "missing_first_artifact": 2,
+      "missing_first_artifact": 0,
       "ack_required": 0,
       "ack_timeout": 0,
       "executor_idle_blocker": 0,
-      "invalid_gm_completion_packets": 1,
+      "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
       "invalid_ack_timestamps": 0,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
     "repair_queue": [
-      {
-        "id": "repair-invalid-gm-completion-packets",
-        "owner": "gm2",
-        "authorization_level": "L1",
-        "monarch_required": false,
-        "action": "Backfill missing GM completion-packet fields and keep future closeouts machine-checkable.",
-        "task_ids": [
-          "https://github.com/kiddhu/aion-governance/issues/129"
-        ]
-      },
-      {
-        "id": "repair-missing-first-artifact",
-        "owner": "gm2",
-        "authorization_level": "L1",
-        "monarch_required": false,
-        "action": "Create bounded low-risk first-artifact or blocker packets for tasks that ACKed but have no first artifact.",
-        "task_ids": [
-          "aion-dgw-0049-t04-status-taxonomy",
-          "aion-governance-0081-dispatch-treaty"
-        ]
-      },
       {
         "id": "keep-high-risk-replay-frozen",
         "owner": "Monarch",
@@ -118,21 +97,21 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 13,
+    "total_board_verdicts": 14,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 13,
+      "AUTO_PROCEED_WITH_AUDIT": 14,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 13,
+    "dispatched_after_board_count": 14,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 12,
+      "gm2": 13,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -330,6 +309,19 @@
         "auto_proceed_type": null,
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
+        "from_gm": null,
+        "selected_option": "open-bilingual-pr",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "open bilingual PR, pass CI/audit, merge low-risk, closeout/public report/AAR",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -338,25 +330,18 @@
     "total_completion_packets": 2,
     "with_next_step_options": 2,
     "with_board_submission": 2,
-    "auto_submitted_to_board": 1,
+    "auto_submitted_to_board": 2,
     "incorrect_monarch_escalation_count": 0,
     "blocked_by_missing_next_step_options": 0,
     "blocked_by_missing_board_submission": 0,
     "l4_correctly_escalated": 0,
-    "l0_l1_l2_prepare_auto_board_count": 1,
+    "l0_l1_l2_prepare_auto_board_count": 2,
     "gm_source_counts": {
       "gm1": 1,
       "gm2": 1
     },
-    "invalid_packet_count": 1,
-    "invalid_packets": [
-      {
-        "source_issue": "https://github.com/kiddhu/aion-governance/issues/129",
-        "errors": [
-          "missing required field: remaining_gaps"
-        ]
-      }
-    ]
+    "invalid_packet_count": 0,
+    "invalid_packets": []
   },
   "executor_queue_summary": {
     "title": "AION Dispatch Runtime v0.1 / Executor Queue",
@@ -366,7 +351,7 @@
         "queued": 5,
         "ack_required": 0,
         "acked": 3,
-        "missing_first_artifact": 1,
+        "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
         "fallback_triggered": 0,
@@ -379,10 +364,10 @@
         ]
       },
       "gm2": {
-        "queued": 29,
+        "queued": 30,
         "ack_required": 0,
-        "acked": 29,
-        "missing_first_artifact": 1,
+        "acked": 30,
+        "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
         "fallback_triggered": 0,
@@ -415,7 +400,8 @@
           "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
           "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
           "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
-          "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps"
+          "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
+          "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion"
         ]
       },
       "gm": {
@@ -444,16 +430,13 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 33,
-    "missing_first_artifact_count": 2,
+    "acked_count": 34,
+    "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
     "fallback_triggered_count": 1,
     "ack_required_task_ids": [],
-    "missing_first_artifact_task_ids": [
-      "aion-dgw-0049-t04-status-taxonomy",
-      "aion-governance-0081-dispatch-treaty"
-    ],
+    "missing_first_artifact_task_ids": [],
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
@@ -462,7 +445,7 @@
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
     "average_ack_minutes": 0.0,
-    "average_first_artifact_minutes": 0.0
+    "average_first_artifact_minutes": 342.23
   },
   "dispatch_recovery_summary": {
     "title": "AION Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery",
@@ -707,12 +690,12 @@
     {
       "task_id": "aion-dgw-0049-t04-status-taxonomy",
       "project_id": "deepseek-global-wrapper",
-      "status": "DISPATCHED_TO_RUNTIME",
+      "status": "FIRST_ARTIFACT_SEEN",
       "owner": "agent007",
       "audit": "bafuxunan",
       "runtime_handle": "github-comment:https://github.com/AION-Empire/deepseek-global-wrapper/issues/49#issuecomment-4417129783",
       "ack_at": "2026-05-11T02:33:32Z",
-      "first_artifact": null,
+      "first_artifact": "docs/governance/aion-factory-kernel-v0-4-3-missing-artifact-invalid-completion-repair.md#status-taxonomy-first-artifact-blocker-packet",
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/49",
       "next_gate": "create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation",
@@ -739,12 +722,12 @@
     {
       "task_id": "aion-governance-0081-dispatch-treaty",
       "project_id": "aion-governance",
-      "status": "DISPATCHED_TO_RUNTIME",
+      "status": "FIRST_ARTIFACT_SEEN",
       "owner": "gm2",
       "audit": "bafuxunan",
       "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/81#issuecomment-4417129838",
       "ack_at": "2026-05-11T02:33:32Z",
-      "first_artifact": null,
+      "first_artifact": "docs/governance/aion-factory-kernel-v0-4-3-missing-artifact-invalid-completion-repair.md#dispatch-treaty-first-artifact-blocker-packet",
       "pr": "https://github.com/kiddhu/aion-governance/pull/118",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/81",
       "next_gate": "convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops",
@@ -1231,6 +1214,22 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/factory-kernel-v043-missing-artifact-completion",
+      "ack_at": "2026-05-11T13:58:00Z",
+      "first_artifact": "docs/governance/aion-factory-kernel-v0-4-3-missing-artifact-invalid-completion-repair.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/165",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/164",
+      "next_gate": "public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1238,9 +1237,9 @@
       "aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden",
       "aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence",
       "aion-dgw-0049-t03-github-writeback-path: FIRST_ARTIFACT_SEEN -> writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade",
-      "aion-dgw-0049-t04-status-taxonomy: DISPATCHED_TO_RUNTIME -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation",
+      "aion-dgw-0049-t04-status-taxonomy: FIRST_ARTIFACT_SEEN -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation",
       "aion-dgw-0049-t05-failure-replay-rules: MERGED_LOW_RISK -> v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen",
-      "aion-governance-0081-dispatch-treaty: DISPATCHED_TO_RUNTIME -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops",
+      "aion-governance-0081-dispatch-treaty: FIRST_ARTIFACT_SEEN -> convert Dispatch Treaty into enforceable checker/template/report deltas; no empty wake-up loops",
       "aion-governance-0087-autonomous-authorization-council: FIRST_ARTIFACT_SEEN -> connect authorization levels to merge_authorization ledger gate",
       "aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
       "tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
@@ -1270,7 +1269,8 @@
       "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics: MERGED_LOW_RISK -> public_report_sync_and_issue_152_aar",
       "aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge",
       "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop: MERGED_LOW_RISK -> post-merge public report sync + Issue #158 AAR + structured completion packet",
-      "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps: MERGED_LOW_RISK -> post-merge public report sync + Issue #161 AAR + proceed to missing first artifact and invalid GM completion packet repair"
+      "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps: MERGED_LOW_RISK -> post-merge public report sync + Issue #161 AAR + proceed to missing first artifact and invalid GM completion packet repair",
+      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion: MERGED_LOW_RISK -> public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1289,7 +1289,8 @@
       "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
       "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
       "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
-      "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps"
+      "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
+      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
