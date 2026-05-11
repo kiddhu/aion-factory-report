@@ -1,13 +1,13 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T04:21:50Z`
-账本生成时间：`2026-05-11T04:16:40Z`
+生成时间：`2026-05-11T05:23:19Z`
+账本生成时间：`2026-05-11T05:22:00Z`
 
 ## 总体评分
-- 评分：80/100
-- 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：20/25
-- 卡住/仅下令/阻塞任务：3
+- 评分：78/100
+- 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
+- 正在推进的任务：21/27
+- 卡住/仅下令/阻塞任务：4
 
 ## v0.3 低风险闭环
 - 目标闭环：3
@@ -25,13 +25,13 @@
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## AION Board v0.2 / 董事局自动裁决门禁
-- 已登记裁决：2
-- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 2, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 已登记裁决：4
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 4, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：2
+- 裁决后已派工：4
 - 裁决后未派工：0
 - 超预算裁决：0
-- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -61,6 +61,8 @@
 | aion-governance-0089-factory-kernel-v0-4-1-replay-recovery | MERGED_LOW_RISK | gm2 | bafuxunan | v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization |
 | aion-governance-0123-board-v0-1-protocol | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization. |
 | aion-governance-0126-board-v0-2-auto-proceed-gate | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated |
+| aion-governance-0130-board-v0-3-gm-completion-gate | MERGED_LOW_RISK | gm2 | bafuxunan | Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated |
+| seekapi-0129-payment-event-responsibility-matrix-v0-1 | ORDER_POSTED_ONLY | agent007 | bafuxunan | await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR |
 
 ## AION 工厂晨报
 
@@ -90,9 +92,11 @@
 - aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization
 - aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.
 - aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated
+- aion-governance-0130-board-v0-3-gm-completion-gate: MERGED_LOW_RISK -> Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated
+- seekapi-0129-payment-event-responsibility-matrix-v0-1: ORDER_POSTED_ONLY -> await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR
 
 ### 2. 卡在仅已下令的任务
-- 无
+- seekapi-0129-payment-event-responsibility-matrix-v0-1
 
 ### 3. 缺少执行入口的任务
 - 无

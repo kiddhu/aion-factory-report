@@ -1,16 +1,16 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T04:21:50Z",
-  "ledger_generated_at": "2026-05-11T04:16:40Z",
+  "generated_at": "2026-05-11T05:23:19Z",
+  "ledger_generated_at": "2026-05-11T05:22:00Z",
   "project_filter": null,
   "score": {
-    "score": 80,
+    "score": 78,
     "max_score": 100,
-    "total_tasks": 25,
-    "moving_tasks": 20,
-    "stalled_or_order_only_tasks": 3,
+    "total_tasks": 27,
+    "moving_tasks": 21,
+    "stalled_or_order_only_tasks": 4,
     "false_progress_penalty": 0,
-    "verdict": "工厂运转良好，证据覆盖较强。"
+    "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
   },
   "low_risk_loop_summary": {
     "title": "v0.3 低风险闭环",
@@ -51,22 +51,28 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 2,
+    "total_board_verdicts": 4,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 2,
+      "AUTO_PROCEED_WITH_AUDIT": 4,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 2,
+    "dispatched_after_board_count": 4,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
+    "gm_source_counts": {
+      "gm2": 3,
+      "gm1": 1
+    },
+    "cross_gm_board_gate_active": true,
     "tasks": [
       {
         "task_id": "aion-governance-0123-board-v0-1-protocol",
+        "from_gm": null,
         "selected_option": "board-v0-1-protocol",
         "verdict": "AUTO_PROCEED_WITH_AUDIT",
         "authorization_level": "L0",
@@ -84,6 +90,7 @@
       },
       {
         "task_id": "aion-governance-0126-board-v0-2-auto-proceed-gate",
+        "from_gm": null,
         "selected_option": "board-v0-2-auto-proceed-gate",
         "verdict": "AUTO_PROCEED_WITH_AUDIT",
         "authorization_level": "L0",
@@ -95,6 +102,42 @@
           "authorization_level": "L0",
           "consecutive_auto_tasks": 2,
           "max_consecutive_auto_tasks": 5,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0130-board-v0-3-gm-completion-gate",
+        "from_gm": "gm2",
+        "selected_option": "board-v0-3-gm-completion-gate",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L0",
+        "monarch_required": false,
+        "next_action": "open_low_risk_bilingual_governance_pr",
+        "audit_required": true,
+        "auto_proceed_type": "checker",
+        "budget_status": {
+          "authorization_level": "L0",
+          "consecutive_auto_tasks": 3,
+          "max_consecutive_auto_tasks": 5,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "seekapi-0129-payment-event-responsibility-matrix-v0-1",
+        "from_gm": "gm1",
+        "selected_option": "seekapi_payment_event_matrix_v0_1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "dispatch_to_007_for_document_artifact_and_closure_packet",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": {
+          "authorization_level": "L1",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
           "on_exceed": "NEEDS_MONARCH"
         },
         "dispatched_after_board": true
@@ -501,6 +544,38 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L0",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0130-board-v0-3-gm-completion-gate",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/aion-board-v0-3-gm-completion-gate",
+      "ack_at": "2026-05-11T05:16:51Z",
+      "first_artifact": "docs/governance/aion-board-v0.3-gm-completion-packet-gate.md + tests/test_aion_board_gm_completion_check.py",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/131",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/130",
+      "next_gate": "Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L0",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "seekapi-0129-payment-event-responsibility-matrix-v0-1",
+      "project_id": "SeekAPI",
+      "status": "ORDER_POSTED_ONLY",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/129#issuecomment-4417785485",
+      "ack_at": null,
+      "first_artifact": "Issue #129 includes GM1 next_step_options, Board verdict, Factory Ledger mapping draft, evidence target, and stop conditions.",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/131",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/129",
+      "next_gate": "await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -529,9 +604,13 @@
       "aion-governance-0089-factory-kernel-v0-4-failure-replay: MERGED_LOW_RISK -> v0.4 merged; next convert replay packets into bounded low-risk dispatch/recovery actions while high-risk gates remain frozen",
       "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery: MERGED_LOW_RISK -> v0.4.1 merged; remaining replay packets are high-risk and require separate Monarch authorization",
       "aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.",
-      "aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated"
+      "aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated",
+      "aion-governance-0130-board-v0-3-gm-completion-gate: MERGED_LOW_RISK -> Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated",
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1: ORDER_POSTED_ONLY -> await 007 ACK on Issue #129 before claiming execution; after ACK require document/closure packet, bafuxunan audit, Factory Report, and AAR"
     ],
-    "tasks_stuck_at_order_posted_only": [],
+    "tasks_stuck_at_order_posted_only": [
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1"
+    ],
     "tasks_missing_runtime_handle": [],
     "tasks_missing_ack": [],
     "tasks_missing_first_artifact": [],
