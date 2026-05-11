@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T12:06:00Z`
-账本生成时间：`2026-05-11T12:05:59Z`
+生成时间：`2026-05-11T12:50:00Z`
+账本生成时间：`2026-05-11T12:50:00Z`
 
 ## 总体评分
 - 评分：85/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：28/33
+- 正在推进的任务：29/34
 - 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
@@ -25,17 +25,29 @@
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## AION Board v0.2 / 董事局自动裁决门禁
-- 已登记裁决：10
-- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 10, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 已登记裁决：11
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 11, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：10
+- 裁决后已派工：11
 - 裁决后未派工：0
 - 超预算裁决：0
-- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics, aion-governance-0155-gm-self-driving-completion-rule-v0-1
+
+## GM Self-Driving Completion Rule v0.1 / GM 自驱收口
+- completion packet 总数：2
+- 含 next_step_options：2
+- 含 board_submission：2
+- 自动提交 Board：1
+- 错误回 Monarch：0
+- 缺 next_step_options 被阻断：0
+- 缺 board_submission 被阻断：0
+- L4 正确升级：0
+- L0/L1/L2 prepare-only 自动进 Board：1
+- GM 来源统计：{'gm1': 1, 'gm2': 1}
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：30
+- 已 ACK：31
 - 缺第一产物：2
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -105,6 +117,7 @@
 | aion-governance-0146-executor-pool-m0-prepare-only | MERGED_LOW_RISK | gm2 | bafuxunan | fallback_audit_then_low_risk_merge |
 | aion-governance-0149-executor-pool-m1-sandbox-authorization-pack | MERGED_LOW_RISK | gm2 | bafuxunan | post_merge_public_report_sync_and_issue_149_aar |
 | aion-governance-0152-executor-pool-m1-1-internal-routing-metrics | MERGED_LOW_RISK | gm2 | bafuxunan | public_report_sync_and_issue_152_aar |
+| aion-governance-0155-gm-self-driving-completion-rule-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | bilingual PR + CI + audit + low-risk merge |
 
 ## AION 工厂晨报
 
@@ -142,6 +155,7 @@
 - aion-governance-0146-executor-pool-m0-prepare-only: MERGED_LOW_RISK -> fallback_audit_then_low_risk_merge
 - aion-governance-0149-executor-pool-m1-sandbox-authorization-pack: MERGED_LOW_RISK -> post_merge_public_report_sync_and_issue_149_aar
 - aion-governance-0152-executor-pool-m1-1-internal-routing-metrics: MERGED_LOW_RISK -> public_report_sync_and_issue_152_aar
+- aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge
 
 ### 2. 卡在仅已下令的任务
 - 无
