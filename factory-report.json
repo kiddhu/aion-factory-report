@@ -1,16 +1,112 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T12:50:00Z",
-  "ledger_generated_at": "2026-05-11T12:50:00Z",
+  "generated_at": "2026-05-11T13:28:12Z",
+  "ledger_generated_at": "2026-05-11T13:27:05Z",
   "project_filter": null,
   "score": {
-    "score": 85,
+    "score": 86,
     "max_score": 100,
-    "total_tasks": 34,
-    "moving_tasks": 29,
+    "total_tasks": 35,
+    "moving_tasks": 30,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
+  },
+  "unattended_quality_summary": {
+    "title": "Factory Kernel v0.4.2 / 无人值守质量闭环",
+    "scope": "GLOBAL_FACTORY_VIEW",
+    "project_filter": null,
+    "ready_for_unattended_high_quality": false,
+    "project_scoped_ready_for_unattended_high_quality": null,
+    "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
+    "quality_score": 86,
+    "minimum_ready_score": 95,
+    "blocker_counts": {
+      "monarch_gated_failure_replay": 3,
+      "auto_replay_candidates": 0,
+      "missing_first_artifact": 2,
+      "ack_required": 0,
+      "ack_timeout": 0,
+      "executor_idle_blocker": 0,
+      "invalid_gm_completion_packets": 1,
+      "board_not_dispatched_after_verdict": 0,
+      "invalid_ack_timestamps": 26,
+      "invalid_first_artifact_timestamps": 0,
+      "false_progress_penalty": 0
+    },
+    "repair_queue": [
+      {
+        "id": "repair-invalid-gm-completion-packets",
+        "owner": "gm2",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "action": "Backfill missing GM completion-packet fields and keep future closeouts machine-checkable.",
+        "task_ids": [
+          "https://github.com/kiddhu/aion-governance/issues/129"
+        ]
+      },
+      {
+        "id": "repair-missing-first-artifact",
+        "owner": "gm2",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "action": "Create bounded low-risk first-artifact or blocker packets for tasks that ACKed but have no first artifact.",
+        "task_ids": [
+          "aion-dgw-0049-t04-status-taxonomy",
+          "aion-governance-0081-dispatch-treaty"
+        ]
+      },
+      {
+        "id": "repair-invalid-dispatch-timestamps",
+        "owner": "gm2",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "action": "Repair or annotate ledger timestamp ordering anomalies instead of hiding them in averages.",
+        "task_ids": [
+          "aion-dgw-0049-t03-github-writeback-path",
+          "aion-dgw-0049-t04-status-taxonomy",
+          "aion-dgw-0049-t05-failure-replay-rules",
+          "aion-dispatch-runtime-0135-v0-1",
+          "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery",
+          "aion-governance-0081-dispatch-treaty",
+          "aion-governance-0089-factory-kernel-v0-1",
+          "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
+          "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
+          "aion-governance-0089-factory-kernel-v0-4-failure-replay",
+          "aion-governance-0090-factory-kernel-v0-1-pr",
+          "aion-governance-0097-factory-report-dashboard",
+          "aion-governance-0123-board-v0-1-protocol",
+          "aion-governance-0126-board-v0-2-auto-proceed-gate",
+          "aion-governance-0130-board-v0-3-gm-completion-gate",
+          "aion-governance-0143-auto-trigger-gate-v0-1",
+          "aion-governance-0146-executor-pool-m0-prepare-only",
+          "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+          "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+          "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
+          "seekapi-0129-payment-event-responsibility-matrix-v0-1",
+          "tianggong-0083-m31-plus-parent",
+          "tianggong-0084-universal-evaluation-rubric",
+          "tianggong-0085-seekapi-growth-intel",
+          "tianggong-0086-stock-quant-shadow-audit-intel",
+          "tianggong-0105-coding-agent-adapter"
+        ]
+      },
+      {
+        "id": "keep-high-risk-replay-frozen",
+        "owner": "Monarch",
+        "authorization_level": "L4",
+        "monarch_required": true,
+        "action": "Keep production/payment/database/webhook/deploy replay frozen until separately authorized.",
+        "task_ids": [
+          "aion-dgw-0049-t01-deployment-confirmation",
+          "aion-dgw-0049-t02-prod-smoke-gate",
+          "seekapi-0032-payment-credits-webhook-contract"
+        ]
+      }
+    ],
+    "verdict": "可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。",
+    "next_gate": "Board routes low-risk repairs automatically; high-risk replay remains Monarch-gated.",
+    "warnings": []
   },
   "low_risk_loop_summary": {
     "title": "v0.3 低风险闭环",
@@ -39,6 +135,12 @@
       "aion-dgw-0049-t02-prod-smoke-gate",
       "seekapi-0032-payment-credits-webhook-contract"
     ],
+    "auto_replay_task_ids": [],
+    "monarch_gated_task_ids": [
+      "aion-dgw-0049-t01-deployment-confirmation",
+      "aion-dgw-0049-t02-prod-smoke-gate",
+      "seekapi-0032-payment-credits-webhook-contract"
+    ],
     "v041_recovered_candidates": 6,
     "v041_recovered_task_ids": [
       "aion-dgw-0049-t03-github-writeback-path",
@@ -51,21 +153,21 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 11,
+    "total_board_verdicts": 12,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 11,
+      "AUTO_PROCEED_WITH_AUDIT": 12,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 11,
+    "dispatched_after_board_count": 12,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 10,
+      "gm2": 11,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -237,6 +339,19 @@
         "auto_proceed_type": "checker",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
+        "from_gm": "gm2",
+        "selected_option": "factory-kernel-v0-4-2-unattended-quality-loop",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "open bilingual low-risk governance PR with tests, CI, audit, and post-merge closeout",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -286,9 +401,9 @@
         ]
       },
       "gm2": {
-        "queued": 27,
+        "queued": 28,
         "ack_required": 0,
-        "acked": 27,
+        "acked": 28,
         "missing_first_artifact": 1,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -320,7 +435,8 @@
           "aion-governance-0146-executor-pool-m0-prepare-only",
           "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
           "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
-          "aion-governance-0155-gm-self-driving-completion-rule-v0-1"
+          "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
+          "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop"
         ]
       },
       "gm": {
@@ -349,7 +465,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 31,
+    "acked_count": 32,
     "missing_first_artifact_count": 2,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -362,7 +478,38 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "average_ack_minutes": -72.87,
+    "invalid_ack_timestamp_count": 26,
+    "invalid_ack_timestamp_task_ids": [
+      "aion-dgw-0049-t03-github-writeback-path",
+      "aion-dgw-0049-t04-status-taxonomy",
+      "aion-dgw-0049-t05-failure-replay-rules",
+      "aion-governance-0081-dispatch-treaty",
+      "aion-governance-0089-factory-kernel-v0-1",
+      "tianggong-0083-m31-plus-parent",
+      "tianggong-0084-universal-evaluation-rubric",
+      "tianggong-0085-seekapi-growth-intel",
+      "tianggong-0086-stock-quant-shadow-audit-intel",
+      "tianggong-0105-coding-agent-adapter",
+      "aion-governance-0097-factory-report-dashboard",
+      "aion-governance-0090-factory-kernel-v0-1-pr",
+      "aion-governance-0089-factory-kernel-v0-4-failure-replay",
+      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
+      "aion-governance-0123-board-v0-1-protocol",
+      "aion-governance-0126-board-v0-2-auto-proceed-gate",
+      "aion-governance-0130-board-v0-3-gm-completion-gate",
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1",
+      "aion-dispatch-runtime-0135-v0-1",
+      "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery",
+      "aion-governance-0143-auto-trigger-gate-v0-1",
+      "aion-governance-0146-executor-pool-m0-prepare-only",
+      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+      "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
+      "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop"
+    ],
+    "invalid_first_artifact_timestamp_count": 0,
+    "invalid_first_artifact_timestamp_task_ids": [],
+    "average_ack_minutes": 0.0,
     "average_first_artifact_minutes": null
   },
   "dispatch_recovery_summary": {
@@ -1100,6 +1247,22 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/factory-kernel-v042-unattended-quality-loop",
+      "ack_at": "2026-05-11T13:08:22Z",
+      "first_artifact": "docs/governance/aion-factory-kernel-v0-4-2-unattended-quality-loop.md + unattended_quality_summary report implementation",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/159",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/158",
+      "next_gate": "post-merge public report sync + Issue #158 AAR + structured completion packet",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1137,7 +1300,8 @@
       "aion-governance-0146-executor-pool-m0-prepare-only: MERGED_LOW_RISK -> fallback_audit_then_low_risk_merge",
       "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack: MERGED_LOW_RISK -> post_merge_public_report_sync_and_issue_149_aar",
       "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics: MERGED_LOW_RISK -> public_report_sync_and_issue_152_aar",
-      "aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge"
+      "aion-governance-0155-gm-self-driving-completion-rule-v0-1: MERGED_LOW_RISK -> bilingual PR + CI + audit + low-risk merge",
+      "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop: MERGED_LOW_RISK -> post-merge public report sync + Issue #158 AAR + structured completion packet"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1154,7 +1318,8 @@
       "aion-governance-0143-auto-trigger-gate-v0-1",
       "aion-governance-0146-executor-pool-m0-prepare-only",
       "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
-      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics"
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+      "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
