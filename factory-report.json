@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T10:27:04Z",
-  "ledger_generated_at": "2026-05-11T10:26:08Z",
+  "generated_at": "2026-05-11T10:55:31Z",
+  "ledger_generated_at": "2026-05-11T10:40:00Z",
   "project_filter": null,
   "score": {
-    "score": 83,
+    "score": 84,
     "max_score": 100,
-    "total_tasks": 30,
-    "moving_tasks": 25,
+    "total_tasks": 31,
+    "moving_tasks": 26,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -51,21 +51,21 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 7,
+    "total_board_verdicts": 8,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 7,
+      "AUTO_PROCEED_WITH_AUDIT": 8,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 7,
+    "dispatched_after_board_count": 8,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 6,
+      "gm2": 7,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -185,6 +185,19 @@
         "auto_proceed_type": "checker",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0146-executor-pool-m0-prepare-only",
+        "from_gm": "gm2",
+        "selected_option": "executor-pool-m0-prepare-only",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "create Executor Pool M0 docs/schema/checker/report summary",
+        "audit_required": true,
+        "auto_proceed_type": "checker",
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -209,9 +222,9 @@
         ]
       },
       "gm2": {
-        "queued": 23,
+        "queued": 24,
         "ack_required": 0,
-        "acked": 23,
+        "acked": 24,
         "missing_first_artifact": 1,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -239,7 +252,8 @@
           "aion-governance-0130-board-v0-3-gm-completion-gate",
           "aion-dispatch-runtime-0135-v0-1",
           "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery",
-          "aion-governance-0143-auto-trigger-gate-v0-1"
+          "aion-governance-0143-auto-trigger-gate-v0-1",
+          "aion-governance-0146-executor-pool-m0-prepare-only"
         ]
       },
       "gm": {
@@ -268,7 +282,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 27,
+    "acked_count": 28,
     "missing_first_artifact_count": 2,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -281,7 +295,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "average_ack_minutes": -81.97,
+    "average_ack_minutes": -79.52,
     "average_first_artifact_minutes": null
   },
   "dispatch_recovery_summary": {
@@ -359,6 +373,55 @@
         "needs_monarch": false,
         "fallback_owner": "gm1",
         "auditor": "bafuxunan"
+      }
+    ]
+  },
+  "executor_pool_summary": {
+    "title": "Executor Pool M0 / 执行器池路线",
+    "phase": "M0",
+    "status": "PREPARE_ONLY",
+    "pool_task_ids": [
+      "aion-governance-0146-executor-pool-m0-prepare-only"
+    ],
+    "internal_executors": [
+      "gm1_direct",
+      "gm2_direct",
+      "agent007",
+      "bafuxunan"
+    ],
+    "external_candidates": [
+      "OpenHands",
+      "SWE-agent",
+      "Cursor CLI"
+    ],
+    "routing_rule_count": 6,
+    "factory_report_metrics_design": [
+      "executor_task_count",
+      "ack_required_count",
+      "ack_timeout_count",
+      "first_artifact_delay_count",
+      "fallback_triggered_count",
+      "average_ack_time",
+      "average_first_artifact_time",
+      "task_type_distribution"
+    ],
+    "prepare_only_enforced": true,
+    "external_real_run_allowed": false,
+    "next_step_options": [
+      {
+        "id": "executor_pool_m1_sandbox_authorization_pack",
+        "title": "Executor Pool M1：沙箱方案与对比任务授权包",
+        "monarch_required_for_real_run": true
+      },
+      {
+        "id": "audit_runtime_v0_1",
+        "title": "Audit Runtime v0.1",
+        "monarch_required": false
+      },
+      {
+        "id": "keep_m0_prepare_only",
+        "title": "继续 M0 prepare-only，不接外部执行器",
+        "monarch_required": false
       }
     ]
   },
@@ -842,6 +905,22 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0146-executor-pool-m0-prepare-only",
+      "project_id": "Executor Pool",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/executor-pool-m0-prepare-only",
+      "ack_at": "2026-05-11T10:40:00Z",
+      "first_artifact": "docs/governance/aion-executor-pool-m0.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/147",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/146",
+      "next_gate": "fallback_audit_then_low_risk_merge",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -875,7 +954,8 @@
       "seekapi-0129-payment-event-responsibility-matrix-v0-1: MERGED_LOW_RISK -> AAR posted; optional SeekAPI payment metadata contract/intake template as L1 follow-up; L4 actions require Monarch authorization",
       "aion-dispatch-runtime-0135-v0-1: MERGED_LOW_RISK -> public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups",
       "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery: MERGED_LOW_RISK -> Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option",
-      "aion-governance-0143-auto-trigger-gate-v0-1: MERGED_LOW_RISK -> Auto-trigger Gate v0.1 merged; public Factory Report/AAR closeout; Executor Pool M0 remains prepare-only and high-risk actions require Monarch"
+      "aion-governance-0143-auto-trigger-gate-v0-1: MERGED_LOW_RISK -> Auto-trigger Gate v0.1 merged; public Factory Report/AAR closeout; Executor Pool M0 remains prepare-only and high-risk actions require Monarch",
+      "aion-governance-0146-executor-pool-m0-prepare-only: MERGED_LOW_RISK -> fallback_audit_then_low_risk_merge"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -889,7 +969,8 @@
       "aion-governance-0089-v03-loop2-state-fixtures",
       "aion-governance-0089-v03-loop3-report-summary",
       "aion-governance-0123-board-v0-1-protocol",
-      "aion-governance-0143-auto-trigger-gate-v0-1"
+      "aion-governance-0143-auto-trigger-gate-v0-1",
+      "aion-governance-0146-executor-pool-m0-prepare-only"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
