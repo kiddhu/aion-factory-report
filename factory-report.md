@@ -1,13 +1,13 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T07:53:09Z`
-账本生成时间：`2026-05-11T07:51:37Z`
+生成时间：`2026-05-11T10:06:15Z`
+账本生成时间：`2026-05-11T10:05:09Z`
 
 ## 总体评分
-- 评分：79/100
-- 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
-- 正在推进的任务：23/29
-- 卡住/仅下令/阻塞任务：4
+- 评分：83/100
+- 判断：工厂运转良好，证据覆盖较强。
+- 正在推进的任务：24/29
+- 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
 - 目标闭环：3
@@ -28,19 +28,19 @@
 - 已登记裁决：6
 - 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 6, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 0, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：5
-- 裁决后未派工：1
+- 裁决后已派工：6
+- 裁决后未派工：0
 - 超预算裁决：0
 - 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery
 
 ## Dispatch Runtime v0.1 / 执行队列
-- 待 ACK：1
-- 已 ACK：25
+- 待 ACK：0
+- 已 ACK：26
 - 缺第一产物：2
-- ACK_TIMEOUT：1
+- ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
 - fallback 已触发：1
-- 当前待 ACK 任务：seekapi-0129-payment-event-responsibility-matrix-v0-1
+- 当前待 ACK 任务：无
 
 ## Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery
 - recovery actions：1
@@ -78,7 +78,7 @@
 | aion-governance-0123-board-v0-1-protocol | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization. |
 | aion-governance-0126-board-v0-2-auto-proceed-gate | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated |
 | aion-governance-0130-board-v0-3-gm-completion-gate | MERGED_LOW_RISK | gm2 | bafuxunan | Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated |
-| seekapi-0129-payment-event-responsibility-matrix-v0-1 | ACK_TIMEOUT | agent007 | bafuxunan | gm1_direct_artifact_or_report_ack_timeout, audit required before completion; no high-risk actions |
+| seekapi-0129-payment-event-responsibility-matrix-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | AAR posted; optional SeekAPI payment metadata contract/intake template as L1 follow-up; L4 actions require Monarch authorization |
 | aion-dispatch-runtime-0135-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups |
 | aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery | MERGED_LOW_RISK | gm2 | bafuxunan | Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option |
 
@@ -111,7 +111,7 @@
 - aion-governance-0123-board-v0-1-protocol: MERGED_LOW_RISK -> Post-merge ledger closeout PR, public Factory Report sync, and Issue #123 AAR. Any L2 real sandbox/third-party execution or L3/L4 action requires Monarch authorization.
 - aion-governance-0126-board-v0-2-auto-proceed-gate: MERGED_LOW_RISK -> post-merge ledger closeout PR, public Factory Report sync, and Issue #126 AAR; L2+ remains Monarch-gated
 - aion-governance-0130-board-v0-3-gm-completion-gate: MERGED_LOW_RISK -> Board v0.3 merged; continue GM1/SeekAPI pilot on Issue #129 by waiting for 007 ACK and first document artifact; L2+ remains Monarch-gated
-- seekapi-0129-payment-event-responsibility-matrix-v0-1: ACK_TIMEOUT -> gm1_direct_artifact_or_report_ack_timeout, audit required before completion; no high-risk actions
+- seekapi-0129-payment-event-responsibility-matrix-v0-1: MERGED_LOW_RISK -> AAR posted; optional SeekAPI payment metadata contract/intake template as L1 follow-up; L4 actions require Monarch authorization
 - aion-dispatch-runtime-0135-v0-1: MERGED_LOW_RISK -> public Factory Report sync, Issue #135 AAR, and monitor #129 ACK SLA/fallback lane without repeated wakeups
 - aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery: MERGED_LOW_RISK -> Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option
 
