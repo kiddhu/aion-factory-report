@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-11T03:10:36Z`
-账本生成时间：`2026-05-11T03:10:27Z`
+生成时间：`2026-05-11T03:14:09Z`
+账本生成时间：`2026-05-11T03:14:00Z`
 
 ## 总体评分
-- 评分：74/100
+- 评分：78/100
 - 判断：工厂部分运转；优先处理卡住或仅已下令的任务。
-- 正在推进的任务：17/23
+- 正在推进的任务：18/23
 - 卡住/仅下令/阻塞任务：3
 
 ## v0.3 低风险闭环
@@ -37,7 +37,7 @@
 | aion-governance-0089-factory-kernel-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | continue v0.2 real ledger integration in #91 and audit runtime recovery in #92 |
 | tianggong-0083-m31-plus-parent | MERGED_LOW_RISK | gm2 | bafuxunan | drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution |
 | tianggong-0084-universal-evaluation-rubric | MERGED_LOW_RISK | gm2 | bafuxunan | #84 merged; use universal evaluation checker for #85/#86 read-only intel records |
-| tianggong-0085-seekapi-growth-intel | DISPATCHED_TO_RUNTIME | gm2 | bafuxunan | create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API |
+| tianggong-0085-seekapi-growth-intel | MERGED_LOW_RISK | gm2 | bafuxunan | SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization. |
 | tianggong-0086-stock-quant-shadow-audit-intel | MERGED_LOW_RISK | gm2 | bafuxunan | Stock/quant/shadow-audit intel is merged as low-risk internal read-only asset. Any clone/install/execute, broker/data integration, trading, production use, public publishing, or production PASS requires separate Monarch authorization. |
 | tianggong-0105-coding-agent-adapter | MERGED_LOW_RISK | gm2 | bafuxunan | PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization. |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
@@ -64,7 +64,7 @@
 - aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92
 - tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution
 - tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records
-- tianggong-0085-seekapi-growth-intel: DISPATCHED_TO_RUNTIME -> create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API
+- tianggong-0085-seekapi-growth-intel: MERGED_LOW_RISK -> SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization.
 - tianggong-0086-stock-quant-shadow-audit-intel: MERGED_LOW_RISK -> Stock/quant/shadow-audit intel is merged as low-risk internal read-only asset. Any clone/install/execute, broker/data integration, trading, production use, public publishing, or production PASS requires separate Monarch authorization.
 - tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL

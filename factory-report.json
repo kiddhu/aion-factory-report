@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T03:10:36Z",
-  "ledger_generated_at": "2026-05-11T03:10:27Z",
+  "generated_at": "2026-05-11T03:14:09Z",
+  "ledger_generated_at": "2026-05-11T03:14:00Z",
   "project_filter": null,
   "score": {
-    "score": 74,
+    "score": 78,
     "max_score": 100,
     "total_tasks": 23,
-    "moving_tasks": 17,
+    "moving_tasks": 18,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂部分运转；优先处理卡住或仅已下令的任务。"
@@ -183,15 +183,15 @@
     {
       "task_id": "tianggong-0085-seekapi-growth-intel",
       "project_id": "tianggong-si",
-      "status": "DISPATCHED_TO_RUNTIME",
+      "status": "MERGED_LOW_RISK",
       "owner": "gm2",
       "audit": "bafuxunan",
-      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/85#issuecomment-4417129912",
+      "runtime_handle": "branch:tianggong/issue-85-seekapi-growth-intel",
       "ack_at": "2026-05-11T02:33:32Z",
-      "first_artifact": null,
-      "pr": "https://github.com/kiddhu/aion-governance/pull/118",
+      "first_artifact": "projects/tianggong-si/evaluations/seekapi-growth/v1/seekapi-growth-intel-report.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/103",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/85",
-      "next_gate": "create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API"
+      "next_gate": "SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization."
     },
     {
       "task_id": "tianggong-0086-stock-quant-shadow-audit-intel",
@@ -362,7 +362,7 @@
       "aion-governance-0089-factory-kernel-v0-1: MERGED_LOW_RISK -> continue v0.2 real ledger integration in #91 and audit runtime recovery in #92",
       "tianggong-0083-m31-plus-parent: MERGED_LOW_RISK -> drive #84 universal evaluation schema/checker/fixtures before #85/#86 intel and before any M3.2 sandbox execution",
       "tianggong-0084-universal-evaluation-rubric: MERGED_LOW_RISK -> #84 merged; use universal evaluation checker for #85/#86 read-only intel records",
-      "tianggong-0085-seekapi-growth-intel: DISPATCHED_TO_RUNTIME -> create public read-only SeekAPI growth OSS intel records using #84 rubric; no install/execute/production API",
+      "tianggong-0085-seekapi-growth-intel: MERGED_LOW_RISK -> SeekAPI growth intel is an internal read-only asset. SeekAPI production growth execution, public content publishing, production API integration, deploy, DB/payment/credit/webhook use, or issue closure requires separate authorization.",
       "tianggong-0086-stock-quant-shadow-audit-intel: MERGED_LOW_RISK -> Stock/quant/shadow-audit intel is merged as low-risk internal read-only asset. Any clone/install/execute, broker/data integration, trading, production use, public publishing, or production PASS requires separate Monarch authorization.",
       "tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.",
       "aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL",
