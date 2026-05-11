@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T11:29:05Z",
-  "ledger_generated_at": "2026-05-11T11:28:03Z",
+  "generated_at": "2026-05-11T12:06:00Z",
+  "ledger_generated_at": "2026-05-11T12:05:59Z",
   "project_filter": null,
   "score": {
-    "score": 84,
+    "score": 85,
     "max_score": 100,
-    "total_tasks": 32,
-    "moving_tasks": 27,
+    "total_tasks": 33,
+    "moving_tasks": 28,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -51,21 +51,21 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 9,
+    "total_board_verdicts": 10,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 9,
+      "AUTO_PROCEED_WITH_AUDIT": 10,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 0,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 9,
+    "dispatched_after_board_count": 10,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 8,
+      "gm2": 9,
       "gm1": 1
     },
     "cross_gm_board_gate_active": true,
@@ -211,6 +211,19 @@
         "auto_proceed_type": "ledger correction",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+        "from_gm": "gm2",
+        "selected_option": "executor-pool-m1-1-post-merge-closeout",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "sync public Factory Report and post Issue #152 AAR; M2 real sandbox remains Monarch-gated",
+        "audit_required": true,
+        "auto_proceed_type": "ledger correction",
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -235,9 +248,9 @@
         ]
       },
       "gm2": {
-        "queued": 25,
+        "queued": 26,
         "ack_required": 0,
-        "acked": 25,
+        "acked": 26,
         "missing_first_artifact": 1,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -267,7 +280,8 @@
           "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery",
           "aion-governance-0143-auto-trigger-gate-v0-1",
           "aion-governance-0146-executor-pool-m0-prepare-only",
-          "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack"
+          "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+          "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics"
         ]
       },
       "gm": {
@@ -296,7 +310,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 29,
+    "acked_count": 30,
     "missing_first_artifact_count": 2,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -309,7 +323,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "average_ack_minutes": -77.17,
+    "average_ack_minutes": -74.63,
     "average_first_artifact_minutes": null
   },
   "dispatch_recovery_summary": {
@@ -393,16 +407,18 @@
   "executor_pool_summary": {
     "title": "Executor Pool / 执行器池路线",
     "phase": "M0",
-    "current_phase": "M1",
+    "current_phase": "M1.1",
     "phases": [
       "M0",
-      "M1"
+      "M1",
+      "M1.1"
     ],
     "status": "PREPARE_ONLY",
     "current_status": "PREPARE_ONLY",
     "pool_task_ids": [
       "aion-governance-0146-executor-pool-m0-prepare-only",
-      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack"
+      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics"
     ],
     "internal_executors": [
       "gm1_direct",
@@ -430,19 +446,22 @@
     "external_real_run_allowed": false,
     "next_step_options": [
       {
-        "id": "executor-pool-m1-sandbox-authorization-pack",
-        "title": "Executor Pool M1：沙箱方案与对比任务授权包",
-        "risk_level": "L2",
-        "mode": "PREPARE_ONLY",
+        "id": "executor-pool-m1-1-internal-routing-metrics",
+        "title": "Executor Pool M1.1 internal routing metrics",
+        "expected_value": "Expose internal agent routing/load/throughput/fallback metrics in Factory Report without real external execution.",
+        "risk_level_guess": "L2_PREPARE_ONLY",
+        "dependency_ready": true,
         "monarch_required": false,
-        "recommended": true
+        "gm_preference": true
       },
       {
-        "id": "executor-pool-m1-real-sandbox-run",
-        "title": "M1 真实沙箱运行授权",
-        "risk_level": "L2_REAL_EXECUTION",
-        "mode": "NEEDS_MONARCH",
-        "monarch_required": true
+        "id": "executor-pool-m2-real-sandbox-run",
+        "title": "Executor Pool M2 real sandbox run authorization",
+        "expected_value": "Request separate Monarch approval for real sandbox clone/install/run.",
+        "risk_level_guess": "L2_REAL_EXECUTION",
+        "dependency_ready": false,
+        "monarch_required": true,
+        "gm_preference": false
       }
     ],
     "m1_status": "PREPARE_ONLY",
@@ -454,7 +473,49 @@
     ],
     "m1_candidate_comparison_task_count": 2,
     "m1_prepare_only_enforced": true,
-    "m1_real_run_allowed": false
+    "m1_real_run_allowed": false,
+    "m11_status": "PREPARE_ONLY",
+    "m11_authorization_level": "L2_PREPARE_ONLY",
+    "m11_prepare_only_enforced": true,
+    "m11_real_external_execution_allowed": false,
+    "m11_role_count": 4,
+    "m11_internal_executor_roles": [
+      "GM1",
+      "GM2",
+      "agent007",
+      "bafuxunan"
+    ],
+    "m11_routing_rule_count": 4,
+    "m11_metrics": [
+      "queued",
+      "in_progress",
+      "completed",
+      "blocked",
+      "ack_timeout",
+      "fallback_triggered",
+      "fallback_succeeded",
+      "audit_pending",
+      "audit_passed",
+      "fallback_success_rate",
+      "throughput_per_day",
+      "audit_latency_hours",
+      "audit_latency",
+      "first_artifact_delay"
+    ],
+    "m11_fallback_success_rate_available": true,
+    "m11_throughput_model_available": true,
+    "m11_fallback_success_rate": null,
+    "m11_audit_latency_hours": null,
+    "m2_authorization_request_readiness": {
+      "ready_for_real_run": false,
+      "monarch_required_for_real_run": true,
+      "evidence_needed_before_request": [
+        "stable internal routing/load/throughput metrics in Factory Report",
+        "bounded fallback success-rate evidence",
+        "audit latency and queue visibility",
+        "explicit candidate sandbox plan from M1"
+      ]
+    }
   },
   "progress": [
     {
@@ -968,6 +1029,22 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+      "project_id": "Executor Pool",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:governance/executor-pool-m11-internal-routing-metrics",
+      "ack_at": "2026-05-11T12:05:00Z",
+      "first_artifact": "docs/governance/aion-executor-pool-m1-1-internal-routing-metrics.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/153",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/152",
+      "next_gate": "public_report_sync_and_issue_152_aar",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1003,7 +1080,8 @@
       "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery: MERGED_LOW_RISK -> Public Factory Report sync, Issue #138 AAR, #129 GM1 direct L1 artifact or blocker note, Executor Pool M0 prepare-only next board option",
       "aion-governance-0143-auto-trigger-gate-v0-1: MERGED_LOW_RISK -> Auto-trigger Gate v0.1 merged; public Factory Report/AAR closeout; Executor Pool M0 remains prepare-only and high-risk actions require Monarch",
       "aion-governance-0146-executor-pool-m0-prepare-only: MERGED_LOW_RISK -> fallback_audit_then_low_risk_merge",
-      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack: MERGED_LOW_RISK -> post_merge_public_report_sync_and_issue_149_aar"
+      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack: MERGED_LOW_RISK -> post_merge_public_report_sync_and_issue_149_aar",
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics: MERGED_LOW_RISK -> public_report_sync_and_issue_152_aar"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1019,7 +1097,8 @@
       "aion-governance-0123-board-v0-1-protocol",
       "aion-governance-0143-auto-trigger-gate-v0-1",
       "aion-governance-0146-executor-pool-m0-prepare-only",
-      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack"
+      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
