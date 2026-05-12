@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-12T07:23:22Z",
-  "ledger_generated_at": "2026-05-12T04:41:28Z",
+  "generated_at": "2026-05-12T08:27:25Z",
+  "ledger_generated_at": "2026-05-12T08:08:29Z",
   "project_filter": null,
   "score": {
     "score": 94,
     "max_score": 100,
-    "total_tasks": 50,
-    "moving_tasks": 47,
+    "total_tasks": 51,
+    "moving_tasks": 48,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 7,
+      "invalid_ack_timestamps": 8,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -48,7 +48,8 @@
           "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
           "seekapi-gm1-overnight-state-correction-v0-1",
           "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
-          "seekapi-prod-smoke-evidence-template-v0-1"
+          "seekapi-prod-smoke-evidence-template-v0-1",
+          "tianggong-adapter-evaluation-matrix-v0-1"
         ]
       },
       {
@@ -516,9 +517,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 9,
+        "queued": 10,
         "ack_required": 0,
-        "acked": 7,
+        "acked": 8,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -532,7 +533,8 @@
           "aion-governance-0178-security-scan-baseline-v0-1",
           "aion-governance-0181-elder-senate-v0-1",
           "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
-          "aion-governance-0180-same-task-benchmark-design-v0-1"
+          "aion-governance-0180-same-task-benchmark-design-v0-1",
+          "tianggong-adapter-evaluation-matrix-v0-1"
         ]
       },
       "gm2": {
@@ -611,7 +613,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 47,
+    "acked_count": 48,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -621,7 +623,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 7,
+    "invalid_ack_timestamp_count": 8,
     "invalid_ack_timestamp_task_ids": [
       "seekapi-0133-strategic-realignment-v0-1",
       "seekapi-checkout-metadata-contract-v0-1",
@@ -629,7 +631,8 @@
       "seekapi-gm1-overnight-state-correction-v0-1",
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
       "seekapi-prod-smoke-evidence-template-v0-1",
-      "aion-governance-0184-elder-senate-v0-2-embedded-enforcement"
+      "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
+      "tianggong-adapter-evaluation-matrix-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -841,14 +844,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 46,
+    "audit_queue_count": 47,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 41,
+    "audit_passed_count": 42,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 13,
+    "formal_bafuxunan_audit_count": 14,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
@@ -951,6 +954,16 @@
     ],
     "blocked_task_ids": []
   },
+  "adapter_evaluation_matrix_summary": {
+    "title": "Adapter Evaluation Matrix v0.1 / 外部执行器评估矩阵",
+    "matrix_count": 1,
+    "prepare_only_count": 1,
+    "real_execution_allowed_count": 0,
+    "external_write_allowed_count": 0,
+    "with_elder_senate_review_count": 1,
+    "missing_elder_senate_review_count": 0,
+    "blocked_task_ids": []
+  },
   "elder_senate_summary": {
     "title": "AION Elder Senate / 长老院",
     "version": "v0.2 embedded enforcement",
@@ -961,7 +974,7 @@
       "elder_senate_submission"
     ],
     "statement": "Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.",
-    "reviews_total": 3,
+    "reviews_total": 4,
     "pass_count": 3,
     "revise_count": 0,
     "block_count": 0,
@@ -988,8 +1001,8 @@
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
     "gm2_queue": 33,
-    "agent007_queue": 10,
-    "audit_queue": 5,
+    "agent007_queue": 11,
+    "audit_queue": 6,
     "ack_timeout_count": 0,
     "audit_timeout_count": 0,
     "fallback_success_rate": null,
@@ -1799,6 +1812,22 @@
       "board_verdict": "PREPARE_ONLY",
       "board_authorization_level": "L2",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "tianggong-adapter-evaluation-matrix-v0-1",
+      "project_id": "tianggong-si",
+      "status": "MERGED_LOW_RISK",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:007/issue-189-adapter-evaluation-matrix-v0-1",
+      "ack_at": "2026-05-12T08:08:29Z",
+      "first_artifact": "projects/tianggong-si/governance/adapter-evaluation-matrix-v0.1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/190",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/189",
+      "next_gate": "post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
     }
   ],
   "sections": {
@@ -1852,7 +1881,8 @@
       "aion-governance-0178-security-scan-baseline-v0-1: READY_FOR_LOW_RISK_MERGE -> PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization.",
       "aion-governance-0181-elder-senate-v0-1: MERGED_LOW_RISK -> post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement: MERGED_LOW_RISK -> public Factory Report sync and issue #184 AAR; no high-risk action",
-      "aion-governance-0180-same-task-benchmark-design-v0-1: MERGED_LOW_RISK -> post-merge public Factory Report sync and AAR; real external executor remains Monarch-gated"
+      "aion-governance-0180-same-task-benchmark-design-v0-1: MERGED_LOW_RISK -> post-merge public Factory Report sync and AAR; real external executor remains Monarch-gated",
+      "tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1882,7 +1912,8 @@
       "aion-governance-0178-security-scan-baseline-v0-1",
       "aion-governance-0181-elder-senate-v0-1",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
-      "aion-governance-0180-same-task-benchmark-design-v0-1"
+      "aion-governance-0180-same-task-benchmark-design-v0-1",
+      "tianggong-adapter-evaluation-matrix-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
