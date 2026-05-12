@@ -1,7 +1,7 @@
 # AION 工厂报告
 
-生成时间：`2026-05-12T12:04:00Z`
-账本生成时间：`2026-05-12T12:04:00Z`
+生成时间：`2026-05-12T12:22:33Z`
+账本生成时间：`2026-05-12T12:22:33Z`
 
 ## 总体评分
 - 评分：94/100
@@ -93,14 +93,14 @@
 - M2 候选执行器：OpenHands, SWE-agent, Cursor CLI
 
 ## Audit Runtime v0.1 / 审计运行时
-- 审计队列总数：44
+- 审计队列总数：45
 - 待审计：0
 - ACK 超时：0
 - 审计超时：0
-- 审计通过：39
+- 审计通过：40
 - 审计阻断：0
 - fallback audit：33
-- 八府巡按正式审计：11
+- 八府巡按正式审计：12
 - 平均审计耗时：84.62
 - 审计瓶颈任务：无
 
@@ -136,7 +136,7 @@
 - doctrine_updates_required：0
 - capacity_bottlenecks_detected：0
 - quality_gate_failures_detected：0
-- recommended_next_actions：aion-governance-0181-elder-senate-v0-1: open PR for audit
+- recommended_next_actions：aion-governance-0181-elder-senate-v0-1: post-merge AAR and next low-risk integration proposal
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
@@ -188,7 +188,7 @@
 | seekapi-payment-webhook-credits-l4-authorization-pack-v0-1 | READY_FOR_LOW_RISK_MERGE | gm | bafuxunan | Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated |
 | seekapi-prod-smoke-evidence-template-v0-1 | READY_FOR_LOW_RISK_MERGE | gm | bafuxunan | Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated |
 | aion-governance-0178-security-scan-baseline-v0-1 | READY_FOR_LOW_RISK_MERGE | agent007 | bafuxunan | PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization. |
-| aion-governance-0181-elder-senate-v0-1 | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | run local tests, commit, then open PR for audit; no production/deploy/payment/database/secret/external-executor action |
+| aion-governance-0181-elder-senate-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet |
 
 ## AION 工厂晨报
 
@@ -240,7 +240,7 @@
 - seekapi-payment-webhook-credits-l4-authorization-pack-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated
 - seekapi-prod-smoke-evidence-template-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated
 - aion-governance-0178-security-scan-baseline-v0-1: READY_FOR_LOW_RISK_MERGE -> PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization.
-- aion-governance-0181-elder-senate-v0-1: FIRST_ARTIFACT_SEEN -> run local tests, commit, then open PR for audit; no production/deploy/payment/database/secret/external-executor action
+- aion-governance-0181-elder-senate-v0-1: MERGED_LOW_RISK -> post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet
 
 ### 2. 卡在仅已下令的任务
 - 无
@@ -278,6 +278,7 @@
 - seekapi-payment-webhook-credits-l4-authorization-pack-v0-1
 - seekapi-prod-smoke-evidence-template-v0-1
 - aion-governance-0178-security-scan-baseline-v0-1
+- aion-governance-0181-elder-senate-v0-1
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation

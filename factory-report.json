@@ -1,7 +1,7 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-12T12:04:00Z",
-  "ledger_generated_at": "2026-05-12T12:04:00Z",
+  "generated_at": "2026-05-12T12:22:33Z",
+  "ledger_generated_at": "2026-05-12T12:22:33Z",
   "project_filter": null,
   "score": {
     "score": 94,
@@ -603,8 +603,8 @@
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
-    "average_ack_minutes": 0.03,
-    "average_first_artifact_minutes": 171.62
+    "average_ack_minutes": 0.05,
+    "average_first_artifact_minutes": 152.66
   },
   "dispatch_recovery_summary": {
     "title": "AION Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery",
@@ -811,14 +811,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 44,
+    "audit_queue_count": 45,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 39,
+    "audit_passed_count": 40,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 11,
+    "formal_bafuxunan_audit_count": 12,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
@@ -924,7 +924,7 @@
     "capacity_bottlenecks_detected": 0,
     "quality_gate_failures_detected": 0,
     "recommended_next_actions": [
-      "aion-governance-0181-elder-senate-v0-1: open PR for audit"
+      "aion-governance-0181-elder-senate-v0-1: post-merge AAR and next low-risk integration proposal"
     ]
   },
   "progress": [
@@ -1687,15 +1687,15 @@
     {
       "task_id": "aion-governance-0181-elder-senate-v0-1",
       "project_id": "aion-governance",
-      "status": "FIRST_ARTIFACT_SEEN",
+      "status": "MERGED_LOW_RISK",
       "owner": "agent007",
       "audit": "bafuxunan",
       "runtime_handle": "branch:007/elder-senate-v0-1-issue-181",
       "ack_at": "2026-05-12T12:04:00Z",
       "first_artifact": "docs/governance/aion-elder-senate-v0.1.md + scripts/aion_elder_senate_review_check.py",
-      "pr": null,
+      "pr": "https://github.com/kiddhu/aion-governance/pull/182",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/181",
-      "next_gate": "run local tests, commit, then open PR for audit; no production/deploy/payment/database/secret/external-executor action",
+      "next_gate": "post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet",
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
@@ -1750,7 +1750,7 @@
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
       "seekapi-prod-smoke-evidence-template-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
       "aion-governance-0178-security-scan-baseline-v0-1: READY_FOR_LOW_RISK_MERGE -> PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization.",
-      "aion-governance-0181-elder-senate-v0-1: FIRST_ARTIFACT_SEEN -> run local tests, commit, then open PR for audit; no production/deploy/payment/database/secret/external-executor action"
+      "aion-governance-0181-elder-senate-v0-1: MERGED_LOW_RISK -> post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1777,7 +1777,8 @@
       "seekapi-gm1-overnight-state-correction-v0-1",
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
       "seekapi-prod-smoke-evidence-template-v0-1",
-      "aion-governance-0178-security-scan-baseline-v0-1"
+      "aion-governance-0178-security-scan-baseline-v0-1",
+      "aion-governance-0181-elder-senate-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
