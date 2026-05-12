@@ -4,10 +4,10 @@
   "ledger_generated_at": "2026-05-13T01:35:00Z",
   "project_filter": null,
   "score": {
-    "score": 94,
+    "score": 95,
     "max_score": 100,
-    "total_tasks": 54,
-    "moving_tasks": 51,
+    "total_tasks": 55,
+    "moving_tasks": 52,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -19,7 +19,7 @@
     "ready_for_unattended_high_quality": false,
     "project_scoped_ready_for_unattended_high_quality": null,
     "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
-    "quality_score": 94,
+    "quality_score": 95,
     "minimum_ready_score": 95,
     "blocker_counts": {
       "monarch_gated_failure_replay": 3,
@@ -545,9 +545,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 13,
+        "queued": 14,
         "ack_required": 0,
-        "acked": 11,
+        "acked": 12,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -565,7 +565,8 @@
           "tianggong-adapter-evaluation-matrix-v0-1",
           "aion-governance-0193-pause-recovery-rule-v0-1",
           "tianggong-m32-readonly-sandbox-authorization-packet-v0-1",
-          "aion-governance-0196-runtime-observability-v0-1"
+          "aion-governance-0196-runtime-observability-v0-1",
+          "aion-governance-0206-parent-child-task-continuity-rule-v0-1"
         ]
       },
       "gm2": {
@@ -644,7 +645,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 51,
+    "acked_count": 52,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -893,16 +894,33 @@
     "blocked_task_ids": [],
     "missing_signal_task_ids": []
   },
+  "parent_child_continuity_summary": {
+    "title": "AION Parent-Child Task Continuity v0.1 / 父子任务连续性",
+    "rule_count": 1,
+    "prepare_only_count": 1,
+    "parent_control_issue_count": 1,
+    "definition_of_done_count": 1,
+    "continuation_packet_count": 1,
+    "task_tree_count": 1,
+    "integration_gate_pass_count": 1,
+    "issue_self_evolution_link_count": 1,
+    "real_execution_allowed_count": 0,
+    "rule_task_ids": [
+      "aion-governance-0206-parent-child-task-continuity-rule-v0-1"
+    ],
+    "blocked_task_ids": [],
+    "missing_integration_gate_task_ids": []
+  },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 50,
+    "audit_queue_count": 51,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
     "audit_passed_count": 45,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 17,
+    "formal_bafuxunan_audit_count": 18,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
@@ -1089,7 +1107,7 @@
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
     "gm2_queue": 33,
-    "agent007_queue": 14,
+    "agent007_queue": 15,
     "audit_queue": 7,
     "ack_timeout_count": 0,
     "audit_timeout_count": 0,
@@ -1964,6 +1982,22 @@
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
+      "project_id": "aion-parent-child-continuity",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:issue-206-parent-child-continuity-v0.1",
+      "ack_at": "2026-05-13T02:40:00Z",
+      "first_artifact": "docs/governance/aion-parent-child-task-continuity-v0.1.md",
+      "pr": "pending-pr",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/206",
+      "next_gate": "Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report.",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
     }
   ],
   "sections": {
@@ -2021,7 +2055,8 @@
       "tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated",
       "aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated",
       "tianggong-m32-readonly-sandbox-authorization-packet-v0-1: MERGED_LOW_RISK -> public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated",
-      "aion-governance-0196-runtime-observability-v0-1: MERGED_LOW_RISK -> Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated."
+      "aion-governance-0196-runtime-observability-v0-1: MERGED_LOW_RISK -> Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated.",
+      "aion-governance-0206-parent-child-task-continuity-rule-v0-1: FIRST_ARTIFACT_SEEN -> Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
