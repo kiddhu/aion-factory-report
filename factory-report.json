@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-11T17:59:17Z",
-  "ledger_generated_at": "2026-05-11T17:55:02Z",
+  "generated_at": "2026-05-12T03:27:08Z",
+  "ledger_generated_at": "2026-05-12T03:24:00Z",
   "project_filter": null,
   "score": {
-    "score": 92,
+    "score": 93,
     "max_score": 100,
-    "total_tasks": 40,
-    "moving_tasks": 37,
+    "total_tasks": 46,
+    "moving_tasks": 43,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -19,7 +19,7 @@
     "ready_for_unattended_high_quality": false,
     "project_scoped_ready_for_unattended_high_quality": null,
     "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
-    "quality_score": 92,
+    "quality_score": 93,
     "minimum_ready_score": 95,
     "blocker_counts": {
       "monarch_gated_failure_replay": 3,
@@ -30,11 +30,26 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 0,
+      "invalid_ack_timestamps": 6,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
     "repair_queue": [
+      {
+        "id": "repair-invalid-dispatch-timestamps",
+        "owner": "gm2",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "action": "Repair or annotate ledger timestamp ordering anomalies instead of hiding them in averages.",
+        "task_ids": [
+          "seekapi-0133-strategic-realignment-v0-1",
+          "seekapi-checkout-metadata-contract-v0-1",
+          "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+          "seekapi-gm1-overnight-state-correction-v0-1",
+          "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+          "seekapi-prod-smoke-evidence-template-v0-1"
+        ]
+      },
       {
         "id": "keep-high-risk-replay-frozen",
         "owner": "Monarch",
@@ -97,22 +112,23 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 17,
+    "total_board_verdicts": 21,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
-      "AUTO_PROCEED_WITH_AUDIT": 16,
+      "AUTO_PROCEED_WITH_AUDIT": 19,
       "SPLIT_AND_PROCEED": 0,
-      "PREPARE_ONLY": 1,
+      "PREPARE_ONLY": 2,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 17,
+    "dispatched_after_board_count": 21,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
       "gm2": 16,
-      "gm1": 1
+      "gm1": 1,
+      "gm": 4
     },
     "cross_gm_board_gate_active": true,
     "tasks": [
@@ -361,6 +377,78 @@
         "auto_proceed_type": "dry-run only script",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "seekapi-checkout-metadata-contract-v0-1",
+        "from_gm": null,
+        "selected_option": "seekapi_checkout_metadata_contract_v0_1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "create artifact, run Quality Gate, audit, AAR",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": {
+          "authorization_level": "L1",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+        "from_gm": null,
+        "selected_option": "seekapi_credit_ledger_oneapi_responsibility_map_v0_1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "create artifact, run Quality Gate, audit, AAR",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": {
+          "authorization_level": "L1",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+        "from_gm": null,
+        "selected_option": "seekapi_payment_webhook_credits_l4_authorization_pack_v0_1",
+        "verdict": "PREPARE_ONLY",
+        "authorization_level": "L2",
+        "monarch_required": false,
+        "next_action": "create artifact, run Quality Gate, audit, AAR",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": {
+          "authorization_level": "L2",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "seekapi-prod-smoke-evidence-template-v0-1",
+        "from_gm": null,
+        "selected_option": "seekapi_prod_smoke_evidence_template_v0_1",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "create artifact, run Quality Gate, audit, AAR",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": {
+          "authorization_level": "L1",
+          "consecutive_auto_tasks": 1,
+          "max_consecutive_auto_tasks": 3,
+          "on_exceed": "NEEDS_MONARCH"
+        },
+        "dispatched_after_board": true
       }
     ]
   },
@@ -447,15 +535,21 @@
         ]
       },
       "gm": {
-        "queued": 1,
+        "queued": 7,
         "ack_required": 0,
-        "acked": 0,
+        "acked": 6,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
         "fallback_triggered": 0,
         "task_ids": [
-          "seekapi-0032-payment-credits-webhook-contract"
+          "seekapi-0032-payment-credits-webhook-contract",
+          "seekapi-0133-strategic-realignment-v0-1",
+          "seekapi-checkout-metadata-contract-v0-1",
+          "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+          "seekapi-gm1-overnight-state-correction-v0-1",
+          "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+          "seekapi-prod-smoke-evidence-template-v0-1"
         ]
       },
       "007": {
@@ -472,7 +566,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 37,
+    "acked_count": 43,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -482,8 +576,15 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 0,
-    "invalid_ack_timestamp_task_ids": [],
+    "invalid_ack_timestamp_count": 6,
+    "invalid_ack_timestamp_task_ids": [
+      "seekapi-0133-strategic-realignment-v0-1",
+      "seekapi-checkout-metadata-contract-v0-1",
+      "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+      "seekapi-gm1-overnight-state-correction-v0-1",
+      "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+      "seekapi-prod-smoke-evidence-template-v0-1"
+    ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
     "average_ack_minutes": 0.03,
@@ -694,24 +795,28 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 37,
+    "audit_queue_count": 43,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 33,
+    "audit_passed_count": 38,
     "audit_blocked_count": 0,
-    "fallback_audit_count": 28,
-    "formal_bafuxunan_audit_count": 9,
+    "fallback_audit_count": 33,
+    "formal_bafuxunan_audit_count": 10,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
   "quality_gate_summary": {
     "title": "Quality Gate v0.1 / 质量门禁",
-    "quality_gate_count": 1,
-    "quality_gate_pass_count": 1,
+    "quality_gate_count": 5,
+    "quality_gate_pass_count": 5,
     "quality_gate_block_count": 0,
     "passed_task_ids": [
-      "aion-governance-0171-quality-gate-v0-1"
+      "aion-governance-0171-quality-gate-v0-1",
+      "seekapi-checkout-metadata-contract-v0-1",
+      "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+      "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+      "seekapi-prod-smoke-evidence-template-v0-1"
     ],
     "blocked_task_ids": [],
     "forbidden_action_block_count": 0,
@@ -724,6 +829,38 @@
         "ci_status": "PASS",
         "checker_status": "PASS",
         "audit_verdict": "FALLBACK_AUDIT_PASS"
+      },
+      {
+        "task_id": "seekapi-checkout-metadata-contract-v0-1",
+        "valid": true,
+        "errors": [],
+        "ci_status": "SUCCESS",
+        "checker_status": "PASS",
+        "audit_verdict": "FORMAL_AUDIT_PASS"
+      },
+      {
+        "task_id": "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+        "valid": true,
+        "errors": [],
+        "ci_status": "SUCCESS",
+        "checker_status": "PASS",
+        "audit_verdict": "FORMAL_AUDIT_PASS"
+      },
+      {
+        "task_id": "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+        "valid": true,
+        "errors": [],
+        "ci_status": "SUCCESS",
+        "checker_status": "PASS",
+        "audit_verdict": "FORMAL_AUDIT_PASS"
+      },
+      {
+        "task_id": "seekapi-prod-smoke-evidence-template-v0-1",
+        "valid": true,
+        "errors": [],
+        "ci_status": "SUCCESS",
+        "checker_status": "PASS",
+        "audit_verdict": "FORMAL_AUDIT_PASS"
       }
     ]
   },
@@ -1371,6 +1508,102 @@
       "board_verdict": "PREPARE_ONLY",
       "board_authorization_level": "L2",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "seekapi-0133-strategic-realignment-v0-1",
+      "project_id": "SeekAPI",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "github-issue:https://github.com/kiddhu/aion-governance/issues/133",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "#133 issue body strategic packet; refreshed by overnight ledger PR",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/133",
+      "next_gate": "use #133 Board options to continue L1 SeekAPI contracts/templates",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
+    },
+    {
+      "task_id": "seekapi-checkout-metadata-contract-v0-1",
+      "project_id": "SeekAPI",
+      "status": "READY_FOR_LOW_RISK_MERGE",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm1/seekapi-overnight-l1-contracts",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "projects/seekapi/payment/checkout-metadata-contract-v0.1.md",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/133",
+      "next_gate": "Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+      "project_id": "SeekAPI",
+      "status": "READY_FOR_LOW_RISK_MERGE",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm1/seekapi-overnight-l1-contracts",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "projects/seekapi/payment/credit-ledger-oneapi-responsibility-map-v0.1.md",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/133",
+      "next_gate": "Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "seekapi-gm1-overnight-state-correction-v0-1",
+      "project_id": "SeekAPI",
+      "status": "READY_FOR_LOW_RISK_MERGE_FALLBACK_ALLOWED",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm1/seekapi-overnight-l1-contracts",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "state correction comments for #129/#133 + ledger refresh",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/129",
+      "next_gate": "CI, AAR, no issue close",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
+    },
+    {
+      "task_id": "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+      "project_id": "SeekAPI",
+      "status": "READY_FOR_LOW_RISK_MERGE",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm1/seekapi-overnight-l1-contracts",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "projects/seekapi/payment/payment-webhook-credits-l4-authorization-pack-v0.1.md",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/133",
+      "next_gate": "Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "board_verdict": "PREPARE_ONLY",
+      "board_authorization_level": "L2",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "seekapi-prod-smoke-evidence-template-v0-1",
+      "project_id": "SeekAPI",
+      "status": "READY_FOR_LOW_RISK_MERGE",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm1/seekapi-overnight-l1-contracts",
+      "ack_at": "2026-05-11T17:44:08Z",
+      "first_artifact": "projects/seekapi/prod-smoke/prod-smoke-evidence-template-v0.1.md",
+      "pr": 176,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/133",
+      "next_gate": "Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1414,7 +1647,13 @@
       "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion: MERGED_LOW_RISK -> public report sync + Issue #164 AAR + proceed to Audit Runtime v0.1 / Quality Gate v0.1 / Executor Pool M2 prepare-only sequence",
       "aion-governance-0168-audit-runtime-v0-1: MERGED_LOW_RISK -> post-merge closeout PR -> public Factory Report -> #168 AAR -> Quality Gate v0.1",
       "aion-governance-0171-quality-gate-v0-1: MERGED_LOW_RISK -> public Factory Report sync -> Issue #171 AAR -> next Board option",
-      "aion-governance-0174-executor-pool-m2-authorization-pack: MERGED_LOW_RISK -> public_report_sync_issue_174_aar_and_same_task_benchmark_design_optional"
+      "aion-governance-0174-executor-pool-m2-authorization-pack: MERGED_LOW_RISK -> public_report_sync_issue_174_aar_and_same_task_benchmark_design_optional",
+      "seekapi-0133-strategic-realignment-v0-1: FIRST_ARTIFACT_SEEN -> use #133 Board options to continue L1 SeekAPI contracts/templates",
+      "seekapi-checkout-metadata-contract-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "seekapi-credit-ledger-oneapi-responsibility-map-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "seekapi-gm1-overnight-state-correction-v0-1: READY_FOR_LOW_RISK_MERGE_FALLBACK_ALLOWED -> CI, AAR, no issue close",
+      "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "seekapi-prod-smoke-evidence-template-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1435,7 +1674,12 @@
       "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
       "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
       "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
-      "aion-governance-0168-audit-runtime-v0-1"
+      "aion-governance-0168-audit-runtime-v0-1",
+      "seekapi-checkout-metadata-contract-v0-1",
+      "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+      "seekapi-gm1-overnight-state-correction-v0-1",
+      "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+      "seekapi-prod-smoke-evidence-template-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",

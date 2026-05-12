@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="900">
+  <title>AION 工厂报告</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1020; --panel:#121a33; --panel2:#182447; --text:#edf2ff; --muted:#9fb0d0; --good:#58d68d; --warn:#ffd166; --bad:#ff6b6b; --line:#26365f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:linear-gradient(135deg,#070b16,#111b39); color:var(--text); }
+    header { padding:32px 28px 18px; border-bottom:1px solid var(--line); background:rgba(11,16,32,.86); position:sticky; top:0; backdrop-filter: blur(10px); z-index:2; }
+    h1 { margin:0 0 8px; font-size:32px; }
+    .sub { color:var(--muted); }
+    main { padding:24px 28px 48px; max-width:1500px; margin:auto; }
+    .hero { display:grid; grid-template-columns: 220px 1fr repeat(3, minmax(130px, 180px)); gap:16px; margin-bottom:22px; }
+    .score { font-size:54px; font-weight:800; color:var(--good); }
+    .panel, .card { background:rgba(18,26,51,.92); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:0 16px 40px rgba(0,0,0,.22); }
+    .metric b { display:block; font-size:28px; }
+    .metric span, .small { color:var(--muted); }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; }
+    h2 { margin:0 0 12px; font-size:18px; }
+    ul { margin:0; padding-left:20px; } li { margin:7px 0; } .empty { color:var(--muted); }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border-radius:14px; }
+    th, td { border-bottom:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+    th { color:#c9d7ff; background:var(--panel2); position:sticky; top:100px; }
+    a { color:#8ecbff; } .status { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color:var(--warn); }
+    @media (max-width: 1100px) { .hero, .grid { grid-template-columns:1fr; } th { position:static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AION 工厂报告</h1>
+    <div class="sub">一张报告，看帝国工厂今天是否真的在运转。浏览器每 15 分钟自动刷新。</div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="panel"><div class="small">总体评分</div><div class="score">0</div><div class="small">/ 100</div></div>
+      <div class="panel"><div class="small">当前判断</div><p>从可验证证据看，工厂尚未真正运转。</p><div class="small">生成时间：2026-05-12T03:27:08Z<br>账本时间：2026-05-12T03:24:00Z<br>项目：seekapi</div></div>
+      <div class="panel metric"><b>0</b><span>正在推进的任务</span></div>
+      <div class="panel metric"><b>1</b><span>总任务数</span></div>
+      <div class="panel metric"><b>1</b><span>卡住/阻塞任务</span></div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Factory Kernel v0.4.2 / 无人值守质量闭环</h2>
+      <p>是否达到无人值守高质量：False；成熟度：PARTIAL_AUTONOMY_NOT_FULL；质量分：0/95。</p>
+      <p>可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。</p>
+      <div class="small">阻塞计数：{&#x27;monarch_gated_failure_replay&#x27;: 1, &#x27;auto_replay_candidates&#x27;: 0, &#x27;missing_first_artifact&#x27;: 0, &#x27;ack_required&#x27;: 0, &#x27;ack_timeout&#x27;: 0, &#x27;executor_idle_blocker&#x27;: 0, &#x27;invalid_gm_completion_packets&#x27;: 0, &#x27;board_not_dispatched_after_verdict&#x27;: 0, &#x27;invalid_ack_timestamps&#x27;: 0, &#x27;invalid_first_artifact_timestamps&#x27;: 0, &#x27;false_progress_penalty&#x27;: 0}</div>
+      <div class="small">修复队列：keep-high-risk-replay-frozen</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>v0.3 低风险闭环</h2>
+      <p>目标：3 次；已关闭：0 次；已登记：0 次；剩余：3 次。</p>
+      <div class="small">暂无闭环任务</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>v0.4 失败分类与重放</h2>
+      <p>已分类候选：1；可自动重放候选：0；需要 Monarch 拍板候选：1。</p>
+      <p>v0.4.1 已恢复低风险候选：0。</p>
+      <div class="small">当前失败候选：seekapi-0032-payment-credits-webhook-contract</div>
+      <div class="small">已恢复任务：暂无恢复任务</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>AION Board v0.2 / 董事局自动裁决门禁</h2>
+      <p>已登记裁决：0；裁决分布：{&#x27;AUTO_PROCEED&#x27;: 0, &#x27;AUTO_PROCEED_WITH_AUDIT&#x27;: 0, &#x27;SPLIT_AND_PROCEED&#x27;: 0, &#x27;PREPARE_ONLY&#x27;: 0, &#x27;NEEDS_MONARCH&#x27;: 0, &#x27;BLOCK&#x27;: 0}。</p>
+      <p>高风险被拦截：0；裁决后已派工：0；裁决后未派工：0；超预算裁决：0。</p>
+      <div class="small">暂无董事局裁决</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>GM Self-Driving Completion Rule v0.1 / GM 自驱收口</h2>
+      <p>completion packet：0；含 next_step_options：0；含 board_submission：0；自动提交 Board：0。</p>
+      <p>错误回 Monarch：0；缺 options：0；缺 board_submission：0；L4 正确升级：0。</p>
+      <div class="small">L0/L1/L2 prepare 自动进 Board：0；GM 来源：{&#x27;gm1&#x27;: 0, &#x27;gm2&#x27;: 0}</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Dispatch Runtime v0.1 / 执行队列</h2>
+      <p>待 ACK：0；已 ACK：0；缺第一产物：0。</p>
+      <p>ACK_TIMEOUT：0；EXECUTOR_IDLE_BLOCKER：0；fallback 已触发：0。</p>
+      <div class="small">待 ACK 任务：无</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Auto-trigger Gate v0.1 / 自动触发门</h2>
+      <p>自动触发总数：0；已触发：0；已阻断：0；需要 Monarch：0。</p>
+      <div class="small">已触发任务：无</div>
+      <div class="small">待产物：无；待审计：无</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Executor Pool / 执行器池</h2>
+      <p>当前阶段：未开始；当前状态：NOT_STARTED；M1.1 prepare-only：False；M1.1 外部真实运行：False。</p>
+      <div class="small">全部阶段：无</div>
+      <div class="small">内部执行器：无</div>
+      <div class="small">外部候选：无</div>
+      <div class="small">M1.1 指标：无</div>
+      <div class="small">M2 真实沙箱仍需 Monarch：</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Audit Runtime v0.1 / 审计运行时</h2>
+      <p>audit_queue_count：0；audit_pending_count：0；audit_ack_timeout_count：0；audit_timeout_count：0。</p>
+      <p>audit_passed_count：0；audit_blocked_count：0；fallback_audit_count：0；formal_bafuxunan_audit_count：0。</p>
+      <div class="small">audit_latency_average：</div>
+      <div class="small">audit_bottleneck_task_ids：无</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Quality Gate v0.1 / 质量门禁</h2>
+      <p>quality_gate_count：0；quality_gate_pass_count：0；quality_gate_block_count：0。</p>
+      <p>forbidden_action_block_count：0；false_pass_block_count：0。</p>
+      <div class="small">blocked_task_ids：无</div>
+      <div class="small">quality_gate_summary：{&#x27;title&#x27;: &#x27;Quality Gate v0.1 / 质量门禁&#x27;, &#x27;quality_gate_count&#x27;: 0, &#x27;quality_gate_pass_count&#x27;: 0, &#x27;quality_gate_block_count&#x27;: 0, &#x27;passed_task_ids&#x27;: [], &#x27;blocked_task_ids&#x27;: [], &#x27;forbidden_action_block_count&#x27;: 0, &#x27;false_pass_block_count&#x27;: 0, &#x27;tasks&#x27;: []}</div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px; overflow:auto;">
+
+      <table>
+        <thead><tr><th>任务</th><th>状态</th><th>负责人</th><th>审计</th><th>执行入口</th><th>接单确认</th><th>第一产物</th><th>PR</th><th>董事局裁决</th><th>下一关口</th></tr></thead>
+        <tbody><tr><td><a href='https://github.com/AION-Empire/deepseek-global-wrapper/issues/32'>seekapi-0032-payment-credits-webhook-contract</a></td><td><span class='status'>NEEDS_MONARCH</span></td><td>gm</td><td>bafuxunan</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization</td></tr></tbody>
+      </table>
+    </section>
+
+    <div class="grid">
+      <section class='card'><h2>1. 进行中的任务</h2><ul><li>seekapi-0032-payment-credits-webhook-contract: NEEDS_MONARCH -&gt; high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization</li></ul></section><section class='card'><h2>2. 卡在仅已下令的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>3. 缺少执行入口的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>4. 缺少接单确认的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>5. 缺少第一产物的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>6. 等待八府巡按审计的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>7. 可低风险合并的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>8. 需要君主拍板的任务</h2><ul><li>seekapi-0032-payment-credits-webhook-contract</li></ul></section><section class='card'><h2>9. 疑似虚假进展的任务</h2><ul><li class='empty'>无</li></ul></section><section class='card'><h2>10. 下一步 3 个动作</h2><ul><li>seekapi-0032-payment-credits-webhook-contract: high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization</li></ul></section>
+    </div>
+  </main>
+</body>
+</html>

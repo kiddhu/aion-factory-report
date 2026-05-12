@@ -1,0 +1,262 @@
+{
+  "title": "AION 工厂报告",
+  "generated_at": "2026-05-12T03:27:08Z",
+  "ledger_generated_at": "2026-05-12T03:24:00Z",
+  "project_filter": "seekapi",
+  "score": {
+    "score": 0,
+    "max_score": 100,
+    "total_tasks": 1,
+    "moving_tasks": 0,
+    "stalled_or_order_only_tasks": 1,
+    "false_progress_penalty": 0,
+    "verdict": "从可验证证据看，工厂尚未真正运转。"
+  },
+  "unattended_quality_summary": {
+    "title": "Factory Kernel v0.4.2 / 无人值守质量闭环",
+    "scope": "PROJECT_FILTERED_VIEW",
+    "project_filter": "seekapi",
+    "ready_for_unattended_high_quality": false,
+    "project_scoped_ready_for_unattended_high_quality": false,
+    "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
+    "quality_score": 0,
+    "minimum_ready_score": 95,
+    "blocker_counts": {
+      "monarch_gated_failure_replay": 1,
+      "auto_replay_candidates": 0,
+      "missing_first_artifact": 0,
+      "ack_required": 0,
+      "ack_timeout": 0,
+      "executor_idle_blocker": 0,
+      "invalid_gm_completion_packets": 0,
+      "board_not_dispatched_after_verdict": 0,
+      "invalid_ack_timestamps": 0,
+      "invalid_first_artifact_timestamps": 0,
+      "false_progress_penalty": 0
+    },
+    "repair_queue": [
+      {
+        "id": "keep-high-risk-replay-frozen",
+        "owner": "Monarch",
+        "authorization_level": "L4",
+        "monarch_required": true,
+        "action": "Keep production/payment/database/webhook/deploy replay frozen until separately authorized.",
+        "task_ids": [
+          "seekapi-0032-payment-credits-webhook-contract"
+        ]
+      }
+    ],
+    "verdict": "可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。",
+    "next_gate": "Board routes low-risk repairs automatically; high-risk replay remains Monarch-gated.",
+    "warnings": [
+      "global_unattended_readiness_not_asserted"
+    ]
+  },
+  "low_risk_loop_summary": {
+    "title": "v0.3 低风险闭环",
+    "target_loops": 3,
+    "total_loops": 0,
+    "closed_loops": 0,
+    "remaining_loops": 3,
+    "loop_task_ids": [],
+    "closed_task_ids": []
+  },
+  "failure_replay_summary": {
+    "title": "v0.4 失败分类与重放",
+    "classified_candidates": 1,
+    "auto_replay_candidates": 0,
+    "monarch_gated_candidates": 1,
+    "candidate_task_ids": [
+      "seekapi-0032-payment-credits-webhook-contract"
+    ],
+    "auto_replay_task_ids": [],
+    "monarch_gated_task_ids": [
+      "seekapi-0032-payment-credits-webhook-contract"
+    ],
+    "v041_recovered_candidates": 0,
+    "v041_recovered_task_ids": []
+  },
+  "board_summary": {
+    "title": "AION Board v0.2 / 董事局自动裁决门禁",
+    "total_board_verdicts": 0,
+    "verdict_counts": {
+      "AUTO_PROCEED": 0,
+      "AUTO_PROCEED_WITH_AUDIT": 0,
+      "SPLIT_AND_PROCEED": 0,
+      "PREPARE_ONLY": 0,
+      "NEEDS_MONARCH": 0,
+      "BLOCK": 0
+    },
+    "high_risk_blocked_count": 0,
+    "dispatched_after_board_count": 0,
+    "not_dispatched_after_board_count": 0,
+    "budget_exceeded_count": 0,
+    "gm_source_counts": {},
+    "cross_gm_board_gate_active": false,
+    "tasks": []
+  },
+  "gm_self_driving_summary": {
+    "title": "GM Self-Driving Completion Rule v0.1 / GM 自驱收口",
+    "total_completion_packets": 0,
+    "with_next_step_options": 0,
+    "with_board_submission": 0,
+    "auto_submitted_to_board": 0,
+    "incorrect_monarch_escalation_count": 0,
+    "blocked_by_missing_next_step_options": 0,
+    "blocked_by_missing_board_submission": 0,
+    "l4_correctly_escalated": 0,
+    "l0_l1_l2_prepare_auto_board_count": 0,
+    "gm_source_counts": {
+      "gm1": 0,
+      "gm2": 0
+    },
+    "invalid_packet_count": 0,
+    "invalid_packets": []
+  },
+  "executor_queue_summary": {
+    "title": "AION Dispatch Runtime v0.1 / Executor Queue",
+    "executor_count": 1,
+    "by_executor": {
+      "gm": {
+        "queued": 1,
+        "ack_required": 0,
+        "acked": 0,
+        "missing_first_artifact": 0,
+        "ack_timeout": 0,
+        "executor_idle_blocker": 0,
+        "fallback_triggered": 0,
+        "task_ids": [
+          "seekapi-0032-payment-credits-webhook-contract"
+        ]
+      }
+    },
+    "ack_required_count": 0,
+    "acked_count": 0,
+    "missing_first_artifact_count": 0,
+    "ack_timeout_count": 0,
+    "executor_idle_blocker_count": 0,
+    "fallback_triggered_count": 0,
+    "ack_required_task_ids": [],
+    "missing_first_artifact_task_ids": [],
+    "fallback_triggered_task_ids": [],
+    "invalid_ack_timestamp_count": 0,
+    "invalid_ack_timestamp_task_ids": [],
+    "invalid_first_artifact_timestamp_count": 0,
+    "invalid_first_artifact_timestamp_task_ids": [],
+    "average_ack_minutes": null,
+    "average_first_artifact_minutes": null
+  },
+  "dispatch_recovery_summary": {
+    "title": "AION Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery",
+    "total_recovery_actions": 0,
+    "fallback_triggered_count": 0,
+    "report_only_count": 0,
+    "needs_monarch_count": 0,
+    "blocked_count": 0,
+    "fallback_triggered_task_ids": [],
+    "report_only_task_ids": [],
+    "needs_monarch_task_ids": [],
+    "blocked_task_ids": [],
+    "by_recovery_type": {
+      "FALLBACK_TO_INTERNAL_EXECUTOR": 0,
+      "REPORT_ONLY": 0,
+      "NEEDS_MONARCH": 0,
+      "BLOCK": 0
+    },
+    "by_failure_class": {},
+    "actions": []
+  },
+  "auto_trigger_summary": {
+    "title": "AION Auto-trigger Gate v0.1 / 自动触发门",
+    "total_auto_triggers": 0,
+    "triggered_count": 0,
+    "blocked_count": 0,
+    "needs_monarch_count": 0,
+    "triggered_task_ids": [],
+    "blocked_task_ids": [],
+    "needs_monarch_task_ids": [],
+    "pending_artifact_task_ids": [],
+    "pending_audit_task_ids": [],
+    "completed_artifact_task_ids": [],
+    "completed_audit_task_ids": [],
+    "results": []
+  },
+  "executor_pool_summary": {
+    "title": "Executor Pool / 执行器池",
+    "phase": null,
+    "phases": [],
+    "status": "NOT_STARTED",
+    "pool_task_ids": [],
+    "internal_executors": [],
+    "external_candidates": [],
+    "prepare_only_enforced": false,
+    "external_real_run_allowed": false,
+    "m1_prepare_only_enforced": false,
+    "m1_real_run_allowed": false,
+    "m11_prepare_only_enforced": false,
+    "m11_real_external_execution_allowed": false,
+    "m2_prepare_only_enforced": false,
+    "m2_real_execution_allowed": false,
+    "m2_real_sandbox_run_requires_monarch": null
+  },
+  "audit_runtime_summary": {
+    "title": "Audit Runtime v0.1 / 审计运行时",
+    "audit_queue_count": 0,
+    "audit_pending_count": 0,
+    "audit_ack_timeout_count": 0,
+    "audit_timeout_count": 0,
+    "audit_passed_count": 0,
+    "audit_blocked_count": 0,
+    "fallback_audit_count": 0,
+    "formal_bafuxunan_audit_count": 0,
+    "audit_latency_average": null,
+    "audit_bottleneck_task_ids": []
+  },
+  "quality_gate_summary": {
+    "title": "Quality Gate v0.1 / 质量门禁",
+    "quality_gate_count": 0,
+    "quality_gate_pass_count": 0,
+    "quality_gate_block_count": 0,
+    "passed_task_ids": [],
+    "blocked_task_ids": [],
+    "forbidden_action_block_count": 0,
+    "false_pass_block_count": 0,
+    "tasks": []
+  },
+  "progress": [
+    {
+      "task_id": "seekapi-0032-payment-credits-webhook-contract",
+      "project_id": "seekapi",
+      "status": "NEEDS_MONARCH",
+      "owner": "gm",
+      "audit": "bafuxunan",
+      "runtime_handle": null,
+      "ack_at": null,
+      "first_artifact": null,
+      "pr": null,
+      "source_issue": "https://github.com/AION-Empire/deepseek-global-wrapper/issues/32",
+      "next_gate": "high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
+    }
+  ],
+  "sections": {
+    "active_tasks": [
+      "seekapi-0032-payment-credits-webhook-contract: NEEDS_MONARCH -> high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization"
+    ],
+    "tasks_stuck_at_order_posted_only": [],
+    "tasks_missing_runtime_handle": [],
+    "tasks_missing_ack": [],
+    "tasks_missing_first_artifact": [],
+    "tasks_waiting_audit": [],
+    "tasks_ready_for_low_risk_merge": [],
+    "tasks_requiring_monarch": [
+      "seekapi-0032-payment-credits-webhook-contract"
+    ],
+    "tasks_falsely_claiming_progress": [],
+    "next_3_actions": [
+      "seekapi-0032-payment-credits-webhook-contract: high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization"
+    ]
+  }
+}
