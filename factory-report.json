@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-12T03:27:08Z",
-  "ledger_generated_at": "2026-05-12T03:24:00Z",
+  "generated_at": "2026-05-12T03:45:35Z",
+  "ledger_generated_at": "2026-05-12T03:38:00Z",
   "project_filter": null,
   "score": {
-    "score": 93,
+    "score": 94,
     "max_score": 100,
-    "total_tasks": 46,
-    "moving_tasks": 43,
+    "total_tasks": 47,
+    "moving_tasks": 44,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -19,7 +19,7 @@
     "ready_for_unattended_high_quality": false,
     "project_scoped_ready_for_unattended_high_quality": null,
     "readiness_level": "PARTIAL_AUTONOMY_NOT_FULL",
-    "quality_score": 93,
+    "quality_score": 94,
     "minimum_ready_score": 95,
     "blocker_counts": {
       "monarch_gated_failure_replay": 3,
@@ -112,23 +112,24 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 21,
+    "total_board_verdicts": 22,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
       "AUTO_PROCEED_WITH_AUDIT": 19,
       "SPLIT_AND_PROCEED": 0,
-      "PREPARE_ONLY": 2,
+      "PREPARE_ONLY": 3,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 21,
+    "dispatched_after_board_count": 22,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
       "gm2": 16,
       "gm1": 1,
-      "gm": 4
+      "gm": 4,
+      "agent007": 1
     },
     "cross_gm_board_gate_active": true,
     "tasks": [
@@ -449,6 +450,19 @@
           "on_exceed": "NEEDS_MONARCH"
         },
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0178-security-scan-baseline-v0-1",
+        "from_gm": null,
+        "selected_option": "security-scan-baseline-v0-1-prepare-only",
+        "verdict": "PREPARE_ONLY",
+        "authorization_level": "L2",
+        "monarch_required": false,
+        "next_action": "open bilingual prepare-only PR with checker/spec/fixtures/tests/report evidence",
+        "audit_required": true,
+        "auto_proceed_type": "checker",
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -475,9 +489,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 5,
+        "queued": 6,
         "ack_required": 0,
-        "acked": 3,
+        "acked": 4,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -487,7 +501,8 @@
           "aion-dgw-0049-t02-prod-smoke-gate",
           "aion-dgw-0049-t03-github-writeback-path",
           "aion-dgw-0049-t04-status-taxonomy",
-          "aion-dgw-0049-t05-failure-replay-rules"
+          "aion-dgw-0049-t05-failure-replay-rules",
+          "aion-governance-0178-security-scan-baseline-v0-1"
         ]
       },
       "gm2": {
@@ -566,7 +581,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 43,
+    "acked_count": 44,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -588,7 +603,7 @@
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
     "average_ack_minutes": 0.03,
-    "average_first_artifact_minutes": 196.13
+    "average_first_artifact_minutes": 171.62
   },
   "dispatch_recovery_summary": {
     "title": "AION Dispatch Runtime v0.2 / ACK_TIMEOUT Recovery",
@@ -795,16 +810,40 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 43,
+    "audit_queue_count": 44,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 38,
+    "audit_passed_count": 39,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 10,
+    "formal_bafuxunan_audit_count": 11,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
+  },
+  "security_scan_summary": {
+    "title": "Security Scan Baseline v0.1 / 安全扫描基线",
+    "security_scan_count": 1,
+    "security_scan_pass_count": 1,
+    "security_scan_block_count": 0,
+    "prepare_only_count": 1,
+    "production_access_allowed_count": 0,
+    "pass_declaration_block_count": 0,
+    "passed_task_ids": [
+      "aion-governance-0178-security-scan-baseline-v0-1"
+    ],
+    "blocked_task_ids": [],
+    "tasks": [
+      {
+        "task_id": "aion-governance-0178-security-scan-baseline-v0-1",
+        "result": "PASS",
+        "prepare_only": true,
+        "checker": "aion_security_scan_check",
+        "version": "0.1",
+        "finding_count": 0,
+        "by_rule": {}
+      }
+    ]
   },
   "quality_gate_summary": {
     "title": "Quality Gate v0.1 / 质量门禁",
@@ -1604,6 +1643,22 @@
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0178-security-scan-baseline-v0-1",
+      "project_id": "aion-governance",
+      "status": "READY_FOR_LOW_RISK_MERGE",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:007/security-scan-baseline-v0-1-issue-178",
+      "ack_at": "2026-05-12T03:31:50Z",
+      "first_artifact": "docs/governance/aion-security-scan-baseline-v0.1.md + scripts/aion_security_scan_check.py + fixtures/tests/report summary",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/179",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/178",
+      "next_gate": "PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization.",
+      "board_verdict": "PREPARE_ONLY",
+      "board_authorization_level": "L2",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1653,7 +1708,8 @@
       "seekapi-credit-ledger-oneapi-responsibility-map-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
       "seekapi-gm1-overnight-state-correction-v0-1: READY_FOR_LOW_RISK_MERGE_FALLBACK_ALLOWED -> CI, AAR, no issue close",
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
-      "seekapi-prod-smoke-evidence-template-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated"
+      "seekapi-prod-smoke-evidence-template-v0-1: READY_FOR_LOW_RISK_MERGE -> Quality Gate CI/checker/audit/AAR closeout; L4 execution remains Monarch-gated",
+      "aion-governance-0178-security-scan-baseline-v0-1: READY_FOR_LOW_RISK_MERGE -> PR #178 review/CI/audit only; no production/payment/database/webhook/secret/customer-data access, no real external executor, no issue closure, no PASS declaration, no merge without authorization."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1679,7 +1735,8 @@
       "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
       "seekapi-gm1-overnight-state-correction-v0-1",
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
-      "seekapi-prod-smoke-evidence-template-v0-1"
+      "seekapi-prod-smoke-evidence-template-v0-1",
+      "aion-governance-0178-security-scan-baseline-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",
