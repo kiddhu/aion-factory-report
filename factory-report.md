@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-12T16:36:50Z`
-账本生成时间：`2026-05-12T15:55:41Z`
+生成时间：`2026-05-13T01:35:00Z`
+账本生成时间：`2026-05-13T01:35:00Z`
 
 ## 总体评分
 - 评分：94/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：50/53
+- 正在推进的任务：51/54
 - 卡住/仅下令/阻塞任务：3
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
@@ -14,7 +14,7 @@
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
 - 质量分：94/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 9, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 10, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
 - 修复队列：repair-invalid-dispatch-timestamps, keep-high-risk-replay-frozen
 
 ## v0.3 低风险闭环
@@ -55,7 +55,7 @@
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：50
+- 已 ACK：51
 - 缺第一产物：0
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -92,15 +92,29 @@
 - M2 外部真实运行允许：False
 - M2 候选执行器：OpenHands, SWE-agent, Cursor CLI
 
+## Runtime Observability v0.1 / 运行时可观测性
+- rule_count：1
+- prepare_only_count：1
+- gate_coverage_count：1
+- signal_coverage_count：1
+- Discord heartbeat 非正式进度：1
+- GitHub formal progress：1
+- 80/90 checkpoint required：1
+- 90/90 continuation packet required：1
+- #192 failure sample：1
+- real_execution_allowed_count：0
+- rule_task_ids：aion-governance-0196-runtime-observability-v0-1
+- blocked_task_ids：无
+
 ## Audit Runtime v0.1 / 审计运行时
-- 审计队列总数：49
+- 审计队列总数：50
 - 待审计：0
 - ACK 超时：0
 - 审计超时：0
-- 审计通过：44
+- 审计通过：45
 - 审计阻断：0
 - fallback audit：33
-- 八府巡按正式审计：16
+- 八府巡按正式审计：17
 - 平均审计耗时：84.62
 - 审计瓶颈任务：无
 
@@ -175,7 +189,7 @@
 ## AION Elder Senate / 长老院
 - alias：AION Board, 董事局, 董事会, elder_senate_submission
 - statement：Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.
-- reviews_total：6
+- reviews_total：7
 - pass_count：3
 - revise_count：0
 - block_count：0
@@ -196,7 +210,7 @@
 ## AION Elder Senate Capacity / 长老院产能复核
 - gm1_queue：0
 - gm2_queue：33
-- agent007_queue：13
+- agent007_queue：14
 - audit_queue：7
 - ack_timeout_count：0
 - audit_timeout_count：0
@@ -259,6 +273,7 @@
 | tianggong-adapter-evaluation-matrix-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated |
 | aion-governance-0193-pause-recovery-rule-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated |
 | tianggong-m32-readonly-sandbox-authorization-packet-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated |
+| aion-governance-0196-runtime-observability-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated. |
 
 ## AION 工厂晨报
 
@@ -316,6 +331,7 @@
 - tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated
 - aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated
 - tianggong-m32-readonly-sandbox-authorization-packet-v0-1: MERGED_LOW_RISK -> public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated
+- aion-governance-0196-runtime-observability-v0-1: MERGED_LOW_RISK -> Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated.
 
 ### 2. 卡在仅已下令的任务
 - 无
