@@ -1,7 +1,7 @@
 # AION 工厂报告
 
-生成时间：`2026-05-12T03:27:08Z`
-账本生成时间：`2026-05-12T03:24:00Z`
+生成时间：`2026-05-12T04:49:32Z`
+账本生成时间：`2026-05-12T04:41:28Z`
 项目过滤：`seekapi`
 
 ## 总体评分
@@ -105,6 +105,16 @@
 - 平均审计耗时：None
 - 审计瓶颈任务：无
 
+## Security Scan Baseline v0.1 / 安全扫描基线
+- security_scan_count：0
+- 通过：0
+- 阻断：0
+- prepare-only：0
+- production-access 阻断：0
+- PASS-declaration 阻断：0
+- 通过任务：无
+- 被阻断任务：无
+
 ## Quality Gate v0.1 / 质量门禁
 - 质量门任务总数：0
 - 通过：0
@@ -112,6 +122,37 @@
 - forbidden-action 阻断：0
 - false-PASS 阻断：0
 - 被阻断任务：无
+
+## AION Elder Senate / 长老院
+- alias：AION Board, 董事局, 董事会, elder_senate_submission
+- statement：Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.
+- reviews_total：0
+- pass_count：0
+- revise_count：0
+- block_count：0
+- needs_monarch_count：0
+- gm_completion_packets_missing_elder_senate_review：0
+- priority_drift_detected：0
+- priority_drift_without_explanation：0
+- unsafe_auto_proceed_blocked：0
+- false_monarch_escalation_detected：0
+- merge_authorization_reviews：0
+- coach_training_rules_created：0
+- knowledge_updates_required：0
+- doctrine_updates_required：0
+- capacity_bottlenecks_detected：0
+- quality_gate_failures_detected：0
+- recommended_next_actions：无
+
+## AION Elder Senate Capacity / 长老院产能复核
+- gm1_queue：0
+- gm2_queue：0
+- agent007_queue：0
+- audit_queue：0
+- ack_timeout_count：0
+- audit_timeout_count：0
+- fallback_success_rate：None
+- bottleneck_executor：gm
 
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
