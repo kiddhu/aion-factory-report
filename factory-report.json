@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-12T08:27:25Z",
-  "ledger_generated_at": "2026-05-12T08:08:29Z",
+  "generated_at": "2026-05-12T14:55:28Z",
+  "ledger_generated_at": "2026-05-12T14:55:01Z",
   "project_filter": null,
   "score": {
     "score": 94,
     "max_score": 100,
-    "total_tasks": 51,
-    "moving_tasks": 48,
+    "total_tasks": 52,
+    "moving_tasks": 49,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 8,
+      "invalid_ack_timestamps": 9,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -43,6 +43,7 @@
         "action": "Repair or annotate ledger timestamp ordering anomalies instead of hiding them in averages.",
         "task_ids": [
           "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
+          "aion-governance-0193-pause-recovery-rule-v0-1",
           "seekapi-0133-strategic-realignment-v0-1",
           "seekapi-checkout-metadata-contract-v0-1",
           "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
@@ -114,24 +115,24 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 24,
+    "total_board_verdicts": 25,
     "verdict_counts": {
       "AUTO_PROCEED": 0,
       "AUTO_PROCEED_WITH_AUDIT": 20,
       "SPLIT_AND_PROCEED": 0,
-      "PREPARE_ONLY": 4,
+      "PREPARE_ONLY": 5,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 24,
+    "dispatched_after_board_count": 25,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
       "gm2": 16,
       "gm1": 1,
       "gm": 4,
-      "agent007": 3
+      "agent007": 4
     },
     "cross_gm_board_gate_active": true,
     "tasks": [
@@ -491,6 +492,19 @@
         "auto_proceed_type": "schema",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0193-pause-recovery-rule-v0-1",
+        "from_gm": null,
+        "selected_option": "post-merge-closeout-public-report-aar",
+        "verdict": "PREPARE_ONLY",
+        "authorization_level": "L2",
+        "monarch_required": false,
+        "next_action": "post-merge closeout, public Factory Report sync, and issue #193 AAR",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -517,9 +531,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 10,
+        "queued": 11,
         "ack_required": 0,
-        "acked": 8,
+        "acked": 9,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -534,7 +548,8 @@
           "aion-governance-0181-elder-senate-v0-1",
           "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
           "aion-governance-0180-same-task-benchmark-design-v0-1",
-          "tianggong-adapter-evaluation-matrix-v0-1"
+          "tianggong-adapter-evaluation-matrix-v0-1",
+          "aion-governance-0193-pause-recovery-rule-v0-1"
         ]
       },
       "gm2": {
@@ -613,7 +628,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 48,
+    "acked_count": 49,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -623,7 +638,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 8,
+    "invalid_ack_timestamp_count": 9,
     "invalid_ack_timestamp_task_ids": [
       "seekapi-0133-strategic-realignment-v0-1",
       "seekapi-checkout-metadata-contract-v0-1",
@@ -632,7 +647,8 @@
       "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
       "seekapi-prod-smoke-evidence-template-v0-1",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
-      "tianggong-adapter-evaluation-matrix-v0-1"
+      "tianggong-adapter-evaluation-matrix-v0-1",
+      "aion-governance-0193-pause-recovery-rule-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -844,14 +860,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 47,
+    "audit_queue_count": 48,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 42,
+    "audit_passed_count": 43,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 14,
+    "formal_bafuxunan_audit_count": 15,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
@@ -964,6 +980,26 @@
     "missing_elder_senate_review_count": 0,
     "blocked_task_ids": []
   },
+  "pause_recovery_summary": {
+    "title": "AION Pause Recovery Rule v0.1 / 暂停恢复规则",
+    "rule_count": 1,
+    "prepare_only_count": 1,
+    "auto_resume_class_count": 2,
+    "monarch_required_class_count": 2,
+    "with_elder_senate_review_count": 1,
+    "missing_elder_senate_review_count": 0,
+    "with_board_submission_count": 1,
+    "missing_board_submission_count": 0,
+    "with_factory_ledger_mapping_count": 1,
+    "missing_factory_ledger_mapping_count": 0,
+    "with_next_step_options_count": 1,
+    "missing_next_step_options_count": 0,
+    "protected_surface_without_monarch_count": 0,
+    "rule_task_ids": [
+      "aion-governance-0193-pause-recovery-rule-v0-1"
+    ],
+    "blocked_task_ids": []
+  },
   "elder_senate_summary": {
     "title": "AION Elder Senate / 长老院",
     "version": "v0.2 embedded enforcement",
@@ -974,7 +1010,7 @@
       "elder_senate_submission"
     ],
     "statement": "Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.",
-    "reviews_total": 4,
+    "reviews_total": 5,
     "pass_count": 3,
     "revise_count": 0,
     "block_count": 0,
@@ -1001,8 +1037,8 @@
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
     "gm2_queue": 33,
-    "agent007_queue": 11,
-    "audit_queue": 6,
+    "agent007_queue": 12,
+    "audit_queue": 7,
     "ack_timeout_count": 0,
     "audit_timeout_count": 0,
     "fallback_success_rate": null,
@@ -1828,6 +1864,22 @@
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-governance-0193-pause-recovery-rule-v0-1",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "github-comment:https://github.com/kiddhu/aion-governance/issues/193#issuecomment-4431444017",
+      "ack_at": "2026-05-12T14:38:27Z",
+      "first_artifact": "AION Pause Recovery Rule v0.1 prepare-only rule/schema/checker/fixtures/report/ledger evidence created locally.",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/194",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/193",
+      "next_gate": "post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated",
+      "board_verdict": "PREPARE_ONLY",
+      "board_authorization_level": "L2",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -1882,7 +1934,8 @@
       "aion-governance-0181-elder-senate-v0-1: MERGED_LOW_RISK -> post-merge AAR recorded; next low-risk gate is elder_senate_review integration into GM completion packet",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement: MERGED_LOW_RISK -> public Factory Report sync and issue #184 AAR; no high-risk action",
       "aion-governance-0180-same-task-benchmark-design-v0-1: MERGED_LOW_RISK -> post-merge public Factory Report sync and AAR; real external executor remains Monarch-gated",
-      "tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated"
+      "tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated",
+      "aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
@@ -1913,7 +1966,8 @@
       "aion-governance-0181-elder-senate-v0-1",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
       "aion-governance-0180-same-task-benchmark-design-v0-1",
-      "tianggong-adapter-evaluation-matrix-v0-1"
+      "tianggong-adapter-evaluation-matrix-v0-1",
+      "aion-governance-0193-pause-recovery-rule-v0-1"
     ],
     "tasks_requiring_monarch": [
       "aion-dgw-0049-t01-deployment-confirmation",

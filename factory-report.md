@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-12T08:27:25Z`
-账本生成时间：`2026-05-12T08:08:29Z`
+生成时间：`2026-05-12T14:55:28Z`
+账本生成时间：`2026-05-12T14:55:01Z`
 
 ## 总体评分
 - 评分：94/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：48/51
+- 正在推进的任务：49/52
 - 卡住/仅下令/阻塞任务：3
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
@@ -14,7 +14,7 @@
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
 - 质量分：94/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 8, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 9, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
 - 修复队列：repair-invalid-dispatch-timestamps, keep-high-risk-replay-frozen
 
 ## v0.3 低风险闭环
@@ -33,13 +33,13 @@
 - 恢复任务：aion-dgw-0049-t03-github-writeback-path, aion-dgw-0049-t04-status-taxonomy, aion-dgw-0049-t05-failure-replay-rules, aion-governance-0081-dispatch-treaty, tianggong-0085-seekapi-growth-intel, tianggong-0086-stock-quant-shadow-audit-intel
 
 ## AION Board v0.2 / 董事局自动裁决门禁
-- 已登记裁决：24
-- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 20, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 4, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
+- 已登记裁决：25
+- 裁决分布：{'AUTO_PROCEED': 0, 'AUTO_PROCEED_WITH_AUDIT': 20, 'SPLIT_AND_PROCEED': 0, 'PREPARE_ONLY': 5, 'NEEDS_MONARCH': 0, 'BLOCK': 0}
 - 高风险被拦截：0
-- 裁决后已派工：24
+- 裁决后已派工：25
 - 裁决后未派工：0
 - 超预算裁决：0
-- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics, aion-governance-0155-gm-self-driving-completion-rule-v0-1, aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop, aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps, aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion, aion-governance-0168-audit-runtime-v0-1, aion-governance-0171-quality-gate-v0-1, aion-governance-0174-executor-pool-m2-authorization-pack, seekapi-checkout-metadata-contract-v0-1, seekapi-credit-ledger-oneapi-responsibility-map-v0-1, seekapi-payment-webhook-credits-l4-authorization-pack-v0-1, seekapi-prod-smoke-evidence-template-v0-1, aion-governance-0178-security-scan-baseline-v0-1, aion-governance-0184-elder-senate-v0-2-embedded-enforcement, aion-governance-0180-same-task-benchmark-design-v0-1
+- 裁决任务：aion-governance-0123-board-v0-1-protocol, aion-governance-0126-board-v0-2-auto-proceed-gate, aion-governance-0130-board-v0-3-gm-completion-gate, seekapi-0129-payment-event-responsibility-matrix-v0-1, aion-dispatch-runtime-0135-v0-1, aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery, aion-governance-0143-auto-trigger-gate-v0-1, aion-governance-0146-executor-pool-m0-prepare-only, aion-governance-0149-executor-pool-m1-sandbox-authorization-pack, aion-governance-0152-executor-pool-m1-1-internal-routing-metrics, aion-governance-0155-gm-self-driving-completion-rule-v0-1, aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop, aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps, aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion, aion-governance-0168-audit-runtime-v0-1, aion-governance-0171-quality-gate-v0-1, aion-governance-0174-executor-pool-m2-authorization-pack, seekapi-checkout-metadata-contract-v0-1, seekapi-credit-ledger-oneapi-responsibility-map-v0-1, seekapi-payment-webhook-credits-l4-authorization-pack-v0-1, seekapi-prod-smoke-evidence-template-v0-1, aion-governance-0178-security-scan-baseline-v0-1, aion-governance-0184-elder-senate-v0-2-embedded-enforcement, aion-governance-0180-same-task-benchmark-design-v0-1, aion-governance-0193-pause-recovery-rule-v0-1
 
 ## GM Self-Driving Completion Rule v0.1 / GM 自驱收口
 - completion packet 总数：2
@@ -55,7 +55,7 @@
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：48
+- 已 ACK：49
 - 缺第一产物：0
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -93,14 +93,14 @@
 - M2 候选执行器：OpenHands, SWE-agent, Cursor CLI
 
 ## Audit Runtime v0.1 / 审计运行时
-- 审计队列总数：47
+- 审计队列总数：48
 - 待审计：0
 - ACK 超时：0
 - 审计超时：0
-- 审计通过：42
+- 审计通过：43
 - 审计阻断：0
 - fallback audit：33
-- 八府巡按正式审计：14
+- 八府巡按正式审计：15
 - 平均审计耗时：84.62
 - 审计瓶颈任务：无
 
@@ -145,10 +145,24 @@
 - missing_elder_senate_review_count：0
 - blocked_task_ids：无
 
+## AION Pause Recovery Rule v0.1 / 暂停恢复规则
+- rule_count：1
+- prepare_only_count：1
+- auto_resume_class_count：2
+- monarch_required_class_count：2
+- with_elder_senate_review_count：1
+- missing_elder_senate_review_count：0
+- with_board_submission_count：1
+- with_factory_ledger_mapping_count：1
+- with_next_step_options_count：1
+- protected_surface_without_monarch_count：0
+- rule_task_ids：aion-governance-0193-pause-recovery-rule-v0-1
+- blocked_task_ids：无
+
 ## AION Elder Senate / 长老院
 - alias：AION Board, 董事局, 董事会, elder_senate_submission
 - statement：Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.
-- reviews_total：4
+- reviews_total：5
 - pass_count：3
 - revise_count：0
 - block_count：0
@@ -169,8 +183,8 @@
 ## AION Elder Senate Capacity / 长老院产能复核
 - gm1_queue：0
 - gm2_queue：33
-- agent007_queue：11
-- audit_queue：6
+- agent007_queue：12
+- audit_queue：7
 - ack_timeout_count：0
 - audit_timeout_count：0
 - fallback_success_rate：None
@@ -230,6 +244,7 @@
 | aion-governance-0184-elder-senate-v0-2-embedded-enforcement | MERGED_LOW_RISK | agent007 | bafuxunan | public Factory Report sync and issue #184 AAR; no high-risk action |
 | aion-governance-0180-same-task-benchmark-design-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge public Factory Report sync and AAR; real external executor remains Monarch-gated |
 | tianggong-adapter-evaluation-matrix-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated |
+| aion-governance-0193-pause-recovery-rule-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated |
 
 ## AION 工厂晨报
 
@@ -285,6 +300,7 @@
 - aion-governance-0184-elder-senate-v0-2-embedded-enforcement: MERGED_LOW_RISK -> public Factory Report sync and issue #184 AAR; no high-risk action
 - aion-governance-0180-same-task-benchmark-design-v0-1: MERGED_LOW_RISK -> post-merge public Factory Report sync and AAR; real external executor remains Monarch-gated
 - tianggong-adapter-evaluation-matrix-v0-1: MERGED_LOW_RISK -> post-merge closeout, public Factory Report sync, and issue #189 AAR; real sandbox/run/execute/replace remains Monarch-gated
+- aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated
 
 ### 2. 卡在仅已下令的任务
 - 无
@@ -326,6 +342,7 @@
 - aion-governance-0184-elder-senate-v0-2-embedded-enforcement
 - aion-governance-0180-same-task-benchmark-design-v0-1
 - tianggong-adapter-evaluation-matrix-v0-1
+- aion-governance-0193-pause-recovery-rule-v0-1
 
 ### 8. 需要君主拍板的任务
 - aion-dgw-0049-t01-deployment-confirmation
