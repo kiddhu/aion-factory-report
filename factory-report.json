@@ -1,6 +1,6 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-13T03:59:09Z",
+  "generated_at": "2026-05-13T04:27:44Z",
   "ledger_generated_at": "2026-05-13T02:58:38Z",
   "project_filter": null,
   "score": {
@@ -527,11 +527,11 @@
       {
         "task_id": "aion-governance-audit-pipeline-v0-2-live-pr-queue",
         "from_gm": null,
-        "selected_option": "audit-current-queue",
+        "selected_option": "monitor-audit-pipeline-drift",
         "verdict": "AUTO_PROCEED_WITH_AUDIT",
         "authorization_level": "L1",
         "monarch_required": false,
-        "next_action": "Post-merge ledger/report/public-report closeout and AAR.",
+        "next_action": "Monitor Audit Pipeline drift; future high-risk actions remain Monarch-gated.",
         "audit_required": true,
         "auto_proceed_type": "checker",
         "budget_status": null,
