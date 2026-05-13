@@ -1,6 +1,6 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-13T03:22:09Z",
+  "generated_at": "2026-05-13T03:59:09Z",
   "ledger_generated_at": "2026-05-13T02:58:38Z",
   "project_filter": null,
   "score": {
@@ -979,51 +979,14 @@
   },
   "audit_pipeline_summary": {
     "title": "Audit Pipeline v0.2 / 审计流水线",
-    "live_pr_queue_count": 3,
-    "ready_for_audit_count": 3,
-    "sla_breached_count": 2,
-    "fallback_eligible_count": 2,
-    "formal_bafuxunan_required_count": 1,
-    "stop_new_pr": true,
-    "recommended_audit_order": [
-      {
-        "pr_number": 211,
-        "url": "https://github.com/kiddhu/aion-governance/pull/211",
-        "risk_level": "L2_prepare",
-        "ci_status": "PASS",
-        "audit_requested_at": "2026-05-13T02:40:44Z",
-        "sla_status": "WITHIN_SLA",
-        "fallback_audit_allowed": false,
-        "recommended_audit_order": 1,
-        "recommended_auditor": "bafuxunan"
-      },
-      {
-        "pr_number": 204,
-        "url": "https://github.com/kiddhu/aion-governance/pull/204",
-        "risk_level": "L1",
-        "ci_status": "PASS",
-        "audit_requested_at": "2026-05-12T18:14:00Z",
-        "sla_status": "SLA_BREACHED",
-        "fallback_audit_allowed": true,
-        "recommended_audit_order": 2,
-        "recommended_auditor": "bafuxunan_or_fallback_audit"
-      },
-      {
-        "pr_number": 200,
-        "url": "https://github.com/kiddhu/aion-governance/pull/200",
-        "risk_level": "L1",
-        "ci_status": "EFFECTIVE_PASS",
-        "audit_requested_at": "2026-05-12T17:45:38Z",
-        "sla_status": "SLA_BREACHED",
-        "fallback_audit_allowed": true,
-        "recommended_audit_order": 3,
-        "recommended_auditor": "bafuxunan_or_fallback_audit"
-      }
-    ],
-    "bottleneck_prs": [
-      "#204",
-      "#200"
-    ]
+    "live_pr_queue_count": 0,
+    "ready_for_audit_count": 0,
+    "sla_breached_count": 0,
+    "fallback_eligible_count": 0,
+    "formal_bafuxunan_required_count": 0,
+    "stop_new_pr": false,
+    "recommended_audit_order": [],
+    "bottleneck_prs": []
   },
   "security_scan_summary": {
     "title": "Security Scan Baseline v0.1 / 安全扫描基线",
@@ -2143,7 +2106,7 @@
       "first_artifact": "docs/governance/aion-audit-pipeline-v0.2.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/215",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/214",
-      "next_gate": "Public Factory Report sync + AAR; no production actions.",
+      "next_gate": "GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch.",
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
       "board_authorization_level": "L1",
       "board_monarch_required": false
@@ -2208,7 +2171,7 @@
       "aion-governance-0206-parent-child-task-continuity-rule-v0-1: CLOSED_WITH_RETRO -> #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action.",
       "aion-governance-0208-issue-self-evolution-loop-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
       "aion-governance-0209-low-risk-auto-closeout-rule-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
-      "aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> Public Factory Report sync + AAR; no production actions."
+      "aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],

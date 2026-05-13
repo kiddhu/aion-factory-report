@@ -1,6 +1,6 @@
 # AION 工厂报告
 
-生成时间：`2026-05-13T03:22:09Z`
+生成时间：`2026-05-13T03:59:09Z`
 账本生成时间：`2026-05-13T02:58:38Z`
 
 ## 总体评分
@@ -153,14 +153,14 @@
 - 审计瓶颈任务：无
 
 ## Audit Pipeline v0.2 / 审计流水线
-- live_pr_queue_count：3
-- ready_for_audit_count：3
-- sla_breached_count：2
-- fallback_eligible_count：2
-- formal_bafuxunan_required_count：1
-- stop_new_pr：True
-- bottleneck_prs：#204, #200
-- recommended_audit_order：#211, #204, #200
+- live_pr_queue_count：0
+- ready_for_audit_count：0
+- sla_breached_count：0
+- fallback_eligible_count：0
+- formal_bafuxunan_required_count：0
+- stop_new_pr：False
+- bottleneck_prs：无
+- recommended_audit_order：无
 
 ## Security Scan Baseline v0.1 / 安全扫描基线
 - security_scan_count：1
@@ -321,7 +321,7 @@
 | aion-governance-0206-parent-child-task-continuity-rule-v0-1 | CLOSED_WITH_RETRO | gm2 | bafuxunan | #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action. |
 | aion-governance-0208-issue-self-evolution-loop-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge closeout ledger/report/AAR complete; no high-risk action taken. |
 | aion-governance-0209-low-risk-auto-closeout-rule-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge closeout ledger/report/AAR complete; no high-risk action taken. |
-| aion-governance-audit-pipeline-v0-2-live-pr-queue | MERGED_LOW_RISK | gm2 | bafuxunan | Public Factory Report sync + AAR; no production actions. |
+| aion-governance-audit-pipeline-v0-2-live-pr-queue | MERGED_LOW_RISK | gm2 | bafuxunan | GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch. |
 
 ## AION 工厂晨报
 
@@ -383,7 +383,7 @@
 - aion-governance-0206-parent-child-task-continuity-rule-v0-1: CLOSED_WITH_RETRO -> #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action.
 - aion-governance-0208-issue-self-evolution-loop-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.
 - aion-governance-0209-low-risk-auto-closeout-rule-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.
-- aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> Public Factory Report sync + AAR; no production actions.
+- aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch.
 
 ### 2. 卡在仅已下令的任务
 - 无
