@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-13T01:35:00Z",
-  "ledger_generated_at": "2026-05-13T01:35:00Z",
+  "generated_at": "2026-05-13T02:50:00Z",
+  "ledger_generated_at": "2026-05-13T02:50:00Z",
   "project_filter": null,
   "score": {
     "score": 95,
     "max_score": 100,
-    "total_tasks": 55,
-    "moving_tasks": 52,
+    "total_tasks": 57,
+    "moving_tasks": 54,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 10,
+      "invalid_ack_timestamps": 13,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -45,6 +45,9 @@
           "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
           "aion-governance-0193-pause-recovery-rule-v0-1",
           "aion-governance-0196-runtime-observability-v0-1",
+          "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
+          "aion-governance-0208-issue-self-evolution-loop-v0-1",
+          "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
           "seekapi-0133-strategic-realignment-v0-1",
           "seekapi-checkout-metadata-contract-v0-1",
           "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
@@ -545,9 +548,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 14,
+        "queued": 13,
         "ack_required": 0,
-        "acked": 12,
+        "acked": 11,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -565,14 +568,13 @@
           "tianggong-adapter-evaluation-matrix-v0-1",
           "aion-governance-0193-pause-recovery-rule-v0-1",
           "tianggong-m32-readonly-sandbox-authorization-packet-v0-1",
-          "aion-governance-0196-runtime-observability-v0-1",
-          "aion-governance-0206-parent-child-task-continuity-rule-v0-1"
+          "aion-governance-0196-runtime-observability-v0-1"
         ]
       },
       "gm2": {
-        "queued": 33,
+        "queued": 36,
         "ack_required": 0,
-        "acked": 33,
+        "acked": 36,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -610,7 +612,10 @@
           "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
           "aion-governance-0168-audit-runtime-v0-1",
           "aion-governance-0171-quality-gate-v0-1",
-          "aion-governance-0174-executor-pool-m2-authorization-pack"
+          "aion-governance-0174-executor-pool-m2-authorization-pack",
+          "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
+          "aion-governance-0208-issue-self-evolution-loop-v0-1",
+          "aion-governance-0209-low-risk-auto-closeout-rule-v0-1"
         ]
       },
       "gm": {
@@ -645,7 +650,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 52,
+    "acked_count": 54,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -655,7 +660,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 10,
+    "invalid_ack_timestamp_count": 13,
     "invalid_ack_timestamp_task_ids": [
       "seekapi-0133-strategic-realignment-v0-1",
       "seekapi-checkout-metadata-contract-v0-1",
@@ -666,7 +671,10 @@
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
       "tianggong-adapter-evaluation-matrix-v0-1",
       "aion-governance-0193-pause-recovery-rule-v0-1",
-      "aion-governance-0196-runtime-observability-v0-1"
+      "aion-governance-0196-runtime-observability-v0-1",
+      "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
+      "aion-governance-0208-issue-self-evolution-loop-v0-1",
+      "aion-governance-0209-low-risk-auto-closeout-rule-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -911,16 +919,45 @@
     "blocked_task_ids": [],
     "missing_integration_gate_task_ids": []
   },
+  "issue_self_evolution_summary": {
+    "title": "AION Issue Self-Evolution Loop v0.1 / Issue 自进化闭环",
+    "loop_count": 1,
+    "prepare_only_count": 1,
+    "failure_sample_count": 1,
+    "improvement_item_count": 1,
+    "regression_plan_count": 1,
+    "elder_senate_review_count": 1,
+    "auto_apply_item_count": 1,
+    "monarch_required_item_count": 0,
+    "real_execution_allowed_count": 0,
+    "loop_task_ids": [
+      "aion-governance-0208-issue-self-evolution-loop-v0-1"
+    ],
+    "blocked_task_ids": []
+  },
+  "low_risk_auto_closeout_summary": {
+    "title": "AION Low-risk Auto-closeout Rule v0.1 / 低风险自动收口",
+    "rule_count": 1,
+    "auto_closeout_allowed_count": 1,
+    "monarch_required_count": 0,
+    "required_gate_count": 6,
+    "required_evidence_count": 5,
+    "high_risk_blocked_count": 0,
+    "rule_task_ids": [
+      "aion-governance-0209-low-risk-auto-closeout-rule-v0-1"
+    ],
+    "blocked_task_ids": []
+  },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 51,
+    "audit_queue_count": 53,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 45,
+    "audit_passed_count": 48,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 18,
+    "formal_bafuxunan_audit_count": 20,
     "audit_latency_average": 84.62,
     "audit_bottleneck_task_ids": []
   },
@@ -1106,8 +1143,8 @@
   "elder_senate_capacity_summary": {
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
-    "gm2_queue": 33,
-    "agent007_queue": 15,
+    "gm2_queue": 36,
+    "agent007_queue": 14,
     "audit_queue": 7,
     "ack_timeout_count": 0,
     "audit_timeout_count": 0,
@@ -1986,15 +2023,47 @@
     {
       "task_id": "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
       "project_id": "aion-parent-child-continuity",
-      "status": "FIRST_ARTIFACT_SEEN",
-      "owner": "agent007",
+      "status": "CLOSED_WITH_RETRO",
+      "owner": "gm2",
       "audit": "bafuxunan",
       "runtime_handle": "branch:issue-206-parent-child-continuity-v0.1",
       "ack_at": "2026-05-13T02:40:00Z",
       "first_artifact": "docs/governance/aion-parent-child-task-continuity-v0.1.md",
-      "pr": "pending-pr",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/207",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/206",
-      "next_gate": "Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report.",
+      "next_gate": "#206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action.",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-governance-0208-issue-self-evolution-loop-v0-1",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm2/next-step-self-evolution-autocloseout-v0-1",
+      "ack_at": "2026-05-13T02:40:00Z",
+      "first_artifact": "docs/governance/aion-issue-self-evolution-loop-v0.1.md + checker/tests/fixtures",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/212",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/208",
+      "next_gate": "Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm2/next-step-self-evolution-autocloseout-v0-1",
+      "ack_at": "2026-05-13T02:40:00Z",
+      "first_artifact": "docs/governance/aion-low-risk-auto-closeout-rule-v0.1.md + checker/tests/fixtures",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/212",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/209",
+      "next_gate": "Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
@@ -2056,7 +2125,9 @@
       "aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated",
       "tianggong-m32-readonly-sandbox-authorization-packet-v0-1: MERGED_LOW_RISK -> public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated",
       "aion-governance-0196-runtime-observability-v0-1: MERGED_LOW_RISK -> Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated.",
-      "aion-governance-0206-parent-child-task-continuity-rule-v0-1: FIRST_ARTIFACT_SEEN -> Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report."
+      "aion-governance-0206-parent-child-task-continuity-rule-v0-1: CLOSED_WITH_RETRO -> #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action.",
+      "aion-governance-0208-issue-self-evolution-loop-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
+      "aion-governance-0209-low-risk-auto-closeout-rule-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],

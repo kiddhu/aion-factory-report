@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-13T01:35:00Z`
-账本生成时间：`2026-05-13T01:35:00Z`
+生成时间：`2026-05-13T02:50:00Z`
+账本生成时间：`2026-05-13T02:50:00Z`
 
 ## 总体评分
 - 评分：95/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：52/55
+- 正在推进的任务：54/57
 - 卡住/仅下令/阻塞任务：3
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
@@ -14,7 +14,7 @@
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
 - 质量分：95/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 10, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 13, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
 - 修复队列：repair-invalid-dispatch-timestamps, keep-high-risk-replay-frozen
 
 ## v0.3 低风险闭环
@@ -55,7 +55,7 @@
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：52
+- 已 ACK：54
 - 缺第一产物：0
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -119,15 +119,36 @@
 - rule_task_ids：aion-governance-0206-parent-child-task-continuity-rule-v0-1
 - blocked_task_ids：无
 
+## Issue Self-Evolution Loop v0.1 / Issue 自进化闭环
+- loop_count：1
+- prepare_only_count：1
+- failure_sample_count：1
+- improvement_item_count：1
+- regression_plan_count：1
+- elder_senate_review_count：1
+- real_execution_allowed_count：0
+- loop_task_ids：aion-governance-0208-issue-self-evolution-loop-v0-1
+- blocked_task_ids：无
+
+## Low-risk Auto-closeout Rule v0.1 / 低风险自动收口
+- rule_count：1
+- auto_closeout_allowed_count：1
+- monarch_required_count：0
+- required_gate_count：6
+- required_evidence_count：5
+- high_risk_blocked_count：0
+- rule_task_ids：aion-governance-0209-low-risk-auto-closeout-rule-v0-1
+- blocked_task_ids：无
+
 ## Audit Runtime v0.1 / 审计运行时
-- 审计队列总数：51
+- 审计队列总数：53
 - 待审计：0
 - ACK 超时：0
 - 审计超时：0
-- 审计通过：45
+- 审计通过：48
 - 审计阻断：0
 - fallback audit：33
-- 八府巡按正式审计：18
+- 八府巡按正式审计：20
 - 平均审计耗时：84.62
 - 审计瓶颈任务：无
 
@@ -222,8 +243,8 @@
 
 ## AION Elder Senate Capacity / 长老院产能复核
 - gm1_queue：0
-- gm2_queue：33
-- agent007_queue：15
+- gm2_queue：36
+- agent007_queue：14
 - audit_queue：7
 - ack_timeout_count：0
 - audit_timeout_count：0
@@ -287,7 +308,9 @@
 | aion-governance-0193-pause-recovery-rule-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated |
 | tianggong-m32-readonly-sandbox-authorization-packet-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated |
 | aion-governance-0196-runtime-observability-v0-1 | MERGED_LOW_RISK | agent007 | bafuxunan | Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated. |
-| aion-governance-0206-parent-child-task-continuity-rule-v0-1 | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report. |
+| aion-governance-0206-parent-child-task-continuity-rule-v0-1 | CLOSED_WITH_RETRO | gm2 | bafuxunan | #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action. |
+| aion-governance-0208-issue-self-evolution-loop-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge closeout ledger/report/AAR complete; no high-risk action taken. |
+| aion-governance-0209-low-risk-auto-closeout-rule-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Post-merge closeout ledger/report/AAR complete; no high-risk action taken. |
 
 ## AION 工厂晨报
 
@@ -346,7 +369,9 @@
 - aion-governance-0193-pause-recovery-rule-v0-1: MERGED_LOW_RISK -> post-merge Factory Report sync, issue #193 AAR, and keep real execution / protected surfaces Monarch-gated
 - tianggong-m32-readonly-sandbox-authorization-packet-v0-1: MERGED_LOW_RISK -> public Factory Report sync, #192 AAR, and keep real external executor clone/install/run Monarch-gated
 - aion-governance-0196-runtime-observability-v0-1: MERGED_LOW_RISK -> Public Factory Report sync and final completion packet; high-risk runtime data/external execution remains Monarch-gated.
-- aion-governance-0206-parent-child-task-continuity-rule-v0-1: FIRST_ARTIFACT_SEEN -> Implementation PR, CI, 八府巡按 audit, low-risk merge, closeout/AAR/public report.
+- aion-governance-0206-parent-child-task-continuity-rule-v0-1: CLOSED_WITH_RETRO -> #206 closeout/AAR complete; PR #212 implemented #208/#209 follow-up rules; issue closure remains separate risk-gated action.
+- aion-governance-0208-issue-self-evolution-loop-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.
+- aion-governance-0209-low-risk-auto-closeout-rule-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.
 
 ### 2. 卡在仅已下令的任务
 - 无
