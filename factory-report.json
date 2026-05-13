@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-13T06:26:00Z",
-  "ledger_generated_at": "2026-05-13T06:26:00Z",
+  "generated_at": "2026-05-13T07:35:00Z",
+  "ledger_generated_at": "2026-05-13T07:35:00Z",
   "project_filter": null,
   "score": {
     "score": 95,
     "max_score": 100,
-    "total_tasks": 59,
-    "moving_tasks": 56,
+    "total_tasks": 60,
+    "moving_tasks": 57,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 15,
+      "invalid_ack_timestamps": 16,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -49,6 +49,7 @@
           "aion-governance-0208-issue-self-evolution-loop-v0-1",
           "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
           "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
+          "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
           "aion-governance-audit-pipeline-v0-2-live-pr-queue",
           "seekapi-0133-strategic-realignment-v0-1",
           "seekapi-checkout-metadata-contract-v0-1",
@@ -121,9 +122,9 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 28,
+    "total_board_verdicts": 29,
     "verdict_counts": {
-      "AUTO_PROCEED": 0,
+      "AUTO_PROCEED": 1,
       "AUTO_PROCEED_WITH_AUDIT": 22,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 6,
@@ -131,11 +132,11 @@
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 28,
+    "dispatched_after_board_count": 29,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 18,
+      "gm2": 19,
       "gm1": 1,
       "gm": 4,
       "agent007": 5
@@ -550,6 +551,19 @@
         "auto_proceed_type": "checker",
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+        "from_gm": null,
+        "selected_option": "implement_gate_v0_1",
+        "verdict": "AUTO_PROCEED",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "Create low-risk PR and audit",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -600,9 +614,9 @@
         ]
       },
       "gm2": {
-        "queued": 38,
+        "queued": 39,
         "ack_required": 0,
-        "acked": 38,
+        "acked": 39,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -645,7 +659,8 @@
           "aion-governance-0208-issue-self-evolution-loop-v0-1",
           "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
           "aion-governance-audit-pipeline-v0-2-live-pr-queue",
-          "aion-governance-0229-audit-pipeline-drift-monitor-v0-1"
+          "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
+          "aion-governance-0236-monarch-real-world-consequence-gate-v0-1"
         ]
       },
       "gm": {
@@ -680,7 +695,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 56,
+    "acked_count": 57,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -690,7 +705,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 15,
+    "invalid_ack_timestamp_count": 16,
     "invalid_ack_timestamp_task_ids": [
       "seekapi-0133-strategic-realignment-v0-1",
       "seekapi-checkout-metadata-contract-v0-1",
@@ -706,7 +721,8 @@
       "aion-governance-0208-issue-self-evolution-loop-v0-1",
       "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
       "aion-governance-audit-pipeline-v0-2-live-pr-queue",
-      "aion-governance-0229-audit-pipeline-drift-monitor-v0-1"
+      "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
+      "aion-governance-0236-monarch-real-world-consequence-gate-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -982,14 +998,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 55,
+    "audit_queue_count": 56,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 50,
+    "audit_passed_count": 51,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 22,
+    "formal_bafuxunan_audit_count": 23,
     "audit_latency_average": 47.7,
     "audit_bottleneck_task_ids": []
   },
@@ -1007,28 +1023,50 @@
   "audit_pipeline_drift_monitor_summary": {
     "title": "Audit Pipeline Drift Monitor v0.1 / 审计流水线漂移监控",
     "monitor_count": 1,
-    "drift_detected_count": 1,
-    "live_open_pr_count": 3,
+    "drift_detected_count": 0,
+    "live_open_pr_count": 0,
     "report_queue_count": 0,
-    "conditional_or_pending_open_pr_count": 1,
-    "pass_open_pr_count": 2,
+    "conditional_or_pending_open_pr_count": 0,
+    "pass_open_pr_count": 0,
     "monarch_required_count": 0,
-    "drift_prs": [
-      "#220",
-      "#223",
-      "#227"
-    ],
+    "drift_prs": [],
     "blocked_task_ids": [],
     "tasks": [
       {
         "task_id": "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
-        "drift_detected": true,
-        "drift_reason": "Factory Report audit_pipeline_summary is cleared, but live GitHub still has open PRs #220/#223/#227 requiring merge-readiness routing; #223 remains CONDITIONAL_PASS and must not merge.",
-        "live_open_pr_count": 3,
+        "drift_detected": false,
+        "drift_reason": "Resolved: live GitHub open PR queue no longer includes #220/#223/#227 after low-risk merges at 2026-05-13T06:27Z; only legacy UNKNOWN PRs remain outside the #228/#229 active audit queue.",
+        "live_open_pr_count": 0,
         "report_queue_count": 0,
-        "drift_count": 3,
-        "conditional_or_pending_open_pr_count": 1,
-        "pass_open_pr_count": 2
+        "drift_count": 0,
+        "conditional_or_pending_open_pr_count": 0,
+        "pass_open_pr_count": 0
+      }
+    ]
+  },
+  "monarch_real_world_consequence_gate_summary": {
+    "title": "Monarch Financial & Real-World Consequence Gate v0.1 / 君主财务与现实后果授权门",
+    "gate_count": 1,
+    "factory_owned_internal_count": 1,
+    "real_world_consequence_count": 0,
+    "false_monarch_escalation_prevented_count": 1,
+    "monarch_required_count": 0,
+    "tasks": [
+      {
+        "task_id": "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+        "risk_class": "technical_high_risk_internal",
+        "monarch_required": false,
+        "decision_owner": "Elder Senate + GM + Audit",
+        "corrected_prs": [
+          "#220",
+          "#223",
+          "#227"
+        ],
+        "closeout_reviewed_issues": [
+          "#199",
+          "#202",
+          "#210"
+        ]
       }
     ]
   },
@@ -1187,8 +1225,8 @@
       "elder_senate_submission"
     ],
     "statement": "Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.",
-    "reviews_total": 9,
-    "pass_count": 3,
+    "reviews_total": 10,
+    "pass_count": 4,
     "revise_count": 0,
     "block_count": 0,
     "needs_monarch_count": 0,
@@ -1198,11 +1236,11 @@
     "unsafe_auto_proceed_blocked": 0,
     "false_monarch_escalation_detected": 0,
     "merge_authorization_reviews": 2,
-    "knowledge_updates_required": 4,
-    "coach_training_rules_created": 4,
-    "gm_training_rules_created": 4,
+    "knowledge_updates_required": 5,
+    "coach_training_rules_created": 5,
+    "gm_training_rules_created": 5,
     "capacity_bottlenecks_detected": 2,
-    "doctrine_updates_required": 4,
+    "doctrine_updates_required": 5,
     "quality_gate_failures_detected": 0,
     "recommended_next_actions": [
       "aion-governance-0181-elder-senate-v0-1: post-merge AAR and next low-risk integration proposal",
@@ -1214,7 +1252,7 @@
   "elder_senate_capacity_summary": {
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
-    "gm2_queue": 38,
+    "gm2_queue": 39,
     "agent007_queue": 14,
     "audit_queue": 7,
     "ack_timeout_count": 0,
@@ -2166,8 +2204,24 @@
       "first_artifact": "docs/governance/aion-audit-pipeline-drift-monitor-v0.1.md",
       "pr": "https://github.com/kiddhu/aion-governance/pull/234",
       "source_issue": "https://github.com/kiddhu/aion-governance/issues/229",
-      "next_gate": "Post-merge public Factory Report sync + #229 closeout comment",
+      "next_gate": "Proceed #233 Command Approval Policy v0.1 after refreshed public report sync.",
       "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "GitHub issue #236 + local branch",
+      "ack_at": "2026-05-13T07:12:00Z",
+      "first_artifact": "docs/governance/monarch-financial-real-world-consequence-gate-v0.1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/237",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/236",
+      "next_gate": "Post-merge closeout PR + public report sync",
+      "board_verdict": "AUTO_PROCEED",
       "board_authorization_level": "L1",
       "board_monarch_required": false
     }
@@ -2232,7 +2286,8 @@
       "aion-governance-0208-issue-self-evolution-loop-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
       "aion-governance-0209-low-risk-auto-closeout-rule-v0-1: MERGED_LOW_RISK -> Post-merge closeout ledger/report/AAR complete; no high-risk action taken.",
       "aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch.",
-      "aion-governance-0229-audit-pipeline-drift-monitor-v0-1: MERGED_LOW_RISK -> Post-merge public Factory Report sync + #229 closeout comment"
+      "aion-governance-0229-audit-pipeline-drift-monitor-v0-1: MERGED_LOW_RISK -> Proceed #233 Command Approval Policy v0.1 after refreshed public report sync.",
+      "aion-governance-0236-monarch-real-world-consequence-gate-v0-1: MERGED_LOW_RISK -> Post-merge closeout PR + public report sync"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
