@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-13T09:01:36Z",
-  "ledger_generated_at": "2026-05-13T09:00:09Z",
+  "generated_at": "2026-05-13T11:10:50Z",
+  "ledger_generated_at": "2026-05-13T11:10:37Z",
   "project_filter": null,
   "score": {
     "score": 95,
     "max_score": 100,
-    "total_tasks": 61,
-    "moving_tasks": 58,
+    "total_tasks": 65,
+    "moving_tasks": 62,
     "stalled_or_order_only_tasks": 3,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 17,
+      "invalid_ack_timestamps": 23,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -42,6 +42,9 @@
         "monarch_required": false,
         "action": "Repair or annotate ledger timestamp ordering anomalies instead of hiding them in averages.",
         "task_ids": [
+          "aion-controlled-continuous-execution-trial-v0-1",
+          "aion-governance-0087-autonomous-authorization-council",
+          "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
           "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
           "aion-governance-0193-pause-recovery-rule-v0-1",
           "aion-governance-0196-runtime-observability-v0-1",
@@ -49,9 +52,12 @@
           "aion-governance-0208-issue-self-evolution-loop-v0-1",
           "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
           "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
+          "aion-governance-0232-empire-vital-signs-v0-1",
           "aion-governance-0233-command-approval-policy-v0-1",
           "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
           "aion-governance-audit-pipeline-v0-2-live-pr-queue",
+          "aion-governance-auto-proceed-dispatch-contract-v0-1",
+          "aion-governance-continuous-execution-control-north-star-v0-1",
           "seekapi-0133-strategic-realignment-v0-1",
           "seekapi-checkout-metadata-contract-v0-1",
           "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
@@ -123,24 +129,24 @@
   },
   "board_summary": {
     "title": "AION Board v0.2 / 董事局自动裁决门禁",
-    "total_board_verdicts": 30,
+    "total_board_verdicts": 34,
     "verdict_counts": {
-      "AUTO_PROCEED": 2,
-      "AUTO_PROCEED_WITH_AUDIT": 22,
+      "AUTO_PROCEED": 4,
+      "AUTO_PROCEED_WITH_AUDIT": 24,
       "SPLIT_AND_PROCEED": 0,
       "PREPARE_ONLY": 6,
       "NEEDS_MONARCH": 0,
       "BLOCK": 0
     },
     "high_risk_blocked_count": 0,
-    "dispatched_after_board_count": 30,
+    "dispatched_after_board_count": 34,
     "not_dispatched_after_board_count": 0,
     "budget_exceeded_count": 0,
     "gm_source_counts": {
-      "gm2": 20,
+      "gm2": 23,
       "gm1": 1,
       "gm": 4,
-      "agent007": 5
+      "agent007": 6
     },
     "cross_gm_board_gate_active": true,
     "tasks": [
@@ -578,6 +584,58 @@
         "auto_proceed_type": null,
         "budget_status": null,
         "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-0232-empire-vital-signs-v0-1",
+        "from_gm": null,
+        "selected_option": "implement_vital_signs_v0_1",
+        "verdict": "AUTO_PROCEED",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "Create PR and audit",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-auto-proceed-dispatch-contract-v0-1",
+        "from_gm": null,
+        "selected_option": "implement_auto_proceed_contract_v0_1",
+        "verdict": "AUTO_PROCEED",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "Create PR and audit",
+        "audit_required": true,
+        "auto_proceed_type": null,
+        "budget_status": null,
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-governance-continuous-execution-control-north-star-v0-1",
+        "from_gm": null,
+        "selected_option": "next_l1_monitor_strategic_drift_daily",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "Create PR, request audit, merge only if low-risk gates pass",
+        "audit_required": true,
+        "auto_proceed_type": "docs",
+        "budget_status": null,
+        "dispatched_after_board": true
+      },
+      {
+        "task_id": "aion-controlled-continuous-execution-trial-v0-1",
+        "from_gm": null,
+        "selected_option": "repair_active_north_star_mapping_debt",
+        "verdict": "AUTO_PROCEED_WITH_AUDIT",
+        "authorization_level": "L1",
+        "monarch_required": false,
+        "next_action": "create PR, run checks, request audit, merge only after low-risk gates pass",
+        "audit_required": true,
+        "auto_proceed_type": "ledger correction",
+        "budget_status": null,
+        "dispatched_after_board": true
       }
     ]
   },
@@ -604,9 +662,9 @@
     "executor_count": 4,
     "by_executor": {
       "agent007": {
-        "queued": 13,
+        "queued": 14,
         "ack_required": 0,
-        "acked": 11,
+        "acked": 12,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -624,13 +682,14 @@
           "tianggong-adapter-evaluation-matrix-v0-1",
           "aion-governance-0193-pause-recovery-rule-v0-1",
           "tianggong-m32-readonly-sandbox-authorization-packet-v0-1",
-          "aion-governance-0196-runtime-observability-v0-1"
+          "aion-governance-0196-runtime-observability-v0-1",
+          "aion-governance-continuous-execution-control-north-star-v0-1"
         ]
       },
       "gm2": {
-        "queued": 40,
+        "queued": 43,
         "ack_required": 0,
-        "acked": 40,
+        "acked": 43,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -675,7 +734,10 @@
           "aion-governance-audit-pipeline-v0-2-live-pr-queue",
           "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
           "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
-          "aion-governance-0233-command-approval-policy-v0-1"
+          "aion-governance-0233-command-approval-policy-v0-1",
+          "aion-governance-0232-empire-vital-signs-v0-1",
+          "aion-governance-auto-proceed-dispatch-contract-v0-1",
+          "aion-controlled-continuous-execution-trial-v0-1"
         ]
       },
       "gm": {
@@ -710,7 +772,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 58,
+    "acked_count": 62,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -720,8 +782,10 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 17,
+    "invalid_ack_timestamp_count": 23,
     "invalid_ack_timestamp_task_ids": [
+      "aion-governance-0087-autonomous-authorization-council",
+      "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
       "seekapi-0133-strategic-realignment-v0-1",
       "seekapi-checkout-metadata-contract-v0-1",
       "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
@@ -738,7 +802,11 @@
       "aion-governance-audit-pipeline-v0-2-live-pr-queue",
       "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
       "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
-      "aion-governance-0233-command-approval-policy-v0-1"
+      "aion-governance-0233-command-approval-policy-v0-1",
+      "aion-governance-0232-empire-vital-signs-v0-1",
+      "aion-governance-auto-proceed-dispatch-contract-v0-1",
+      "aion-governance-continuous-execution-control-north-star-v0-1",
+      "aion-controlled-continuous-execution-trial-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -1014,14 +1082,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 57,
+    "audit_queue_count": 61,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
-    "audit_passed_count": 52,
+    "audit_passed_count": 53,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 24,
+    "formal_bafuxunan_audit_count": 28,
     "audit_latency_average": 47.7,
     "audit_bottleneck_task_ids": []
   },
@@ -1105,6 +1173,156 @@
         "always_allow_write_or_runtime_forbidden": true,
         "monarch_required": false
       }
+    ]
+  },
+  "empire_vital_signs_summary": {
+    "title": "AION Empire Vital Signs v0.1 / 帝国生命体征",
+    "policy_count": 1,
+    "signal_count": 5,
+    "read_only_signal_count": 5,
+    "monarch_required_count": 0,
+    "tasks": [
+      {
+        "task_id": "aion-governance-0232-empire-vital-signs-v0-1",
+        "signal_count": 5,
+        "read_only": true,
+        "start_packet_url": "https://github.com/kiddhu/aion-governance/issues/232#issuecomment-4439473952"
+      }
+    ]
+  },
+  "auto_proceed_debt_summary": {
+    "title": "Auto-Proceed Dispatch Contract v0.1 / 自动推进派发契约",
+    "chain_count": 4,
+    "auto_proceed_debt_count": 0,
+    "debt_task_ids": [],
+    "chains": [
+      {
+        "task_id": "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+        "source_closeout": "#236",
+        "selected_next_step": "#233",
+        "start_evidence_present": true
+      },
+      {
+        "task_id": "aion-governance-0233-command-approval-policy-v0-1",
+        "source_closeout": "#233",
+        "selected_next_step": "#232",
+        "start_evidence_present": true
+      },
+      {
+        "task_id": "aion-governance-0232-empire-vital-signs-v0-1",
+        "source_closeout": "#233",
+        "selected_next_step": "#232",
+        "start_evidence_present": true
+      },
+      {
+        "task_id": "aion-governance-auto-proceed-dispatch-contract-v0-1",
+        "source_closeout": "#233",
+        "selected_next_step": "#232",
+        "start_evidence_present": true
+      }
+    ]
+  },
+  "north_star_alignment_summary": {
+    "title": "AION North Star Alignment v0.1 / 北极星对齐",
+    "registry_id": "aion-north-star-registry-v0-1",
+    "objective_count": 5,
+    "mapped_task_count": 20,
+    "missing_mapping_count": 0,
+    "active_missing_mapping_count": 0,
+    "historical_unmapped_count": 45,
+    "unknown_mapping_count": 0,
+    "mapped_task_ids": [
+      "aion-dgw-0049-t01-deployment-confirmation",
+      "aion-dgw-0049-t02-prod-smoke-gate",
+      "aion-dgw-0049-t03-github-writeback-path",
+      "aion-dgw-0049-t04-status-taxonomy",
+      "aion-governance-0081-dispatch-treaty",
+      "aion-governance-0087-autonomous-authorization-council",
+      "seekapi-0032-payment-credits-webhook-contract",
+      "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
+      "seekapi-0133-strategic-realignment-v0-1",
+      "seekapi-checkout-metadata-contract-v0-1",
+      "seekapi-credit-ledger-oneapi-responsibility-map-v0-1",
+      "seekapi-gm1-overnight-state-correction-v0-1",
+      "seekapi-payment-webhook-credits-l4-authorization-pack-v0-1",
+      "seekapi-prod-smoke-evidence-template-v0-1",
+      "aion-governance-0178-security-scan-baseline-v0-1",
+      "aion-governance-0206-parent-child-task-continuity-rule-v0-1",
+      "aion-governance-0232-empire-vital-signs-v0-1",
+      "aion-governance-auto-proceed-dispatch-contract-v0-1",
+      "aion-governance-continuous-execution-control-north-star-v0-1",
+      "aion-controlled-continuous-execution-trial-v0-1"
+    ],
+    "missing_mapping_task_ids": [],
+    "active_missing_mapping_task_ids": [],
+    "historical_unmapped_task_ids": [
+      "aion-dgw-0049-t05-failure-replay-rules",
+      "aion-governance-0089-factory-kernel-v0-1",
+      "tianggong-0083-m31-plus-parent",
+      "tianggong-0084-universal-evaluation-rubric",
+      "tianggong-0085-seekapi-growth-intel",
+      "tianggong-0086-stock-quant-shadow-audit-intel",
+      "tianggong-0105-coding-agent-adapter",
+      "aion-governance-0097-factory-report-dashboard",
+      "aion-governance-0090-factory-kernel-v0-1-pr",
+      "aion-governance-0089-factory-kernel-v0-2-live-ledger",
+      "aion-governance-0089-v03-loop1-packet-template",
+      "aion-governance-0089-v03-loop2-state-fixtures",
+      "aion-governance-0089-v03-loop3-report-summary",
+      "aion-governance-0089-factory-kernel-v0-4-failure-replay",
+      "aion-governance-0089-factory-kernel-v0-4-1-replay-recovery",
+      "aion-governance-0123-board-v0-1-protocol",
+      "aion-governance-0126-board-v0-2-auto-proceed-gate",
+      "aion-governance-0130-board-v0-3-gm-completion-gate",
+      "seekapi-0129-payment-event-responsibility-matrix-v0-1",
+      "aion-dispatch-runtime-0135-v0-1",
+      "aion-dispatch-runtime-0138-v0-2-ack-timeout-recovery",
+      "aion-governance-0143-auto-trigger-gate-v0-1",
+      "aion-governance-0146-executor-pool-m0-prepare-only",
+      "aion-governance-0149-executor-pool-m1-sandbox-authorization-pack",
+      "aion-governance-0152-executor-pool-m1-1-internal-routing-metrics",
+      "aion-governance-0155-gm-self-driving-completion-rule-v0-1",
+      "aion-governance-0089-factory-kernel-v0-4-2-unattended-quality-loop",
+      "aion-governance-0161-factory-kernel-v0-4-3-repair-invalid-ack-timestamps",
+      "aion-governance-0164-factory-kernel-v0-4-3-repair-missing-artifact-invalid-completion",
+      "aion-governance-0168-audit-runtime-v0-1",
+      "aion-governance-0171-quality-gate-v0-1",
+      "aion-governance-0174-executor-pool-m2-authorization-pack",
+      "aion-governance-0181-elder-senate-v0-1",
+      "aion-governance-0184-elder-senate-v0-2-embedded-enforcement",
+      "aion-governance-0180-same-task-benchmark-design-v0-1",
+      "tianggong-adapter-evaluation-matrix-v0-1",
+      "aion-governance-0193-pause-recovery-rule-v0-1",
+      "tianggong-m32-readonly-sandbox-authorization-packet-v0-1",
+      "aion-governance-0196-runtime-observability-v0-1",
+      "aion-governance-0208-issue-self-evolution-loop-v0-1",
+      "aion-governance-0209-low-risk-auto-closeout-rule-v0-1",
+      "aion-governance-audit-pipeline-v0-2-live-pr-queue",
+      "aion-governance-0229-audit-pipeline-drift-monitor-v0-1",
+      "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+      "aion-governance-0233-command-approval-policy-v0-1"
+    ],
+    "unknown_mappings": []
+  },
+  "continuous_execution_control_summary": {
+    "title": "AION Continuous Execution Control v0.1 / 连续执行控制",
+    "control_task_count": 1,
+    "readiness_verdict": "CONTROLLED_TRIAL_READY",
+    "full_unattended_ready": false,
+    "no_agent_dry_run_enabled": true,
+    "auto_proceed_ready_count": 5,
+    "auto_brake_required_count": 3,
+    "auto_proceed_ready_task_ids": [
+      "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
+      "aion-governance-0233-command-approval-policy-v0-1",
+      "aion-governance-0232-empire-vital-signs-v0-1",
+      "aion-governance-auto-proceed-dispatch-contract-v0-1",
+      "aion-governance-continuous-execution-control-north-star-v0-1"
+    ],
+    "auto_brake_required_task_ids": [
+      "aion-dgw-0049-t01-deployment-confirmation",
+      "aion-dgw-0049-t02-prod-smoke-gate",
+      "seekapi-0032-payment-credits-webhook-contract"
     ]
   },
   "security_scan_summary": {
@@ -1262,8 +1480,8 @@
       "elder_senate_submission"
     ],
     "statement": "Elder Senate is not a new bot; it is an embedded GM workflow review gate and Monarch does not need to chat with it daily.",
-    "reviews_total": 11,
-    "pass_count": 5,
+    "reviews_total": 14,
+    "pass_count": 6,
     "revise_count": 0,
     "block_count": 0,
     "needs_monarch_count": 0,
@@ -1273,24 +1491,25 @@
     "unsafe_auto_proceed_blocked": 0,
     "false_monarch_escalation_detected": 0,
     "merge_authorization_reviews": 2,
-    "knowledge_updates_required": 6,
+    "knowledge_updates_required": 7,
     "coach_training_rules_created": 6,
     "gm_training_rules_created": 6,
     "capacity_bottlenecks_detected": 2,
-    "doctrine_updates_required": 6,
+    "doctrine_updates_required": 7,
     "quality_gate_failures_detected": 0,
     "recommended_next_actions": [
       "aion-governance-0181-elder-senate-v0-1: post-merge AAR and next low-risk integration proposal",
       "aion-governance-0184-elder-senate-v0-2-embedded-enforcement: publish public Factory Report and write issue #184 AAR",
       "aion-governance-0180-same-task-benchmark-design-v0-1: post-merge closeout, public Factory Report sync, AAR; do not run real external executors",
-      "tianggong-m32-readonly-sandbox-authorization-packet-v0-1: Proceed to PR CI and bafuxunan audit; keep real external executor run Monarch-gated."
+      "tianggong-m32-readonly-sandbox-authorization-packet-v0-1: Proceed to PR CI and bafuxunan audit; keep real external executor run Monarch-gated.",
+      "aion-controlled-continuous-execution-trial-v0-1: continue with L1 PR checks and audit"
     ]
   },
   "elder_senate_capacity_summary": {
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
-    "gm2_queue": 40,
-    "agent007_queue": 14,
+    "gm2_queue": 43,
+    "agent007_queue": 15,
     "audit_queue": 7,
     "ack_timeout_count": 0,
     "audit_timeout_count": 0,
@@ -2277,6 +2496,70 @@
       "board_verdict": "AUTO_PROCEED",
       "board_authorization_level": "L1",
       "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-0232-empire-vital-signs-v0-1",
+      "project_id": "aion-governance",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "GitHub issue #232 + local branch",
+      "ack_at": "2026-05-13T09:35:33Z",
+      "first_artifact": "docs/governance/aion-empire-vital-signs-v0.1.md",
+      "pr": null,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/232",
+      "next_gate": "Open low-risk PR and audit",
+      "board_verdict": "AUTO_PROCEED",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-auto-proceed-dispatch-contract-v0-1",
+      "project_id": "aion-governance",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "GitHub issue #233/#232 + local branch",
+      "ack_at": "2026-05-13T09:35:33Z",
+      "first_artifact": "docs/governance/auto-proceed-dispatch-contract-v0.1.md",
+      "pr": null,
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/233",
+      "next_gate": "Open low-risk PR and audit",
+      "board_verdict": "AUTO_PROCEED",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-governance-continuous-execution-control-north-star-v0-1",
+      "project_id": "aion-factory-continuous-execution-control",
+      "status": "MERGED_LOW_RISK",
+      "owner": "agent007",
+      "audit": "bafuxunan",
+      "runtime_handle": "github-pr:245",
+      "ack_at": "2026-05-13T10:15:00Z",
+      "first_artifact": "docs/governance/aion-continuous-execution-control-v0.1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/245",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/244",
+      "next_gate": "MONITOR_DRY_RUN_AND_MAP_DRIFT_DEBT",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
+    },
+    {
+      "task_id": "aion-controlled-continuous-execution-trial-v0-1",
+      "project_id": "aion-governance",
+      "status": "MERGED_LOW_RISK",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "github://kiddhu/aion-governance/issues/247#issuecomment-4440193656",
+      "ack_at": "2026-05-13T11:01:50Z",
+      "first_artifact": "docs/governance/aion-controlled-continuous-execution-trial-v0.1.md",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/248",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/247",
+      "next_gate": "Post-merge closeout, public Factory Report sync, and AAR completion; no protected-surface action authorized.",
+      "board_verdict": "AUTO_PROCEED_WITH_AUDIT",
+      "board_authorization_level": "L1",
+      "board_monarch_required": false
     }
   ],
   "sections": {
@@ -2341,7 +2624,11 @@
       "aion-governance-audit-pipeline-v0-2-live-pr-queue: MERGED_LOW_RISK -> GM1 may resume low-risk SeekAPI PRs; all real production/payment/database/webhook/secret/external-executor gates still return to Monarch.",
       "aion-governance-0229-audit-pipeline-drift-monitor-v0-1: MERGED_LOW_RISK -> Proceed #233 Command Approval Policy v0.1 after refreshed public report sync.",
       "aion-governance-0236-monarch-real-world-consequence-gate-v0-1: MERGED_LOW_RISK -> Post-merge closeout PR + public report sync",
-      "aion-governance-0233-command-approval-policy-v0-1: MERGED_LOW_RISK -> Public Factory Report sync + issue closeout comment; #233 remains open until closeout packet posted"
+      "aion-governance-0233-command-approval-policy-v0-1: MERGED_LOW_RISK -> Public Factory Report sync + issue closeout comment; #233 remains open until closeout packet posted",
+      "aion-governance-0232-empire-vital-signs-v0-1: FIRST_ARTIFACT_SEEN -> Open low-risk PR and audit",
+      "aion-governance-auto-proceed-dispatch-contract-v0-1: FIRST_ARTIFACT_SEEN -> Open low-risk PR and audit",
+      "aion-governance-continuous-execution-control-north-star-v0-1: MERGED_LOW_RISK -> MONITOR_DRY_RUN_AND_MAP_DRIFT_DEBT",
+      "aion-controlled-continuous-execution-trial-v0-1: MERGED_LOW_RISK -> Post-merge closeout, public Factory Report sync, and AAR completion; no protected-surface action authorized."
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [],
