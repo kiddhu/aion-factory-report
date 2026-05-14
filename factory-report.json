@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-14T21:56:28Z",
+  "generated_at": "2026-05-14T22:26:33Z",
   "ledger_generated_at": "2026-05-14T16:41:44Z",
   "project_filter": null,
   "score": {
     "score": 96,
     "max_score": 100,
-    "total_tasks": 69,
-    "moving_tasks": 66,
+    "total_tasks": 70,
+    "moving_tasks": 67,
     "stalled_or_order_only_tasks": 0,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -710,9 +710,9 @@
         ]
       },
       "gm2": {
-        "queued": 47,
+        "queued": 48,
         "ack_required": 0,
-        "acked": 47,
+        "acked": 48,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -764,7 +764,8 @@
           "aion-governance-monarch-north-star-values-v0-1",
           "aion-no-silent-stall-rule-v0-1",
           "aion-actions-fuel-recovery-minute-conservation-v0-1",
-          "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1"
+          "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
+          "aion-governance-0276-monarch-north-star-v-next"
         ]
       },
       "gm": {
@@ -799,7 +800,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 66,
+    "acked_count": 67,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -1113,14 +1114,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 65,
+    "audit_queue_count": 66,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
     "audit_passed_count": 56,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 32,
+    "formal_bafuxunan_audit_count": 33,
     "audit_latency_average": 47.7,
     "audit_bottleneck_task_ids": []
   },
@@ -1255,13 +1256,13 @@
   },
   "north_star_alignment_summary": {
     "title": "AION North Star Alignment v0.1 / 北极星对齐",
-    "registry_id": "aion-north-star-registry-v0-1",
+    "registry_id": "aion-north-star-registry-v-next",
     "objective_count": 5,
-    "mapped_task_count": 23,
+    "mapped_task_count": 24,
     "missing_mapping_count": 0,
     "active_missing_mapping_count": 0,
     "historical_unmapped_count": 46,
-    "unknown_mapping_count": 1,
+    "unknown_mapping_count": 2,
     "mapped_task_ids": [
       "aion-dgw-0049-t01-deployment-confirmation",
       "aion-dgw-0049-t02-prod-smoke-gate",
@@ -1285,7 +1286,8 @@
       "aion-controlled-continuous-execution-trial-v0-1",
       "aion-governance-monarch-north-star-values-v0-1",
       "aion-no-silent-stall-rule-v0-1",
-      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1"
+      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
+      "aion-governance-0276-monarch-north-star-v-next"
     ],
     "missing_mapping_task_ids": [],
     "active_missing_mapping_task_ids": [],
@@ -1343,17 +1345,69 @@
         "unknown_objectives": [
           "anti_bureaucracy_runtime_control"
         ]
+      },
+      {
+        "task_id": "aion-governance-0276-monarch-north-star-v-next",
+        "unknown_objectives": [
+          "authorization_first_daily_evolution"
+        ]
       }
     ]
   },
   "monarch_north_star_values_summary": {
-    "title": "Monarch North Star Values v0.1 / 君主北极星价值锁定层",
-    "version": "0.1",
+    "title": "Monarch North Star Values v-next / 君主北极星价值观升级层",
+    "version": "v-next",
     "status": "MONARCH_LOCKED",
     "lock_layer": true,
+    "authorization_default": "authorize_ai_agents",
+    "human_blocking_is_exception": true,
+    "monarch_required_only_when": [
+      "real_financial_consequence",
+      "real_legal_consequence"
+    ],
+    "do_not_block_by_keywords_only": [
+      "deployment",
+      "prod",
+      "smoke",
+      "payment",
+      "credits",
+      "webhook",
+      "Hermes",
+      "runtime",
+      "gateway"
+    ],
+    "classification_order": [
+      "requested_action",
+      "allowed_scope",
+      "expected_side_effect",
+      "actual_external_write",
+      "real_financial_consequence",
+      "real_legal_consequence"
+    ],
+    "active_task_heartbeat_minutes": 10,
+    "waiting_audit_check_minutes": 10,
+    "command_approval_blocker_check_minutes": 10,
+    "ci_wait_check_minutes": 10,
+    "digest_summary_hours": 6,
+    "six_hour_digest_is_summary_only": true,
+    "daily_unattended_evolution_allowed": true,
+    "daily_unattended_evolution_expected": true,
+    "complexity_allowed_if": [
+      "减少人工等待",
+      "减少授权阻断",
+      "提高自动推进速度",
+      "减少未来重复卡点",
+      "形成可测试闭环"
+    ],
+    "complexity_not_allowed_if": [
+      "只是增加文档",
+      "只是增加等待门槛",
+      "只是制造更多审计卡点",
+      "只是把问题描述得更复杂但不能推进"
+    ],
     "no_agent_cron_mode": "DRY_RUN_ONLY",
-    "value_count": 11,
-    "mapped_task_count": 21,
+    "value_count": 15,
+    "mapped_task_count": 22,
     "active_without_monarch_value_mapping_count": 0,
     "unknown_value_mapping_count": 0,
     "mapped_task_ids": [
@@ -1377,7 +1431,8 @@
       "aion-governance-auto-proceed-dispatch-contract-v0-1",
       "aion-governance-monarch-north-star-values-v0-1",
       "aion-no-silent-stall-rule-v0-1",
-      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1"
+      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
+      "aion-governance-0276-monarch-north-star-v-next"
     ],
     "active_without_monarch_value_mapping_task_ids": [],
     "unknown_value_mappings": []
@@ -1390,11 +1445,11 @@
     "rule_task_ids": [
       "aion-no-silent-stall-rule-v0-1"
     ],
-    "active_task_heartbeat_minutes": 30,
+    "active_task_heartbeat_minutes": 10,
     "digest_summary_hours": 6,
     "no_agent_mode": "DRY_RUN_ONLY",
     "no_silent_stall_check_status": "ACTIVE_PROGRESS",
-    "active_lane_count": 68,
+    "active_lane_count": 70,
     "silent_stall_count": 0,
     "needs_monarch_count": 0,
     "allowed_statuses": [
@@ -1441,7 +1496,7 @@
     "readiness_verdict": "CONTROLLED_TRIAL_READY",
     "full_unattended_ready": false,
     "no_agent_dry_run_enabled": true,
-    "auto_proceed_ready_count": 7,
+    "auto_proceed_ready_count": 8,
     "auto_brake_required_count": 0,
     "auto_proceed_ready_task_ids": [
       "aion-governance-0236-monarch-real-world-consequence-gate-v0-1",
@@ -1450,7 +1505,8 @@
       "aion-governance-auto-proceed-dispatch-contract-v0-1",
       "aion-governance-continuous-execution-control-north-star-v0-1",
       "aion-governance-monarch-north-star-values-v0-1",
-      "aion-no-silent-stall-rule-v0-1"
+      "aion-no-silent-stall-rule-v0-1",
+      "aion-governance-0276-monarch-north-star-v-next"
     ],
     "auto_brake_required_task_ids": []
   },
@@ -1638,7 +1694,7 @@
   "elder_senate_capacity_summary": {
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
-    "gm2_queue": 47,
+    "gm2_queue": 48,
     "agent007_queue": 15,
     "audit_queue": 8,
     "ack_timeout_count": 0,
@@ -2754,6 +2810,26 @@
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-governance-0276-monarch-north-star-v-next",
+      "project_id": "aion-governance",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "gm2-local-governance-pr",
+      "ack_at": "2026-05-15T06:30:00+08:00",
+      "first_artifact": {
+        "path": "docs/governance/monarch-north-star-values-v-next.md",
+        "type": "doc",
+        "created_at": "2026-05-15T06:30:00+08:00"
+      },
+      "pr": "pending",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/276",
+      "next_gate": "OPEN_LOW_RISK_GOVERNANCE_PR",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
     }
   ],
   "sections": {
@@ -2826,7 +2902,8 @@
       "aion-governance-monarch-north-star-values-v0-1: MERGED_LOW_RISK -> post_merge_closeout_public_report_sync_and_issue_comment",
       "aion-no-silent-stall-rule-v0-1: MERGED_LOW_RISK -> POST_MERGE_CLOSEOUT_RECORDED_WITH_ACTIONS_FUEL_RECOVERY",
       "aion-actions-fuel-recovery-minute-conservation-v0-1: MERGED_LOW_RISK -> POST_MERGE_CLOSEOUT_COMPLETE",
-      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1: MERGED_LOW_RISK -> Continue #266 next stage: wire audit runtime repair into operational queue/reporting only through separate low-risk PR and audit; do not close #266 yet."
+      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1: MERGED_LOW_RISK -> Continue #266 next stage: wire audit runtime repair into operational queue/reporting only through separate low-risk PR and audit; do not close #266 yet.",
+      "aion-governance-0276-monarch-north-star-v-next: FIRST_ARTIFACT_SEEN -> OPEN_LOW_RISK_GOVERNANCE_PR"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [
