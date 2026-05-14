@@ -1,21 +1,21 @@
 # AION 工厂报告
 
-生成时间：`2026-05-14T16:45:19Z`
+生成时间：`2026-05-14T21:56:28Z`
 账本生成时间：`2026-05-14T16:41:44Z`
 
 ## 总体评分
 - 评分：96/100
 - 判断：工厂运转良好，证据覆盖较强。
 - 正在推进的任务：66/69
-- 卡住/仅下令/阻塞任务：3
+- 卡住/仅下令/阻塞任务：0
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
 - 是否达到无人值守高质量：False
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
 - 质量分：96/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 3, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 27, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
-- 修复队列：repair-invalid-dispatch-timestamps, keep-high-risk-replay-frozen
+- 阻塞计数：{'monarch_gated_failure_replay': 0, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 27, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 修复队列：repair-invalid-dispatch-timestamps
 
 ## v0.3 低风险闭环
 - 目标闭环：3
@@ -24,9 +24,9 @@
 - 剩余闭环：0
 
 ## v0.4 失败分类与重放
-- 已分类候选：3
+- 已分类候选：0
 - 可自动重放候选：0
-- 需要 Monarch 拍板候选：3
+- 需要 Monarch 拍板候选：0
 
 ## v0.4.1 低风险 replay 恢复
 - 已恢复候选：6
@@ -205,10 +205,10 @@
 - active_task_heartbeat_minutes：30
 - digest_summary_hours：6
 - no_agent_mode：DRY_RUN_ONLY
-- no_silent_stall_check_status：NEEDS_MONARCH
-- active_lane_count：21
+- no_silent_stall_check_status：ACTIVE_PROGRESS
+- active_lane_count：68
 - silent_stall_count：0
-- needs_monarch_count：3
+- needs_monarch_count：0
 
 ## AION Actions Fuel Recovery & Minute Conservation Mode v0.1 / Actions 燃料恢复与分钟节流
 - private_minutes_status：EXHAUSTED
@@ -227,7 +227,7 @@
 - full_unattended_ready：False
 - no_agent_dry_run_enabled：True
 - auto_proceed_ready_count：7
-- auto_brake_required_count：3
+- auto_brake_required_count：0
 
 ## AION North Star Alignment v0.1 / 北极星对齐
 - registry_id：aion-north-star-registry-v0-1
@@ -341,8 +341,8 @@
 ## 当前任务进度
 | 任务 | 状态 | 负责人 | 审计 | 下一关口 |
 |---|---:|---|---|---|
-| aion-dgw-0049-t01-deployment-confirmation | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | dispatch to 007 only after runtime handle is available; production deploy remains forbidden |
-| aion-dgw-0049-t02-prod-smoke-gate | DEPLOYMENT_NOT_CONFIRMED | agent007 | bafuxunan | define read-only PROD-SMOKE evidence gate; no production PASS without evidence |
+| aion-dgw-0049-t01-deployment-confirmation | PROTECTED_PREPARE | agent007 | bafuxunan | PROTECTED_PREPARE: define deployment confirmation evidence contract and read-only checks; production deploy remains forbidden without separate Monarch authorization |
+| aion-dgw-0049-t02-prod-smoke-gate | PROTECTED_PREPARE | agent007 | bafuxunan | PROTECTED_PREPARE: define read-only/proof requirements for future prod-smoke evidence; no production smoke or production PASS without separate Monarch authorization |
 | aion-dgw-0049-t03-github-writeback-path | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade |
 | aion-dgw-0049-t04-status-taxonomy | FIRST_ARTIFACT_SEEN | agent007 | bafuxunan | create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation |
 | aion-dgw-0049-t05-failure-replay-rules | MERGED_LOW_RISK | agent007 | bafuxunan | v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen |
@@ -356,7 +356,7 @@
 | tianggong-0105-coding-agent-adapter | MERGED_LOW_RISK | gm2 | bafuxunan | PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization. |
 | aion-governance-0097-factory-report-dashboard | MERGED_LOW_RISK | gm2 | bafuxunan | daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL |
 | aion-governance-0090-factory-kernel-v0-1-pr | MERGED_LOW_RISK | gm2 | bafuxunan | superseded by #89 Factory Kernel v0.2 live-ledger takeover |
-| seekapi-0032-payment-credits-webhook-contract | NEEDS_MONARCH | gm | bafuxunan | high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization |
+| seekapi-0032-payment-credits-webhook-contract | PROTECTED_PREPARE | gm | bafuxunan | PROTECTED_PREPARE: continue contract/checker/dry-run work; live payment, credit grant/debit, webhook replay, DB/customer data mutation, and production PASS remain Monarch-gated |
 | aion-governance-0089-factory-kernel-v0-2-live-ledger | MERGED_LOW_RISK | gm2 | bafuxunan | post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops |
 | aion-governance-0089-v03-loop1-packet-template | MERGED_LOW_RISK | gm2 | bafuxunan | Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay. |
 | aion-governance-0089-v03-loop2-state-fixtures | MERGED_LOW_RISK | gm2 | bafuxunan | Loop 2 closed; use failure classes as v0.4 replay candidates. |
@@ -414,8 +414,8 @@
 ## AION 工厂晨报
 
 ### 1. 进行中的任务
-- aion-dgw-0049-t01-deployment-confirmation: DEPLOYMENT_NOT_CONFIRMED -> dispatch to 007 only after runtime handle is available; production deploy remains forbidden
-- aion-dgw-0049-t02-prod-smoke-gate: DEPLOYMENT_NOT_CONFIRMED -> define read-only PROD-SMOKE evidence gate; no production PASS without evidence
+- aion-dgw-0049-t01-deployment-confirmation: PROTECTED_PREPARE -> PROTECTED_PREPARE: define deployment confirmation evidence contract and read-only checks; production deploy remains forbidden without separate Monarch authorization
+- aion-dgw-0049-t02-prod-smoke-gate: PROTECTED_PREPARE -> PROTECTED_PREPARE: define read-only/proof requirements for future prod-smoke evidence; no production smoke or production PASS without separate Monarch authorization
 - aion-dgw-0049-t03-github-writeback-path: FIRST_ARTIFACT_SEEN -> writeback path repaired; keep production/deploy/payment gates frozen and require PR/CI/audit evidence before any further status upgrade
 - aion-dgw-0049-t04-status-taxonomy: FIRST_ARTIFACT_SEEN -> create low-risk status taxonomy checker/ledger/report PR evidence; no production runtime mutation
 - aion-dgw-0049-t05-failure-replay-rules: MERGED_LOW_RISK -> v0.4 recovered via PR #116/#117; v0.4.1 now records cross-repo recovery comment and keeps high-risk replay frozen
@@ -429,7 +429,7 @@
 - tianggong-0105-coding-agent-adapter: MERGED_LOW_RISK -> PR #106 merged as low-risk governance package. Next real priority remains Factory Kernel #89 takeover of true task state; Executor Adapter runtime and real sandbox comparison require separate Monarch authorization.
 - aion-governance-0097-factory-report-dashboard: MERGED_LOW_RISK -> daily scheduled Factory Report refresh; issue #97 remains open for GitHub Pages/serving decision if Monarch wants external web URL
 - aion-governance-0090-factory-kernel-v0-1-pr: MERGED_LOW_RISK -> superseded by #89 Factory Kernel v0.2 live-ledger takeover
-- seekapi-0032-payment-credits-webhook-contract: NEEDS_MONARCH -> high-risk payment/credits/webhook chain remains visible in Kernel; any real execution, merge, deploy, replay, credit grant, or production PASS requires separate Monarch authorization
+- seekapi-0032-payment-credits-webhook-contract: PROTECTED_PREPARE -> PROTECTED_PREPARE: continue contract/checker/dry-run work; live payment, credit grant/debit, webhook replay, DB/customer data mutation, and production PASS remain Monarch-gated
 - aion-governance-0089-factory-kernel-v0-2-live-ledger: MERGED_LOW_RISK -> post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops
 - aion-governance-0089-v03-loop1-packet-template: MERGED_LOW_RISK -> Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay.
 - aion-governance-0089-v03-loop2-state-fixtures: MERGED_LOW_RISK -> Loop 2 closed; use failure classes as v0.4 replay candidates.
@@ -488,10 +488,14 @@
 - 无
 
 ### 3. 缺少执行入口的任务
-- 无
+- aion-dgw-0049-t01-deployment-confirmation
+- aion-dgw-0049-t02-prod-smoke-gate
+- seekapi-0032-payment-credits-webhook-contract
 
 ### 4. 缺少接单确认的任务
-- 无
+- aion-dgw-0049-t01-deployment-confirmation
+- aion-dgw-0049-t02-prod-smoke-gate
+- seekapi-0032-payment-credits-webhook-contract
 
 ### 5. 缺少第一产物的任务
 - 无
@@ -529,14 +533,12 @@
 - aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1
 
 ### 8. 需要君主拍板的任务
-- aion-dgw-0049-t01-deployment-confirmation
-- aion-dgw-0049-t02-prod-smoke-gate
-- seekapi-0032-payment-credits-webhook-contract
+- 无
 
 ### 9. 疑似虚假进展的任务
 - 无
 
 ### 10. 下一步 3 个动作
-- aion-dgw-0049-t01-deployment-confirmation: dispatch to 007 only after runtime handle is available; production deploy remains forbidden
-- aion-dgw-0049-t02-prod-smoke-gate: define read-only PROD-SMOKE evidence gate; no production PASS without evidence
 - tianggong-0084-universal-evaluation-rubric: #84 merged; use universal evaluation checker for #85/#86 read-only intel records
+- aion-governance-0089-factory-kernel-v0-2-live-ledger: post-merge ledger/evidence correction PR, then sync public Factory Report; issue #89 remains open for v0.3 low-risk loops
+- aion-governance-0089-v03-loop1-packet-template: Loop 1 closed; use template in Loop 2/3 and v0.4 failure replay.
