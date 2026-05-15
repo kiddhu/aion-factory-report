@@ -1,12 +1,12 @@
 # AION 工厂报告
 
-生成时间：`2026-05-14T22:26:33Z`
+生成时间：`2026-05-15T02:35:15Z`
 账本生成时间：`2026-05-14T16:41:44Z`
 
 ## 总体评分
 - 评分：96/100
 - 判断：工厂运转良好，证据覆盖较强。
-- 正在推进的任务：67/70
+- 正在推进的任务：68/71
 - 卡住/仅下令/阻塞任务：0
 
 ## Factory Kernel v0.4.2 / 无人值守质量闭环
@@ -14,7 +14,7 @@
 - 成熟度：PARTIAL_AUTONOMY_NOT_FULL
 - 质量分：96/95
 - 判断：可以继续无人值守推进低风险治理任务；尚不能宣布完整无人值守高质量完成所有任务。
-- 阻塞计数：{'monarch_gated_failure_replay': 0, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 27, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
+- 阻塞计数：{'monarch_gated_failure_replay': 0, 'auto_replay_candidates': 0, 'missing_first_artifact': 0, 'ack_required': 0, 'ack_timeout': 0, 'executor_idle_blocker': 0, 'invalid_gm_completion_packets': 0, 'board_not_dispatched_after_verdict': 0, 'invalid_ack_timestamps': 28, 'invalid_first_artifact_timestamps': 0, 'false_progress_penalty': 0}
 - 修复队列：repair-invalid-dispatch-timestamps
 
 ## v0.3 低风险闭环
@@ -55,7 +55,7 @@
 
 ## Dispatch Runtime v0.1 / 执行队列
 - 待 ACK：0
-- 已 ACK：67
+- 已 ACK：68
 - 缺第一产物：0
 - ACK_TIMEOUT：0
 - EXECUTOR_IDLE_BLOCKER：0
@@ -141,14 +141,14 @@
 - blocked_task_ids：无
 
 ## Audit Runtime v0.1 / 审计运行时
-- 审计队列总数：66
+- 审计队列总数：67
 - 待审计：0
 - ACK 超时：0
 - 审计超时：0
 - 审计通过：56
 - 审计阻断：0
 - fallback audit：33
-- 八府巡按正式审计：33
+- 八府巡按正式审计：34
 - 平均审计耗时：47.7
 - 审计瓶颈任务：无
 
@@ -157,6 +157,7 @@
 - ready_for_audit_count：0
 - sla_breached_count：0
 - fallback_eligible_count：0
+- fast_lane_count：0；fast_lane_due_count：0；standard_lane_count：0；protected_lane_count：0
 - formal_bafuxunan_required_count：0
 - stop_new_pr：False
 - bottleneck_prs：无
@@ -197,7 +198,7 @@
 - status：MONARCH_LOCKED
 - no_agent_cron_mode：DRY_RUN_ONLY
 - value_count：15
-- mapped_task_count：22
+- mapped_task_count：23
 - active_without_monarch_value_mapping_count：0
 - unknown_value_mapping_count：0
 
@@ -206,7 +207,7 @@
 - digest_summary_hours：6
 - no_agent_mode：DRY_RUN_ONLY
 - no_silent_stall_check_status：ACTIVE_PROGRESS
-- active_lane_count：70
+- active_lane_count：71
 - silent_stall_count：0
 - needs_monarch_count：0
 
@@ -222,6 +223,21 @@
 - no_agent_mode：DRY_RUN_ONLY
 - full_unattended_ready：False
 
+## AION Highway Control Tower xhigh v0.1 / 高速长跑总控塔
+- control_tower_count：1
+- lane_count：9
+- root_cause_count：8
+- heartbeat_minutes：30
+- digest_hours：6
+- watchdog_of_watchdogs_present：True
+- waiting_state_ttl_present：True
+- rebase_mechanism_present：True
+- github_actions_patrol_allowed：False
+- local_only_final_state_allowed：False
+- full_unattended_ready_allowed：False
+- lane_ids：actions_fuel_guard, audit_queue, ci_queue, continuation, elder_senate_rebase, factory_report_freshness, gm1_seekapi, gm2_governance, no_agent_local_loops
+- blocked_task_ids：无
+
 ## AION Continuous Execution Control v0.1 / 连续执行控制
 - readiness_verdict：CONTROLLED_TRIAL_READY
 - full_unattended_ready：False
@@ -232,7 +248,7 @@
 ## AION North Star Alignment v0.1 / 北极星对齐
 - registry_id：aion-north-star-registry-v-next
 - objective_count：5
-- mapped_task_count：24
+- mapped_task_count：25
 - missing_mapping_count：0
 - active_missing_mapping_count：0
 - historical_unmapped_count：46
@@ -330,7 +346,7 @@
 
 ## AION Elder Senate Capacity / 长老院产能复核
 - gm1_queue：0
-- gm2_queue：48
+- gm2_queue：49
 - agent007_queue：15
 - audit_queue：8
 - ack_timeout_count：0
@@ -411,6 +427,7 @@
 | aion-actions-fuel-recovery-minute-conservation-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | POST_MERGE_CLOSEOUT_COMPLETE |
 | aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1 | MERGED_LOW_RISK | gm2 | bafuxunan | Continue #266 next stage: wire audit runtime repair into operational queue/reporting only through separate low-risk PR and audit; do not close #266 yet. |
 | aion-governance-0276-monarch-north-star-v-next | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | OPEN_LOW_RISK_GOVERNANCE_PR |
+| aion-highway-control-tower-v0-1 | FIRST_ARTIFACT_SEEN | gm2 | bafuxunan | 八府巡按 audit then low-risk governance merge/closeout; no production or full unattended PASS |
 
 ## AION 工厂晨报
 
@@ -485,6 +502,7 @@
 - aion-actions-fuel-recovery-minute-conservation-v0-1: MERGED_LOW_RISK -> POST_MERGE_CLOSEOUT_COMPLETE
 - aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1: MERGED_LOW_RISK -> Continue #266 next stage: wire audit runtime repair into operational queue/reporting only through separate low-risk PR and audit; do not close #266 yet.
 - aion-governance-0276-monarch-north-star-v-next: FIRST_ARTIFACT_SEEN -> OPEN_LOW_RISK_GOVERNANCE_PR
+- aion-highway-control-tower-v0-1: FIRST_ARTIFACT_SEEN -> 八府巡按 audit then low-risk governance merge/closeout; no production or full unattended PASS
 
 ### 2. 卡在仅已下令的任务
 - 无

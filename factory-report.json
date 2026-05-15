@@ -1,13 +1,13 @@
 {
   "title": "AION 工厂报告",
-  "generated_at": "2026-05-14T22:26:33Z",
+  "generated_at": "2026-05-15T02:35:15Z",
   "ledger_generated_at": "2026-05-14T16:41:44Z",
   "project_filter": null,
   "score": {
     "score": 96,
     "max_score": 100,
-    "total_tasks": 70,
-    "moving_tasks": 67,
+    "total_tasks": 71,
+    "moving_tasks": 68,
     "stalled_or_order_only_tasks": 0,
     "false_progress_penalty": 0,
     "verdict": "工厂运转良好，证据覆盖较强。"
@@ -30,7 +30,7 @@
       "executor_idle_blocker": 0,
       "invalid_gm_completion_packets": 0,
       "board_not_dispatched_after_verdict": 0,
-      "invalid_ack_timestamps": 27,
+      "invalid_ack_timestamps": 28,
       "invalid_first_artifact_timestamps": 0,
       "false_progress_penalty": 0
     },
@@ -61,6 +61,7 @@
           "aion-governance-auto-proceed-dispatch-contract-v0-1",
           "aion-governance-continuous-execution-control-north-star-v0-1",
           "aion-governance-monarch-north-star-values-v0-1",
+          "aion-highway-control-tower-v0-1",
           "aion-no-silent-stall-rule-v0-1",
           "seekapi-0133-strategic-realignment-v0-1",
           "seekapi-checkout-metadata-contract-v0-1",
@@ -710,9 +711,9 @@
         ]
       },
       "gm2": {
-        "queued": 48,
+        "queued": 49,
         "ack_required": 0,
-        "acked": 48,
+        "acked": 49,
         "missing_first_artifact": 0,
         "ack_timeout": 0,
         "executor_idle_blocker": 0,
@@ -765,7 +766,8 @@
           "aion-no-silent-stall-rule-v0-1",
           "aion-actions-fuel-recovery-minute-conservation-v0-1",
           "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
-          "aion-governance-0276-monarch-north-star-v-next"
+          "aion-governance-0276-monarch-north-star-v-next",
+          "aion-highway-control-tower-v0-1"
         ]
       },
       "gm": {
@@ -800,7 +802,7 @@
       }
     },
     "ack_required_count": 0,
-    "acked_count": 67,
+    "acked_count": 68,
     "missing_first_artifact_count": 0,
     "ack_timeout_count": 0,
     "executor_idle_blocker_count": 0,
@@ -810,7 +812,7 @@
     "fallback_triggered_task_ids": [
       "seekapi-0129-payment-event-responsibility-matrix-v0-1"
     ],
-    "invalid_ack_timestamp_count": 27,
+    "invalid_ack_timestamp_count": 28,
     "invalid_ack_timestamp_task_ids": [
       "aion-governance-0087-autonomous-authorization-council",
       "aion-governance-0089-factory-kernel-v0-3-low-risk-loops",
@@ -838,7 +840,8 @@
       "aion-governance-monarch-north-star-values-v0-1",
       "aion-no-silent-stall-rule-v0-1",
       "aion-actions-fuel-recovery-minute-conservation-v0-1",
-      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1"
+      "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
+      "aion-highway-control-tower-v0-1"
     ],
     "invalid_first_artifact_timestamp_count": 0,
     "invalid_first_artifact_timestamp_task_ids": [],
@@ -1114,14 +1117,14 @@
   },
   "audit_runtime_summary": {
     "title": "Audit Runtime v0.1 / 审计运行时",
-    "audit_queue_count": 66,
+    "audit_queue_count": 67,
     "audit_pending_count": 0,
     "audit_ack_timeout_count": 0,
     "audit_timeout_count": 0,
     "audit_passed_count": 56,
     "audit_blocked_count": 0,
     "fallback_audit_count": 33,
-    "formal_bafuxunan_audit_count": 33,
+    "formal_bafuxunan_audit_count": 34,
     "audit_latency_average": 47.7,
     "audit_bottleneck_task_ids": []
   },
@@ -1131,10 +1134,17 @@
     "ready_for_audit_count": 0,
     "sla_breached_count": 0,
     "fallback_eligible_count": 0,
+    "fast_lane_count": 0,
+    "fast_lane_due_count": 0,
+    "standard_lane_count": 0,
+    "protected_lane_count": 0,
+    "target_fast_lane_due_minutes": 5,
+    "target_standard_lane_check_minutes": "10-15",
     "formal_bafuxunan_required_count": 0,
     "stop_new_pr": false,
     "recommended_audit_order": [],
-    "bottleneck_prs": []
+    "bottleneck_prs": [],
+    "fast_lane_due_prs": []
   },
   "audit_pipeline_drift_monitor_summary": {
     "title": "Audit Pipeline Drift Monitor v0.1 / 审计流水线漂移监控",
@@ -1258,7 +1268,7 @@
     "title": "AION North Star Alignment v0.1 / 北极星对齐",
     "registry_id": "aion-north-star-registry-v-next",
     "objective_count": 5,
-    "mapped_task_count": 24,
+    "mapped_task_count": 25,
     "missing_mapping_count": 0,
     "active_missing_mapping_count": 0,
     "historical_unmapped_count": 46,
@@ -1287,7 +1297,8 @@
       "aion-governance-monarch-north-star-values-v0-1",
       "aion-no-silent-stall-rule-v0-1",
       "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
-      "aion-governance-0276-monarch-north-star-v-next"
+      "aion-governance-0276-monarch-north-star-v-next",
+      "aion-highway-control-tower-v0-1"
     ],
     "missing_mapping_task_ids": [],
     "active_missing_mapping_task_ids": [],
@@ -1407,7 +1418,7 @@
     ],
     "no_agent_cron_mode": "DRY_RUN_ONLY",
     "value_count": 15,
-    "mapped_task_count": 22,
+    "mapped_task_count": 23,
     "active_without_monarch_value_mapping_count": 0,
     "unknown_value_mapping_count": 0,
     "mapped_task_ids": [
@@ -1432,7 +1443,8 @@
       "aion-governance-monarch-north-star-values-v0-1",
       "aion-no-silent-stall-rule-v0-1",
       "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1",
-      "aion-governance-0276-monarch-north-star-v-next"
+      "aion-governance-0276-monarch-north-star-v-next",
+      "aion-highway-control-tower-v0-1"
     ],
     "active_without_monarch_value_mapping_task_ids": [],
     "unknown_value_mappings": []
@@ -1449,7 +1461,7 @@
     "digest_summary_hours": 6,
     "no_agent_mode": "DRY_RUN_ONLY",
     "no_silent_stall_check_status": "ACTIVE_PROGRESS",
-    "active_lane_count": 70,
+    "active_lane_count": 71,
     "silent_stall_count": 0,
     "needs_monarch_count": 0,
     "allowed_statuses": [
@@ -1509,6 +1521,43 @@
       "aion-governance-0276-monarch-north-star-v-next"
     ],
     "auto_brake_required_task_ids": []
+  },
+  "highway_control_tower_summary": {
+    "title": "Highway Control Tower xhigh v0.1 / 高速长跑总控塔",
+    "control_tower_count": 1,
+    "lane_count": 9,
+    "root_cause_count": 8,
+    "heartbeat_minutes": 30,
+    "digest_hours": 6,
+    "visible_surface_count": 5,
+    "watchdog_of_watchdogs_present": true,
+    "waiting_state_ttl_present": true,
+    "rebase_mechanism_present": true,
+    "github_actions_patrol_allowed": false,
+    "local_only_final_state_allowed": false,
+    "full_unattended_ready_allowed": false,
+    "lane_ids": [
+      "actions_fuel_guard",
+      "audit_queue",
+      "ci_queue",
+      "continuation",
+      "elder_senate_rebase",
+      "factory_report_freshness",
+      "gm1_seekapi",
+      "gm2_governance",
+      "no_agent_local_loops"
+    ],
+    "root_cause_ids": [
+      "R1_waiting_state_without_ttl",
+      "R2_local_only_invisibility",
+      "R3_cross_gm_ownership_freeze",
+      "R4_audit_queue_runtime_gap",
+      "R5_actions_fuel_backslide",
+      "R6_report_freshness_gap",
+      "R7_watchdog_not_watched",
+      "R8_continuation_gap"
+    ],
+    "blocked_task_ids": []
   },
   "security_scan_summary": {
     "title": "Security Scan Baseline v0.1 / 安全扫描基线",
@@ -1694,7 +1743,7 @@
   "elder_senate_capacity_summary": {
     "title": "AION Elder Senate Capacity / 长老院产能复核",
     "gm1_queue": 0,
-    "gm2_queue": 48,
+    "gm2_queue": 49,
     "agent007_queue": 15,
     "audit_queue": 8,
     "ack_timeout_count": 0,
@@ -2830,6 +2879,22 @@
       "board_verdict": null,
       "board_authorization_level": null,
       "board_monarch_required": null
+    },
+    {
+      "task_id": "aion-highway-control-tower-v0-1",
+      "project_id": "aion-governance",
+      "status": "FIRST_ARTIFACT_SEEN",
+      "owner": "gm2",
+      "audit": "bafuxunan",
+      "runtime_handle": "branch:gm2/highway-control-tower-v0-1",
+      "ack_at": "2026-05-13T19:42:30Z",
+      "first_artifact": "factory/highway-control-tower/highway-control-tower-v0.1.json",
+      "pr": "https://github.com/kiddhu/aion-governance/pull/261",
+      "source_issue": "https://github.com/kiddhu/aion-governance/issues/260",
+      "next_gate": "八府巡按 audit then low-risk governance merge/closeout; no production or full unattended PASS",
+      "board_verdict": null,
+      "board_authorization_level": null,
+      "board_monarch_required": null
     }
   ],
   "sections": {
@@ -2903,7 +2968,8 @@
       "aion-no-silent-stall-rule-v0-1: MERGED_LOW_RISK -> POST_MERGE_CLOSEOUT_RECORDED_WITH_ACTIONS_FUEL_RECOVERY",
       "aion-actions-fuel-recovery-minute-conservation-v0-1: MERGED_LOW_RISK -> POST_MERGE_CLOSEOUT_COMPLETE",
       "aion-governance-0266-audit-runtime-monarch-classifier-repair-v0-1: MERGED_LOW_RISK -> Continue #266 next stage: wire audit runtime repair into operational queue/reporting only through separate low-risk PR and audit; do not close #266 yet.",
-      "aion-governance-0276-monarch-north-star-v-next: FIRST_ARTIFACT_SEEN -> OPEN_LOW_RISK_GOVERNANCE_PR"
+      "aion-governance-0276-monarch-north-star-v-next: FIRST_ARTIFACT_SEEN -> OPEN_LOW_RISK_GOVERNANCE_PR",
+      "aion-highway-control-tower-v0-1: FIRST_ARTIFACT_SEEN -> 八府巡按 audit then low-risk governance merge/closeout; no production or full unattended PASS"
     ],
     "tasks_stuck_at_order_posted_only": [],
     "tasks_missing_runtime_handle": [
